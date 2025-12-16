@@ -203,6 +203,11 @@ class FigmaToXamlConverter:
         layout_wrap = node.get('layoutWrap', 'NO_WRAP')
         item_spacing = node.get('itemSpacing', 0)
         
+        # 主轴对齐方式
+        primary_axis_align = node.get('primaryAxisAlignItems', 'MIN')
+        # 交叉轴对齐方式
+        counter_axis_align = node.get('counterAxisAlignItems', 'MIN')
+        
         xaml = f'{indent}<!-- {name} 容器 -->\n'
         xaml += f'{indent}<Border CornerRadius="{corner_radius}"\n'
         xaml += f'{indent}        BorderBrush="{border_brush}"\n'
@@ -275,11 +280,27 @@ class FigmaToXamlConverter:
             xaml += f'{indent}        \n'
         elif layout_mode == 'VERTICAL':
             # 垂直布局
-            xaml += f'{indent}    <StackPanel Orientation="Vertical">\n'
+            xaml += f'{indent}    <StackPanel Orientation="Vertical"'
+            # 设置水平对齐(交叉轴对齐)
+            if counter_axis_align == 'CENTER':
+                xaml += ' HorizontalAlignment="Center"'
+            elif counter_axis_align == 'MAX':
+                xaml += ' HorizontalAlignment="Right"'
+            else:  # MIN 或其他
+                xaml += ' HorizontalAlignment="Left"'
+            xaml += '>\n'
             xaml += f'{indent}        \n'
         elif layout_mode == 'HORIZONTAL':
             # 水平布局
-            xaml += f'{indent}    <StackPanel Orientation="Horizontal">\n'
+            xaml += f'{indent}    <StackPanel Orientation="Horizontal"'
+            # 设置垂直对齐(交叉轴对齐)
+            if counter_axis_align == 'CENTER':
+                xaml += ' VerticalAlignment="Center"'
+            elif counter_axis_align == 'MAX':
+                xaml += ' VerticalAlignment="Bottom"'
+            else:  # MIN 或其他
+                xaml += ' VerticalAlignment="Top"'
+            xaml += '>\n'
             xaml += f'{indent}        \n'
         else:
             # 默认使用 StackPanel Vertical
@@ -396,6 +417,7 @@ class FigmaToXamlConverter:
         # 提取字体信息
         font_name = node.get('fontName', {})
         font_family = font_name.get('family', 'Segoe UI')
+        font_weight = node.get('fontWeight', 400)
         
         # 提取字号
         font_size = node.get('fontSize', 12)
@@ -413,9 +435,21 @@ class FigmaToXamlConverter:
             if color.upper() != '#000000' or final_opacity < 1.0:
                 foreground = self.hex_to_wpf_color(color, final_opacity)
         
-        # 提取宽高(可选)
-        width = node.get('width')
-        height = node.get('height')
+        # 检查布局尺寸模式
+        layout_sizing_horizontal = node.get('layoutSizingHorizontal', 'FIXED')
+        layout_sizing_vertical = node.get('layoutSizingVertical', 'FIXED')
+        
+        # 提取宽高
+        # HUG 模式: 不设置固定宽高,让 TextBlock 自动调整
+        if layout_sizing_horizontal == 'HUG':
+            width = None
+        else:
+            width = node.get('width')
+        
+        if layout_sizing_vertical == 'HUG':
+            height = None
+        else:
+            height = node.get('height')
         
         # 构建 XAML
         xaml = f'{indent}<!-- {name} -->\n'
@@ -430,6 +464,8 @@ class FigmaToXamlConverter:
             xaml += f' FontFamily="{font_family}"'
         if font_size and font_size != 12:
             xaml += f' FontSize="{font_size}"'
+        if font_weight and font_weight >= 700:
+            xaml += f' FontWeight="Bold"'
         if foreground:
             xaml += f' Foreground="{foreground}"'
         if width:
