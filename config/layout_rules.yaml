@@ -1,0 +1,165 @@
+# ============================================================================
+# 布局容器选择规则
+# 作用: 根据 Figma 布局属性,决定使用哪种 WPF 容器
+# ============================================================================
+
+# ----------------------------------------------------------------------------
+# 容器选择规则 (按优先级顺序)
+# 规则引擎会从上到下匹配,返回第一个匹配的结果
+# ----------------------------------------------------------------------------
+container_selection_rules:
+  
+  # 规则 1: 水平布局 + 换行 → WrapPanel
+  - name: "水平布局且需要换行"
+    condition: "layout_mode == 'HORIZONTAL' and layout_wrap == 'WRAP'"
+    result:
+      container_type: WrapPanel
+      orientation: Horizontal
+      use_grid: false
+  
+  # 规则 2: 水平布局 + 有填充子元素 + 多个子元素 → Grid
+  - name: "水平布局且有填充子元素(使用Grid)"
+    condition: "layout_mode == 'HORIZONTAL' and has_fill_child and visible_children_count > 1"
+    result:
+      container_type: Grid
+      use_grid: true
+  
+  # 规则 3: 垂直布局 → StackPanel (Vertical)
+  - name: "垂直布局"
+    condition: "layout_mode == 'VERTICAL'"
+    result:
+      container_type: StackPanel
+      orientation: Vertical
+      use_grid: false
+  
+  # 规则 4: 水平布局 (无换行,无填充) → StackPanel (Horizontal)
+  - name: "水平布局(无换行)"
+    condition: "layout_mode == 'HORIZONTAL'"
+    result:
+      container_type: StackPanel
+      orientation: Horizontal
+      use_grid: false
+  
+  # 规则 5: 默认 → StackPanel (Vertical)
+  - name: "默认容器"
+    condition: "true"
+    result:
+      container_type: StackPanel
+      orientation: Vertical
+      use_grid: false
+
+# ----------------------------------------------------------------------------
+# 属性生成规则
+# 作用: 根据条件决定是否生成某个 XAML 属性,以及属性值
+# ----------------------------------------------------------------------------
+attribute_rules:
+  
+  # Border 属性规则
+  Border:
+    Width:
+      - condition: "sizing_horizontal == 'FIXED' and width is not None"
+        value: "{width}"
+    
+    Height:
+      - condition: "sizing_vertical == 'FIXED' and height is not None"
+        value: "{height}"
+    
+    HorizontalAlignment:
+      - condition: "sizing_horizontal == 'FILL' or layout_align == 'STRETCH'"
+        value: "Stretch"
+    
+    Background:
+      - condition: "background is not None"
+        value: "{background}"
+    
+    Padding:
+      - condition: "padding_str is not None"
+        value: "{padding_str}"
+      - condition: "true"
+        value: "0"
+  
+  # StackPanel 属性规则
+  StackPanel:
+    Orientation:
+      - condition: "orientation is not None"
+        value: "{orientation}"
+      - condition: "true"
+        value: "Vertical"
+    
+    HorizontalAlignment:
+      # 垂直布局且容器不填充时,设置水平对齐
+      - condition: "orientation == 'Vertical' and not is_container_fill_horizontal and counter_axis_align == 'CENTER'"
+        value: "Center"
+      - condition: "orientation == 'Vertical' and not is_container_fill_horizontal and counter_axis_align == 'MAX'"
+        value: "Right"
+      - condition: "orientation == 'Vertical' and not is_container_fill_horizontal and counter_axis_align == 'MIN'"
+        value: "Left"
+    
+    VerticalAlignment:
+      # 水平布局且容器不填充时,设置垂直对齐
+      - condition: "orientation == 'Horizontal' and not is_container_fill_vertical and counter_axis_align == 'CENTER'"
+        value: "Center"
+      - condition: "orientation == 'Horizontal' and not is_container_fill_vertical and counter_axis_align == 'MAX'"
+        value: "Bottom"
+      - condition: "orientation == 'Horizontal' and not is_container_fill_vertical and counter_axis_align == 'MIN'"
+        value: "Top"
+  
+  # WrapPanel 属性规则
+  WrapPanel:
+    Orientation:
+      - condition: "orientation is not None"
+        value: "{orientation}"
+      - condition: "true"
+        value: "Horizontal"
+    
+    HorizontalAlignment:
+      - condition: "primary_axis_align == 'CENTER'"
+        value: "Center"
+      - condition: "primary_axis_align == 'MAX'"
+        value: "Right"
+      - condition: "true"
+        value: "Left"
+    
+    VerticalAlignment:
+      - condition: "counter_axis_align == 'CENTER'"
+        value: "Center"
+      - condition: "counter_axis_align == 'MAX'"
+        value: "Bottom"
+      - condition: "true"
+        value: "Top"
+  
+  # TextBlock 属性规则
+  TextBlock:
+    FontFamily:
+      - condition: "font_family is not None and font_family not in ['Segoe UI', 'Roboto']"
+        value: "{font_family}"
+    
+    FontSize:
+      - condition: "font_size is not None and font_size != 12"
+        value: "{font_size}"
+    
+    FontWeight:
+      - condition: "font_weight is not None and font_weight >= 700"
+        value: "Bold"
+    
+    Foreground:
+      - condition: "foreground is not None"
+        value: "{foreground}"
+    
+    Width:
+      - condition: "sizing_horizontal != 'HUG' and width is not None"
+        value: "{width}"
+    
+    Height:
+      - condition: "sizing_vertical != 'HUG' and height is not None"
+        value: "{height}"
+
+  # 通用 Margin 规则 (适用于所有元素)
+  Common:
+    Margin:
+      - condition: "parent_spacing > 0 and not is_first_child and parent_layout == 'WRAP'"
+        value: "{parent_spacing / 2}"
+      - condition: "parent_spacing > 0 and not is_first_child and parent_layout == 'VERTICAL'"
+        value: "0,{parent_spacing},0,0"
+      - condition: "parent_spacing > 0 and not is_first_child and parent_layout == 'HORIZONTAL'"
+        value: "{parent_spacing},0,0,0"

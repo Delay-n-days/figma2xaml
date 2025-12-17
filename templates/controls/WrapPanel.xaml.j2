@@ -1,0 +1,11 @@
+{# WrapPanel 控件模板 #}
+{%- from 'macros/helpers.j2' import render_control -%}
+{%- set indent = '    ' * indent_level -%}
+{{ indent }}<WrapPanel
+{%- for key, value in node.attributes.items() if value is not none and not key.startswith('_') %}
+{{ indent }}    {{ key }}="{{ value }}"
+{%- endfor %}>
+{%- for child in node.children %}
+{{ render_control(child, indent_level + 1) }}
+{%- endfor %}
+{{ indent }}</WrapPanel>

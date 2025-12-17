@@ -1,0 +1,10 @@
+{# StackPanel 控件模板 #}
+{%- from 'macros/helpers.j2' import render_control -%}
+{%- set indent = '    ' * indent_level -%}
+{{ indent }}<StackPanel
+{%- for key, value in node.attributes.items() if value is not none %} {{ key }}="{{ value }}"
+{%- endfor %}>
+{%- for child in node.children %}
+{{ render_control(child, indent_level + 1) }}
+{%- endfor %}
+{{ indent }}</StackPanel>

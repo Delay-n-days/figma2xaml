@@ -1,0 +1,72 @@
+# ============================================================================
+# Figma 到 WPF 属性映射配置
+# 作用: 定义 Figma 属性如何映射到 WPF 属性
+# ============================================================================
+
+# ----------------------------------------------------------------------------
+# 对齐方式映射
+# Figma: primaryAxisAlignItems, counterAxisAlignItems
+# WPF: HorizontalAlignment, VerticalAlignment
+# ----------------------------------------------------------------------------
+alignment_mapping:
+  # 交叉轴对齐 (counterAxisAlignItems)
+  counter_axis:
+    MIN:
+      horizontal: Left      # 垂直布局时: 左对齐
+      vertical: Top         # 水平布局时: 上对齐
+    CENTER:
+      horizontal: Center
+      vertical: Center
+    MAX:
+      horizontal: Right     # 垂直布局时: 右对齐
+      vertical: Bottom      # 水平布局时: 下对齐
+  
+  # 主轴对齐 (primaryAxisAlignItems) - 用于 WrapPanel
+  primary_axis:
+    MIN:
+      horizontal: Left
+      vertical: Top
+    CENTER:
+      horizontal: Center
+      vertical: Center
+    MAX:
+      horizontal: Right
+      vertical: Bottom
+
+# ----------------------------------------------------------------------------
+# 尺寸模式映射
+# Figma: layoutSizingHorizontal, layoutSizingVertical
+# 作用: 决定是否设置固定宽高
+# ----------------------------------------------------------------------------
+sizing_mode:
+  FIXED:
+    set_dimension: true     # 设置固定宽高
+    stretch: false
+  HUG:
+    set_dimension: false    # 不设置宽高,自适应内容
+    stretch: false
+  FILL:
+    set_dimension: false    # 不设置宽高,拉伸填充父容器
+    stretch: true           # 设置 HorizontalAlignment="Stretch"
+
+# ----------------------------------------------------------------------------
+# 布局模式映射
+# Figma: layoutMode
+# WPF: Orientation (StackPanel/WrapPanel)
+# ----------------------------------------------------------------------------
+layout_orientation:
+  HORIZONTAL: Horizontal
+  VERTICAL: Vertical
+  NONE: Vertical           # 默认垂直
+
+# ----------------------------------------------------------------------------
+# 字体粗细映射
+# Figma: fontWeight (数值)
+# WPF: FontWeight (关键字)
+# ----------------------------------------------------------------------------
+font_weight_mapping:
+  # >= 700 为 Bold
+  bold_threshold: 700
+  values:
+    normal: Normal
+    bold: Bold
