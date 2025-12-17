@@ -9,7 +9,15 @@
 # ----------------------------------------------------------------------------
 container_selection_rules:
   
-  # 规则 1: 水平布局 + 换行 → WrapPanel
+  # 规则 1: Figma Grid 布局 → WPF Grid (带行列定义)
+  - name: "Grid 网格布局"
+    condition: "layout_mode == 'GRID'"
+    result:
+      container_type: Grid
+      use_grid: true
+      use_grid_layout: true
+  
+  # 规则 2: 水平布局 + 换行 → WrapPanel
   - name: "水平布局且需要换行"
     condition: "layout_mode == 'HORIZONTAL' and layout_wrap == 'WRAP'"
     result:
@@ -17,7 +25,7 @@ container_selection_rules:
       orientation: Horizontal
       use_grid: false
   
-  # 规则 2: 水平布局 + 有填充子元素 + 多个子元素 → Grid
+  # 规则 3: 水平布局 + 有填充子元素 + 多个子元素 → Grid
   - name: "水平布局且有填充子元素(使用Grid)"
     condition: "layout_mode == 'HORIZONTAL' and has_fill_child and visible_children_count > 1"
     result:

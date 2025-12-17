@@ -366,7 +366,7 @@ class FigmaToXamlConverter(QMainWindow):
             QApplication.processEvents()
             
             # 4. 调用转换脚本（subprocess 方式，不修改原脚本）
-            convert_script = Path(__file__).parent / "figma_to_xaml.py"
+            convert_script = Path(__file__).parent / "figma_to_xaml_v2.py"
             
             # 修改 figma_to_xaml.py 使其接受命令行参数
             # 这里暂时用 subprocess 调用，输入输出都是文件

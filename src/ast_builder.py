@@ -99,8 +99,39 @@ class FigmaToWpfBuilder:
         
         # 处理子元素
         use_grid = container_config.get('use_grid', False)
+        use_grid_layout = container_config.get('use_grid_layout', False)
         
-        if use_grid:
+        if use_grid_layout:
+            # Figma Grid 布局: 处理行列定义
+            grid_row_sizes = node.get('gridRowSizes', [])
+            grid_column_sizes = node.get('gridColumnSizes', [])
+            
+            # 转换行定义
+            row_definitions = []
+            for row_size in grid_row_sizes:
+                if row_size.get('type') == 'FLEX':
+                    row_definitions.append(f"{row_size.get('value', 1)}*")
+                elif row_size.get('type') == 'FIXED':
+                    row_definitions.append(str(row_size.get('value', 'Auto')))
+                else:
+                    row_definitions.append('Auto')
+            
+            # 转换列定义
+            column_definitions = []
+            for col_size in grid_column_sizes:
+                if col_size.get('type') == 'FLEX':
+                    column_definitions.append(f"{col_size.get('value', 1)}*")
+                elif col_size.get('type') == 'FIXED':
+                    column_definitions.append(str(col_size.get('value', 'Auto')))
+                else:
+                    column_definitions.append('Auto')
+            
+            if row_definitions:
+                container.set_attribute('_row_definitions', row_definitions)
+            if column_definitions:
+                container.set_attribute('_column_definitions', column_definitions)
+        
+        elif use_grid:
             # Grid: 需要设置列定义
             column_definitions = []
             for i, child in enumerate(visible_children):
@@ -139,8 +170,62 @@ class FigmaToWpfBuilder:
             # 构建子节点
             child_ast = self.build(child, is_root=False)
             
-            # Grid: 设置 Grid.Column
-            if use_grid:
+            # Figma Grid 布局: 设置 Grid.Row 和 Grid.Column
+            if use_grid_layout:
+                # 获取子元素在 Grid 中的位置
+                grid_row = child.get('gridRowAnchorIndex', -1)
+                grid_col = child.get('gridColumnAnchorIndex', -1)
+                
+                # 如果没有明确指定位置,按顺序自动分配
+                if grid_row == -1 or grid_col == -1:
+                    grid_column_count = len(container.attributes.get('_column_definitions', []))
+                    if grid_column_count > 0:
+                        grid_row = visible_child_index // grid_column_count
+                        grid_col = visible_child_index % grid_column_count
+                    else:
+                        grid_row = 0
+                        grid_col = visible_child_index
+                
+                child_ast.set_attribute('Grid.Row', str(grid_row))
+                child_ast.set_attribute('Grid.Column', str(grid_col))
+                
+                # 设置行列跨度
+                grid_row_span = child.get('gridRowSpan', 1)
+                grid_col_span = child.get('gridColumnSpan', 1)
+                if grid_row_span > 1:
+                    child_ast.set_attribute('Grid.RowSpan', str(grid_row_span))
+                if grid_col_span > 1:
+                    child_ast.set_attribute('Grid.ColumnSpan', str(grid_col_span))
+                
+                # 设置 Grid 间距 (通过 Margin 实现)
+                # itemSpacing: 行间距, counterAxisSpacing: 列间距
+                row_spacing = item_spacing  # 行间距
+                col_spacing = node.get('counterAxisSpacing', 0)  # 列间距
+                
+                # 计算 Margin: 左,上,右,下
+                margin_left = col_spacing / 2 if grid_col > 0 else 0
+                margin_top = row_spacing / 2 if grid_row > 0 else 0
+                margin_right = col_spacing / 2
+                margin_bottom = row_spacing / 2
+                
+                # 为最后一列和最后一行移除右边和下边的间距
+                grid_row_count = len(container.attributes.get('_row_definitions', []))
+                if grid_col == grid_column_count - 1:
+                    margin_right = 0
+                if grid_row == grid_row_count - 1:
+                    margin_bottom = 0
+                
+                if margin_left > 0 or margin_top > 0 or margin_right > 0 or margin_bottom > 0:
+                    # 转换为整数（如果是整数值）
+                    margin_left = int(margin_left) if margin_left == int(margin_left) else margin_left
+                    margin_top = int(margin_top) if margin_top == int(margin_top) else margin_top
+                    margin_right = int(margin_right) if margin_right == int(margin_right) else margin_right
+                    margin_bottom = int(margin_bottom) if margin_bottom == int(margin_bottom) else margin_bottom
+                    margin_str = f"{margin_left},{margin_top},{margin_right},{margin_bottom}"
+                    child_ast.set_attribute('Margin', margin_str)
+            
+            # 水平布局 Grid: 设置 Grid.Column
+            elif use_grid:
                 child_ast.set_attribute('Grid.Column', str(visible_child_index))
             
             container.add_child(child_ast)

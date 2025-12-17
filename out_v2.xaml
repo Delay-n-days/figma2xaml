@@ -12,24 +12,39 @@
         BorderBrush="#FF000000"
         BorderThickness="1"
         Padding="0">
-        <StackPanel
-            Orientation="Vertical"
-            HorizontalAlignment="Left">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
             <!-- Rectangle -->
             <Border
                 Width="12"
                 Height="12"
-                Background="#CC6680"/>
+                Background="#CC6680"
+                Grid.Row="0"
+                Grid.Column="0"
+                Margin="0,0,3,4"/>
             <!-- Rectangle -->
             <Border
                 Width="12"
                 Height="12"
-                Background="#CC6680"/>
+                Background="#CC6680"
+                Grid.Row="0"
+                Grid.Column="1"
+                Margin="3,0,0,4"/>
             <!-- Rectangle -->
             <Border
                 Width="12"
                 Height="12"
-                Background="#CC6680"/>
-        </StackPanel>
+                Background="#CC6680"
+                Grid.Row="1"
+                Grid.Column="0"
+                Margin="0,4,3,0"/>
+        </Grid>
     </Border>
 </UserControl>
