@@ -217,10 +217,11 @@
           "x": 0,
           "y": 0,
           "width": 126,
-          "height": 502,
+          "height": 598,
           "gridChildHorizontalAlign": "AUTO",
           "gridChildVerticalAlign": "AUTO",
-          "layoutSizingHorizontal": "HUG",
+          "layoutAlign": "STRETCH",
+          "layoutSizingVertical": "FILL",
           "fills": [
             {
               "type": "SOLID",
@@ -247,7 +248,6 @@
             }
           ],
           "layoutMode": "VERTICAL",
-          "counterAxisSizingMode": "AUTO",
           "verticalPadding": 0
         },
         {
@@ -294,7 +294,7 @@
               "name": "Frame 13",
               "x": 0,
               "y": 0,
-              "width": 508,
+              "width": 572,
               "height": 28,
               "gridChildHorizontalAlign": "AUTO",
               "gridChildVerticalAlign": "AUTO",
@@ -772,7 +772,7 @@
                   "fills": [
                     {
                       "type": "SOLID",
-                      "color": "#F7F7F7"
+                      "color": "#FFFFFF"
                     }
                   ],
                   "paddingLeft": 11,
@@ -784,9 +784,9 @@
                       "type": "SOLID",
                       "blendMode": "NORMAL",
                       "color": {
-                        "r": 0.9686274528503418,
-                        "g": 0.9686274528503418,
-                        "b": 0.9686274528503418
+                        "r": 1,
+                        "g": 1,
+                        "b": 1
                       }
                     }
                   ],
@@ -1075,13 +1075,14 @@
               "name": "Frame 12",
               "x": 0,
               "y": 28,
-              "width": 508,
-              "height": 474,
+              "width": 572,
+              "height": 570,
               "gridChildHorizontalAlign": "AUTO",
               "gridChildVerticalAlign": "AUTO",
               "layoutAlign": "STRETCH",
+              "layoutGrow": 1,
               "layoutSizingHorizontal": "FILL",
-              "layoutSizingVertical": "HUG",
+              "layoutSizingVertical": "FILL",
               "fills": [
                 {
                   "type": "SOLID",
@@ -1102,17 +1103,20 @@
               ],
               "clipsContent": false,
               "layoutMode": "HORIZONTAL",
-              "counterAxisSizingMode": "AUTO",
               "verticalPadding": 0
             }
           ],
           "name": "Frame 14",
           "x": 126,
           "y": 0,
-          "width": 508,
-          "height": 502,
+          "width": 572,
+          "height": 598,
           "gridChildHorizontalAlign": "AUTO",
           "gridChildVerticalAlign": "AUTO",
+          "layoutAlign": "STRETCH",
+          "layoutGrow": 1,
+          "layoutSizingHorizontal": "FILL",
+          "layoutSizingVertical": "FILL",
           "strokes": [
             {
               "type": "SOLID",
@@ -1127,19 +1131,14 @@
         }
       ],
       "name": "Frame 15",
-      "x": 15,
-      "y": 594,
-      "width": 634,
-      "height": 502,
+      "x": 135,
+      "y": 583,
+      "width": 698,
+      "height": 598,
       "gridChildHorizontalAlign": "AUTO",
       "gridChildVerticalAlign": "AUTO",
-      "layoutSizingHorizontal": "HUG",
-      "layoutSizingVertical": "HUG",
-      "counterAxisAlignItems": "CENTER",
-      "primaryAxisSizingMode": "AUTO",
       "clipsContent": false,
       "layoutMode": "HORIZONTAL",
-      "counterAxisSizingMode": "AUTO",
       "verticalPadding": 0
     }
   ],

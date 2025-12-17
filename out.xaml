@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d"
-             d:DesignHeight="502" d:DesignWidth="634">
+             d:DesignHeight="598" d:DesignWidth="698">
     
     <!-- Frame 15 容器 -->
     <Border CornerRadius="0"
@@ -23,18 +23,16 @@
                     Grid.Column="0"
                     BorderBrush="#AAAAAA"
                     BorderThickness="1"
-                    Width="126"
-                    Height="502"
+                    HorizontalAlignment="Stretch"
                     Background="#FFFFFF"
                     Padding="0">
                 
-                <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                <StackPanel Orientation="Vertical">
                     
                     <!-- Frame 2 容器 -->
                     <Border CornerRadius="0"
                             BorderBrush="#FF000000"
                             BorderThickness="1"
-                            Width="126"
                             Background="#0078D7"
                             Padding="0,2,0,2">
                         
@@ -50,7 +48,6 @@
                     <Border CornerRadius="0"
                             BorderBrush="#FF000000"
                             BorderThickness="1"
-                            Width="126"
                             Background="#FFFFFF"
                             Padding="0,2,0,2">
                         
@@ -69,10 +66,10 @@
                     Grid.Column="1"
                     BorderBrush="#7D7D7D"
                     BorderThickness="1"
-                    Height="502"
+                    HorizontalAlignment="Stretch"
                     Padding="0">
                 
-                <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                <StackPanel Orientation="Vertical">
                     
                     <!-- Frame 13 容器 -->
                     <Border CornerRadius="0"
@@ -83,7 +80,7 @@
                             Background="#FFFFFF"
                             Padding="10,0,10,0">
                         
-                        <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+                        <StackPanel Orientation="Vertical">
                             
                             <!-- ES -->
                             <TextBlock Text="ES" FontFamily="Inter" FontSize="16" FontWeight="Bold"/>
@@ -98,8 +95,8 @@
                             Padding="0">
                         
                         <WrapPanel Orientation="Horizontal"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center">
+                                   VerticalAlignment="Top"
+                                   HorizontalAlignment="Left">
                             
                             <!-- Frame 4 容器 -->
                             <Border CornerRadius="0"
@@ -175,7 +172,7 @@
                                     BorderThickness="1"
                                     Width="127"
                                     Height="237"
-                                    Background="#F7F7F7"
+                                    Background="#FFFFFF"
                                     Padding="11,22,11,22">
                                 
                                 <StackPanel Orientation="Vertical" HorizontalAlignment="Left">

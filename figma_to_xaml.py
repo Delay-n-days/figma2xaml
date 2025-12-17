@@ -140,21 +140,42 @@ class FigmaToXamlConverter:
         is_in_fill_column = node.get('_in_fill_column', False)
         
         # 根据 layoutSizing 决定宽高
-        # 根节点特殊处理: 不设置固定宽度,让它自适应
-        if is_root or layout_sizing_horizontal == 'FILL' or layout_align == 'STRETCH' or is_in_fill_column:
-            # 填充父容器宽度
-            width = None  # 不设置固定宽度
-        else:
-            width = node.get('width', 'Auto')
+        # 容器的宽高应该由布局引擎自动计算,而不是硬编码
+        # 只有在 FIXED 模式下才设置固定宽高
         
-        if is_root or layout_sizing_vertical == 'FILL':
-            # 填充父容器高度
-            height = None  # 不设置固定高度
-        elif layout_sizing_vertical == 'HUG':
-            # 根据内容自动调整高度
-            height = None
+        # 宽度处理
+        if is_root:
+            # 根节点: 不设置固定宽度,让它自适应整个 UserControl
+            width = None
+        elif layout_sizing_horizontal == 'FILL' or layout_align == 'STRETCH' or is_in_fill_column:
+            # 填充父容器宽度: 不设置固定宽度
+            width = None
+        elif layout_sizing_horizontal == 'HUG':
+            # 根据内容自适应: 不设置固定宽度
+            width = None
+        elif layout_sizing_horizontal == 'FIXED':
+            # 显式固定宽度: 只有这种情况才设置
+            width = node.get('width')
         else:
-            height = node.get('height', 'Auto')
+            # 默认不设置
+            width = None
+        
+        # 高度处理
+        if is_root:
+            # 根节点: 不设置固定高度
+            height = None
+        elif layout_sizing_vertical == 'FILL':
+            # 填充父容器高度: 不设置固定高度
+            height = None
+        elif layout_sizing_vertical == 'HUG':
+            # 根据内容自适应: 不设置固定高度
+            height = None
+        elif layout_sizing_vertical == 'FIXED':
+            # 显式固定高度: 只有这种情况才设置
+            height = node.get('height')
+        else:
+            # 默认不设置
+            height = None
         
         # 整体透明度
         opacity = node.get('opacity', 1.0)
@@ -240,10 +261,10 @@ class FigmaToXamlConverter:
         children = node.get('children', [])
         visible_children = [c for c in children if c.get('visible', True)]
         
-        # 检查是否有子元素需要填充(FILL or STRETCH)
+        # 检查是否有子元素需要水平填充
+        # 只有明确设置了 layoutSizingHorizontal = FILL 才算需要填充
         has_fill_child = any(
-            child.get('layoutSizingHorizontal') == 'FILL' or 
-            child.get('layoutAlign') == 'STRETCH' 
+            child.get('layoutSizingHorizontal') == 'FILL'
             for child in visible_children
         )
         
@@ -254,9 +275,28 @@ class FigmaToXamlConverter:
         # 选择布局容器
         use_grid = False
         if layout_mode == 'HORIZONTAL' and layout_wrap == 'WRAP':
-            xaml += f'{indent}    <WrapPanel Orientation="Horizontal"\n'
-            xaml += f'{indent}               HorizontalAlignment="Center"\n'
-            xaml += f'{indent}               VerticalAlignment="Center">\n'
+            xaml += f'{indent}    <WrapPanel Orientation="Horizontal"'
+            
+            # WrapPanel 的对齐方式根据 counterAxisAlignItems 设置
+            # 对于水平 WrapPanel,counterAxis 是垂直方向
+            if counter_axis_align == 'CENTER':
+                xaml += '\n{0}               VerticalAlignment="Center"'.format(indent)
+            elif counter_axis_align == 'MAX':
+                xaml += '\n{0}               VerticalAlignment="Bottom"'.format(indent)
+            else:  # MIN 或其他
+                xaml += '\n{0}               VerticalAlignment="Top"'.format(indent)
+            
+            # 水平对齐默认使用 Left(或根据其他属性)
+            # 如果有 primaryAxisAlignItems,也可以设置,但 WrapPanel 没有对应属性
+            # 所以我们设置 HorizontalAlignment
+            if primary_axis_align == 'CENTER':
+                xaml += '\n{0}               HorizontalAlignment="Center"'.format(indent)
+            elif primary_axis_align == 'MAX':
+                xaml += '\n{0}               HorizontalAlignment="Right"'.format(indent)
+            else:  # MIN 或其他
+                xaml += '\n{0}               HorizontalAlignment="Left"'.format(indent)
+            
+            xaml += '>\n'
             xaml += f'{indent}        \n'
         elif layout_mode == 'HORIZONTAL' and has_fill_child and len(visible_children) > 1:
             # 水平布局且有填充子元素 -> 使用 Grid
@@ -267,8 +307,8 @@ class FigmaToXamlConverter:
             for i, child in enumerate(visible_children):
                 # 检查是否是最后一个元素(在根容器中)或显式标记为 FILL
                 is_last_in_root = (is_root and i == len(visible_children) - 1)
-                is_fill = (child.get('layoutSizingHorizontal') == 'FILL' or 
-                          child.get('layoutAlign') == 'STRETCH')
+                # 只看 layoutSizingHorizontal,不看 layoutAlign
+                is_fill = (child.get('layoutSizingHorizontal') == 'FILL')
                 
                 if is_fill or is_last_in_root:
                     # 自动填充列
@@ -281,25 +321,43 @@ class FigmaToXamlConverter:
         elif layout_mode == 'VERTICAL':
             # 垂直布局
             xaml += f'{indent}    <StackPanel Orientation="Vertical"'
-            # 设置水平对齐(交叉轴对齐)
-            if counter_axis_align == 'CENTER':
-                xaml += ' HorizontalAlignment="Center"'
-            elif counter_axis_align == 'MAX':
-                xaml += ' HorizontalAlignment="Right"'
-            else:  # MIN 或其他
-                xaml += ' HorizontalAlignment="Left"'
+            
+            # 判断容器本身是否填充父容器
+            # 如果容器是 FILL 模式,StackPanel 应该拉伸填满,不设置对齐
+            # 如果容器不是 FILL,才设置对齐方式
+            is_container_fill = (layout_sizing_horizontal == 'FILL' or layout_align == 'STRETCH')
+            
+            if not is_container_fill:
+                # 容器不填充时,设置 StackPanel 的水平对齐(交叉轴对齐)
+                if counter_axis_align == 'CENTER':
+                    xaml += ' HorizontalAlignment="Center"'
+                elif counter_axis_align == 'MAX':
+                    xaml += ' HorizontalAlignment="Right"'
+                else:  # MIN 或其他
+                    xaml += ' HorizontalAlignment="Left"'
+            # 如果容器填充,StackPanel 默认会拉伸,不需要设置对齐
+            
             xaml += '>\n'
             xaml += f'{indent}        \n'
         elif layout_mode == 'HORIZONTAL':
             # 水平布局
             xaml += f'{indent}    <StackPanel Orientation="Horizontal"'
-            # 设置垂直对齐(交叉轴对齐)
-            if counter_axis_align == 'CENTER':
-                xaml += ' VerticalAlignment="Center"'
-            elif counter_axis_align == 'MAX':
-                xaml += ' VerticalAlignment="Bottom"'
-            else:  # MIN 或其他
-                xaml += ' VerticalAlignment="Top"'
+            
+            # 判断容器本身是否填充父容器
+            # 如果容器是 FILL 模式,StackPanel 应该拉伸填满,不设置对齐
+            # 如果容器不是 FILL,才设置对齐方式
+            is_container_fill_vertical = (layout_sizing_vertical == 'FILL' or layout_align == 'STRETCH')
+            
+            if not is_container_fill_vertical:
+                # 容器不填充时,设置 StackPanel 的垂直对齐(交叉轴对齐)
+                if counter_axis_align == 'CENTER':
+                    xaml += ' VerticalAlignment="Center"'
+                elif counter_axis_align == 'MAX':
+                    xaml += ' VerticalAlignment="Bottom"'
+                else:  # MIN 或其他
+                    xaml += ' VerticalAlignment="Top"'
+            # 如果容器填充,StackPanel 默认会拉伸,不需要设置对齐
+            
             xaml += '>\n'
             xaml += f'{indent}        \n'
         else:
@@ -337,8 +395,8 @@ class FigmaToXamlConverter:
             is_in_fill_column_flag = False
             if use_grid:
                 is_last_in_root = (is_root and visible_child_index == len(visible_children) - 1)
-                is_fill = (child.get('layoutSizingHorizontal') == 'FILL' or 
-                          child.get('layoutAlign') == 'STRETCH')
+                # 只看 layoutSizingHorizontal,不看 layoutAlign
+                is_fill = (child.get('layoutSizingHorizontal') == 'FILL')
                 is_in_fill_column_flag = is_fill or is_last_in_root
             
             # 如果使用 Grid,添加 Grid.Column 属性
