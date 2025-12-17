@@ -1,0 +1,2917 @@
+{
+  "compressed_data": [
+    {
+      "id": "56:158",
+      "type": "FRAME",
+      "children": [
+        {
+          "id": "56:159",
+          "type": "FRAME",
+          "children": [
+            {
+              "id": "56:160",
+              "type": "TEXT",
+              "name": "工程向导",
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#333333"
+                }
+              ],
+              "x": 15,
+              "y": 19,
+              "width": 64,
+              "height": 19,
+              "gridRowSpan": 1,
+              "gridColumnSpan": 1,
+              "gridRowAnchorIndex": -1,
+              "gridColumnAnchorIndex": -1,
+              "gridChildHorizontalAlign": "AUTO",
+              "gridChildVerticalAlign": "AUTO",
+              "layoutSizingHorizontal": "HUG",
+              "layoutSizingVertical": "HUG",
+              "characters": "工程向导",
+              "hasMissingFont": false,
+              "fontSize": 16,
+              "hangingPunctuation": false,
+              "hangingList": false,
+              "listSpacing": 0,
+              "leadingTrim": "NONE",
+              "fontName": {
+                "family": "Inter",
+                "style": "Regular"
+              },
+              "fontWeight": 400,
+              "canUpgradeToNativeBidiSupport": false
+            },
+            {
+              "id": "56:161",
+              "type": "RECTANGLE",
+              "name": "Rectangle",
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#E0E0E0"
+                }
+              ],
+              "x": 989,
+              "y": 18.5,
+              "width": 20,
+              "height": 20,
+              "gridRowSpan": 1,
+              "gridColumnSpan": 1,
+              "gridRowAnchorIndex": -1,
+              "gridColumnAnchorIndex": -1
+            }
+          ],
+          "name": "Frame",
+          "x": 0,
+          "y": 0,
+          "width": 1024,
+          "height": 45,
+          "gridRowSpan": 1,
+          "gridColumnSpan": 1,
+          "gridRowAnchorIndex": -1,
+          "gridColumnAnchorIndex": -1,
+          "gridChildHorizontalAlign": "AUTO",
+          "gridChildVerticalAlign": "AUTO",
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": "#FFFFFF"
+            }
+          ],
+          "paddingLeft": 15,
+          "paddingRight": 15,
+          "paddingTop": 12,
+          "primaryAxisAlignItems": "SPACE_BETWEEN",
+          "counterAxisAlignItems": "CENTER",
+          "backgrounds": [
+            {
+              "type": "SOLID",
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              }
+            }
+          ],
+          "layoutMode": "HORIZONTAL",
+          "verticalPadding": 12
+        },
+        {
+          "id": "56:162",
+          "type": "FRAME",
+          "children": [
+            {
+              "id": "56:163",
+              "type": "FRAME",
+              "children": [
+                {
+                  "id": "56:164",
+                  "type": "FRAME",
+                  "children": [
+                    {
+                      "id": "56:165",
+                      "type": "TEXT",
+                      "name": "在线",
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": "#FFFFFF"
+                        }
+                      ],
+                      "x": 15,
+                      "y": 16.5,
+                      "width": 28,
+                      "height": 17,
+                      "gridRowSpan": 1,
+                      "gridColumnSpan": 1,
+                      "gridRowAnchorIndex": -1,
+                      "gridColumnAnchorIndex": -1,
+                      "gridChildHorizontalAlign": "AUTO",
+                      "gridChildVerticalAlign": "AUTO",
+                      "layoutSizingHorizontal": "HUG",
+                      "layoutSizingVertical": "HUG",
+                      "characters": "在线",
+                      "hasMissingFont": false,
+                      "fontSize": 14,
+                      "hangingPunctuation": false,
+                      "hangingList": false,
+                      "listSpacing": 0,
+                      "leadingTrim": "NONE",
+                      "fontName": {
+                        "family": "Inter",
+                        "style": "Regular"
+                      },
+                      "fontWeight": 400,
+                      "canUpgradeToNativeBidiSupport": false
+                    }
+                  ],
+                  "name": "Frame",
+                  "x": 0,
+                  "y": 0,
+                  "width": 140,
+                  "height": 40,
+                  "gridRowSpan": 1,
+                  "gridColumnSpan": 1,
+                  "gridRowAnchorIndex": -1,
+                  "gridColumnAnchorIndex": -1,
+                  "gridChildHorizontalAlign": "AUTO",
+                  "gridChildVerticalAlign": "AUTO",
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#0066FF"
+                    }
+                  ],
+                  "paddingLeft": 15,
+                  "paddingTop": 10,
+                  "counterAxisAlignItems": "CENTER",
+                  "backgrounds": [
+                    {
+                      "type": "SOLID",
+                      "blendMode": "NORMAL",
+                      "color": {
+                        "r": 0,
+                        "g": 0.4000000059604645,
+                        "b": 1
+                      }
+                    }
+                  ],
+                  "layoutMode": "HORIZONTAL",
+                  "verticalPadding": 10
+                },
+                {
+                  "id": "56:166",
+                  "type": "FRAME",
+                  "children": [
+                    {
+                      "id": "56:167",
+                      "type": "RECTANGLE",
+                      "name": "Rectangle",
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": "#E0E0E0"
+                        }
+                      ],
+                      "x": 15,
+                      "y": 15,
+                      "width": 20,
+                      "height": 20,
+                      "gridRowSpan": 1,
+                      "gridColumnSpan": 1,
+                      "gridRowAnchorIndex": -1,
+                      "gridColumnAnchorIndex": -1
+                    },
+                    {
+                      "id": "56:168",
+                      "type": "TEXT",
+                      "name": "离线",
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": "#333333"
+                        }
+                      ],
+                      "x": 45,
+                      "y": 16.5,
+                      "width": 28,
+                      "height": 17,
+                      "gridRowSpan": 1,
+                      "gridColumnSpan": 1,
+                      "gridRowAnchorIndex": -1,
+                      "gridColumnAnchorIndex": -1,
+                      "gridChildHorizontalAlign": "AUTO",
+                      "gridChildVerticalAlign": "AUTO",
+                      "layoutSizingHorizontal": "HUG",
+                      "layoutSizingVertical": "HUG",
+                      "characters": "离线",
+                      "hasMissingFont": false,
+                      "fontSize": 14,
+                      "hangingPunctuation": false,
+                      "hangingList": false,
+                      "listSpacing": 0,
+                      "leadingTrim": "NONE",
+                      "fontName": {
+                        "family": "Inter",
+                        "style": "Regular"
+                      },
+                      "fontWeight": 400,
+                      "canUpgradeToNativeBidiSupport": false
+                    }
+                  ],
+                  "name": "Frame",
+                  "x": 0,
+                  "y": 40,
+                  "width": 140,
+                  "height": 40,
+                  "gridRowSpan": 1,
+                  "gridColumnSpan": 1,
+                  "gridRowAnchorIndex": -1,
+                  "gridColumnAnchorIndex": -1,
+                  "gridChildHorizontalAlign": "AUTO",
+                  "gridChildVerticalAlign": "AUTO",
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#FFFFFF"
+                    }
+                  ],
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": "#E0E0E0"
+                    }
+                  ],
+                  "paddingLeft": 15,
+                  "paddingTop": 10,
+                  "counterAxisAlignItems": "CENTER",
+                  "backgrounds": [
+                    {
+                      "type": "SOLID",
+                      "blendMode": "NORMAL",
+                      "color": {
+                        "r": 1,
+                        "g": 1,
+                        "b": 1
+                      }
+                    }
+                  ],
+                  "layoutMode": "HORIZONTAL",
+                  "verticalPadding": 10,
+                  "itemSpacing": 10
+                }
+              ],
+              "name": "Frame",
+              "x": 0,
+              "y": 0,
+              "width": 50,
+              "height": 80,
+              "gridRowSpan": 1,
+              "gridColumnSpan": 1,
+              "gridRowAnchorIndex": -1,
+              "gridColumnAnchorIndex": -1,
+              "gridChildHorizontalAlign": "AUTO",
+              "gridChildVerticalAlign": "AUTO",
+              "layoutGrow": 1,
+              "layoutSizingHorizontal": "FILL",
+              "layoutSizingVertical": "HUG",
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#FFFFFF"
+                }
+              ],
+              "primaryAxisSizingMode": "AUTO",
+              "backgrounds": [
+                {
+                  "type": "SOLID",
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                  }
+                }
+              ],
+              "layoutMode": "VERTICAL",
+              "verticalPadding": 0
+            },
+            {
+              "id": "56:169",
+              "type": "FRAME",
+              "children": [
+                {
+                  "id": "56:170",
+                  "type": "FRAME",
+                  "children": [
+                    {
+                      "id": "56:171",
+                      "type": "FRAME",
+                      "children": [
+                        {
+                          "id": "56:172",
+                          "type": "FRAME",
+                          "children": [
+                            {
+                              "id": "56:173",
+                              "type": "FRAME",
+                              "children": [
+                                {
+                                  "id": "56:174",
+                                  "type": "RECTANGLE",
+                                  "name": "Rectangle",
+                                  "fills": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#FFFFFF"
+                                    }
+                                  ],
+                                  "strokes": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#E0E0E0"
+                                    }
+                                  ],
+                                  "x": 10,
+                                  "y": 10,
+                                  "width": 120,
+                                  "height": 130,
+                                  "gridRowSpan": 1,
+                                  "gridColumnSpan": 1,
+                                  "gridRowAnchorIndex": -1,
+                                  "gridColumnAnchorIndex": -1
+                                },
+                                {
+                                  "id": "56:175",
+                                  "type": "TEXT",
+                                  "name": "IS580",
+                                  "fills": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#333333"
+                                    }
+                                  ],
+                                  "x": 10,
+                                  "y": 150,
+                                  "width": 34,
+                                  "height": 15,
+                                  "gridRowSpan": 1,
+                                  "gridColumnSpan": 1,
+                                  "gridRowAnchorIndex": -1,
+                                  "gridColumnAnchorIndex": -1,
+                                  "gridChildHorizontalAlign": "AUTO",
+                                  "gridChildVerticalAlign": "AUTO",
+                                  "layoutSizingHorizontal": "HUG",
+                                  "layoutSizingVertical": "HUG",
+                                  "characters": "IS580",
+                                  "hasMissingFont": false,
+                                  "hangingPunctuation": false,
+                                  "hangingList": false,
+                                  "listSpacing": 0,
+                                  "leadingTrim": "NONE",
+                                  "fontName": {
+                                    "family": "Inter",
+                                    "style": "Regular"
+                                  },
+                                  "fontWeight": 400,
+                                  "canUpgradeToNativeBidiSupport": false
+                                }
+                              ],
+                              "name": "Frame",
+                              "effects": [
+                                {
+                                  "type": "DROP_SHADOW",
+                                  "radius": 6,
+                                  "color": "#000000",
+                                  "offset": {
+                                    "x": 0,
+                                    "y": 2
+                                  },
+                                  "spread": 0,
+                                  "showShadowBehindNode": true
+                                }
+                              ],
+                              "x": 0,
+                              "y": 0,
+                              "width": 140,
+                              "height": 180,
+                              "gridRowSpan": 1,
+                              "gridColumnSpan": 1,
+                              "gridRowAnchorIndex": -1,
+                              "gridColumnAnchorIndex": -1,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#FFFFFF"
+                                }
+                              ],
+                              "strokes": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#E0E0E0"
+                                }
+                              ],
+                              "cornerRadius": 4,
+                              "topLeftRadius": 4,
+                              "topRightRadius": 4,
+                              "bottomLeftRadius": 4,
+                              "bottomRightRadius": 4,
+                              "paddingLeft": 10,
+                              "paddingRight": 10,
+                              "paddingTop": 10,
+                              "paddingBottom": 10,
+                              "backgrounds": [
+                                {
+                                  "type": "SOLID",
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 1,
+                                    "g": 1,
+                                    "b": 1
+                                  }
+                                }
+                              ],
+                              "layoutMode": "VERTICAL",
+                              "verticalPadding": 10,
+                              "itemSpacing": 10
+                            },
+                            {
+                              "id": "56:176",
+                              "type": "FRAME",
+                              "children": [
+                                {
+                                  "id": "56:177",
+                                  "type": "RECTANGLE",
+                                  "name": "Rectangle",
+                                  "fills": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#FFFFFF"
+                                    }
+                                  ],
+                                  "strokes": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#E0E0E0"
+                                    }
+                                  ],
+                                  "x": 10,
+                                  "y": 10,
+                                  "width": 120,
+                                  "height": 130,
+                                  "gridRowSpan": 1,
+                                  "gridColumnSpan": 1,
+                                  "gridRowAnchorIndex": -1,
+                                  "gridColumnAnchorIndex": -1
+                                },
+                                {
+                                  "id": "56:178",
+                                  "type": "TEXT",
+                                  "name": "IS580-1M",
+                                  "fills": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#333333"
+                                    }
+                                  ],
+                                  "x": 10,
+                                  "y": 150,
+                                  "width": 55,
+                                  "height": 15,
+                                  "gridRowSpan": 1,
+                                  "gridColumnSpan": 1,
+                                  "gridRowAnchorIndex": -1,
+                                  "gridColumnAnchorIndex": -1,
+                                  "gridChildHorizontalAlign": "AUTO",
+                                  "gridChildVerticalAlign": "AUTO",
+                                  "layoutSizingHorizontal": "HUG",
+                                  "layoutSizingVertical": "HUG",
+                                  "characters": "IS580-1M",
+                                  "hasMissingFont": false,
+                                  "hangingPunctuation": false,
+                                  "hangingList": false,
+                                  "listSpacing": 0,
+                                  "leadingTrim": "NONE",
+                                  "fontName": {
+                                    "family": "Inter",
+                                    "style": "Regular"
+                                  },
+                                  "fontWeight": 400,
+                                  "canUpgradeToNativeBidiSupport": false
+                                }
+                              ],
+                              "name": "Frame",
+                              "effects": [
+                                {
+                                  "type": "DROP_SHADOW",
+                                  "radius": 6,
+                                  "color": "#000000",
+                                  "offset": {
+                                    "x": 0,
+                                    "y": 2
+                                  },
+                                  "spread": 0,
+                                  "showShadowBehindNode": true
+                                }
+                              ],
+                              "x": 160,
+                              "y": 0,
+                              "width": 140,
+                              "height": 180,
+                              "gridRowSpan": 1,
+                              "gridColumnSpan": 1,
+                              "gridRowAnchorIndex": -1,
+                              "gridColumnAnchorIndex": -1,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#FFFFFF"
+                                }
+                              ],
+                              "strokes": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#E0E0E0"
+                                }
+                              ],
+                              "cornerRadius": 4,
+                              "topLeftRadius": 4,
+                              "topRightRadius": 4,
+                              "bottomLeftRadius": 4,
+                              "bottomRightRadius": 4,
+                              "paddingLeft": 10,
+                              "paddingRight": 10,
+                              "paddingTop": 10,
+                              "paddingBottom": 10,
+                              "backgrounds": [
+                                {
+                                  "type": "SOLID",
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 1,
+                                    "g": 1,
+                                    "b": 1
+                                  }
+                                }
+                              ],
+                              "layoutMode": "VERTICAL",
+                              "verticalPadding": 10,
+                              "itemSpacing": 10
+                            },
+                            {
+                              "id": "56:179",
+                              "type": "FRAME",
+                              "children": [
+                                {
+                                  "id": "56:180",
+                                  "type": "RECTANGLE",
+                                  "name": "Rectangle",
+                                  "fills": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#FFFFFF"
+                                    }
+                                  ],
+                                  "strokes": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#E0E0E0"
+                                    }
+                                  ],
+                                  "x": 10,
+                                  "y": 10,
+                                  "width": 120,
+                                  "height": 130,
+                                  "gridRowSpan": 1,
+                                  "gridColumnSpan": 1,
+                                  "gridRowAnchorIndex": -1,
+                                  "gridColumnAnchorIndex": -1
+                                },
+                                {
+                                  "id": "56:181",
+                                  "type": "TEXT",
+                                  "name": "ES100",
+                                  "fills": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#333333"
+                                    }
+                                  ],
+                                  "x": 10,
+                                  "y": 150,
+                                  "width": 36,
+                                  "height": 15,
+                                  "gridRowSpan": 1,
+                                  "gridColumnSpan": 1,
+                                  "gridRowAnchorIndex": -1,
+                                  "gridColumnAnchorIndex": -1,
+                                  "gridChildHorizontalAlign": "AUTO",
+                                  "gridChildVerticalAlign": "AUTO",
+                                  "layoutSizingHorizontal": "HUG",
+                                  "layoutSizingVertical": "HUG",
+                                  "characters": "ES100",
+                                  "hasMissingFont": false,
+                                  "hangingPunctuation": false,
+                                  "hangingList": false,
+                                  "listSpacing": 0,
+                                  "leadingTrim": "NONE",
+                                  "fontName": {
+                                    "family": "Inter",
+                                    "style": "Regular"
+                                  },
+                                  "fontWeight": 400,
+                                  "canUpgradeToNativeBidiSupport": false
+                                }
+                              ],
+                              "name": "Frame",
+                              "effects": [
+                                {
+                                  "type": "DROP_SHADOW",
+                                  "radius": 6,
+                                  "color": "#000000",
+                                  "offset": {
+                                    "x": 0,
+                                    "y": 2
+                                  },
+                                  "spread": 0,
+                                  "showShadowBehindNode": true
+                                }
+                              ],
+                              "x": 320,
+                              "y": 0,
+                              "width": 140,
+                              "height": 180,
+                              "gridRowSpan": 1,
+                              "gridColumnSpan": 1,
+                              "gridRowAnchorIndex": -1,
+                              "gridColumnAnchorIndex": -1,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#FFFFFF"
+                                }
+                              ],
+                              "strokes": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#E0E0E0"
+                                }
+                              ],
+                              "cornerRadius": 4,
+                              "topLeftRadius": 4,
+                              "topRightRadius": 4,
+                              "bottomLeftRadius": 4,
+                              "bottomRightRadius": 4,
+                              "paddingLeft": 10,
+                              "paddingRight": 10,
+                              "paddingTop": 10,
+                              "paddingBottom": 10,
+                              "backgrounds": [
+                                {
+                                  "type": "SOLID",
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 1,
+                                    "g": 1,
+                                    "b": 1
+                                  }
+                                }
+                              ],
+                              "layoutMode": "VERTICAL",
+                              "verticalPadding": 10,
+                              "itemSpacing": 10
+                            },
+                            {
+                              "id": "56:182",
+                              "type": "FRAME",
+                              "children": [
+                                {
+                                  "id": "56:183",
+                                  "type": "RECTANGLE",
+                                  "name": "Rectangle",
+                                  "fills": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#FFFFFF"
+                                    }
+                                  ],
+                                  "strokes": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#E0E0E0"
+                                    }
+                                  ],
+                                  "x": 10,
+                                  "y": 10,
+                                  "width": 120,
+                                  "height": 130,
+                                  "gridRowSpan": 1,
+                                  "gridColumnSpan": 1,
+                                  "gridRowAnchorIndex": -1,
+                                  "gridColumnAnchorIndex": -1
+                                },
+                                {
+                                  "id": "56:184",
+                                  "type": "TEXT",
+                                  "name": "ES100-MVSY2",
+                                  "fills": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#333333"
+                                    }
+                                  ],
+                                  "x": 10,
+                                  "y": 150,
+                                  "width": 83,
+                                  "height": 15,
+                                  "gridRowSpan": 1,
+                                  "gridColumnSpan": 1,
+                                  "gridRowAnchorIndex": -1,
+                                  "gridColumnAnchorIndex": -1,
+                                  "gridChildHorizontalAlign": "AUTO",
+                                  "gridChildVerticalAlign": "AUTO",
+                                  "layoutSizingHorizontal": "HUG",
+                                  "layoutSizingVertical": "HUG",
+                                  "characters": "ES100-MVSY2",
+                                  "hasMissingFont": false,
+                                  "hangingPunctuation": false,
+                                  "hangingList": false,
+                                  "listSpacing": 0,
+                                  "leadingTrim": "NONE",
+                                  "fontName": {
+                                    "family": "Inter",
+                                    "style": "Regular"
+                                  },
+                                  "fontWeight": 400,
+                                  "canUpgradeToNativeBidiSupport": false
+                                }
+                              ],
+                              "name": "Frame",
+                              "effects": [
+                                {
+                                  "type": "DROP_SHADOW",
+                                  "radius": 6,
+                                  "color": "#000000",
+                                  "offset": {
+                                    "x": 0,
+                                    "y": 2
+                                  },
+                                  "spread": 0,
+                                  "showShadowBehindNode": true
+                                }
+                              ],
+                              "x": 480,
+                              "y": 0,
+                              "width": 140,
+                              "height": 180,
+                              "gridRowSpan": 1,
+                              "gridColumnSpan": 1,
+                              "gridRowAnchorIndex": -1,
+                              "gridColumnAnchorIndex": -1,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#FFFFFF"
+                                }
+                              ],
+                              "strokes": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#E0E0E0"
+                                }
+                              ],
+                              "cornerRadius": 4,
+                              "topLeftRadius": 4,
+                              "topRightRadius": 4,
+                              "bottomLeftRadius": 4,
+                              "bottomRightRadius": 4,
+                              "paddingLeft": 10,
+                              "paddingRight": 10,
+                              "paddingTop": 10,
+                              "paddingBottom": 10,
+                              "backgrounds": [
+                                {
+                                  "type": "SOLID",
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 1,
+                                    "g": 1,
+                                    "b": 1
+                                  }
+                                }
+                              ],
+                              "layoutMode": "VERTICAL",
+                              "verticalPadding": 10,
+                              "itemSpacing": 10
+                            }
+                          ],
+                          "name": "Frame",
+                          "x": 0,
+                          "y": 0,
+                          "width": 620,
+                          "height": 180,
+                          "gridRowSpan": 1,
+                          "gridColumnSpan": 1,
+                          "gridRowAnchorIndex": -1,
+                          "gridColumnAnchorIndex": -1,
+                          "gridChildHorizontalAlign": "AUTO",
+                          "gridChildVerticalAlign": "AUTO",
+                          "layoutSizingHorizontal": "HUG",
+                          "layoutSizingVertical": "HUG",
+                          "primaryAxisSizingMode": "AUTO",
+                          "layoutMode": "HORIZONTAL",
+                          "counterAxisSizingMode": "AUTO",
+                          "verticalPadding": 0,
+                          "itemSpacing": 20
+                        },
+                        {
+                          "id": "56:185",
+                          "type": "FRAME",
+                          "children": [
+                            {
+                              "id": "56:186",
+                              "type": "FRAME",
+                              "children": [
+                                {
+                                  "id": "56:187",
+                                  "type": "RECTANGLE",
+                                  "name": "Rectangle",
+                                  "fills": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#FFFFFF"
+                                    }
+                                  ],
+                                  "strokes": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#E0E0E0"
+                                    }
+                                  ],
+                                  "x": 10,
+                                  "y": 10,
+                                  "width": 120,
+                                  "height": 130,
+                                  "gridRowSpan": 1,
+                                  "gridColumnSpan": 1,
+                                  "gridRowAnchorIndex": -1,
+                                  "gridColumnAnchorIndex": -1
+                                },
+                                {
+                                  "id": "56:188",
+                                  "type": "TEXT",
+                                  "name": "ES510",
+                                  "fills": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#333333"
+                                    }
+                                  ],
+                                  "x": 10,
+                                  "y": 150,
+                                  "width": 36,
+                                  "height": 15,
+                                  "gridRowSpan": 1,
+                                  "gridColumnSpan": 1,
+                                  "gridRowAnchorIndex": -1,
+                                  "gridColumnAnchorIndex": -1,
+                                  "gridChildHorizontalAlign": "AUTO",
+                                  "gridChildVerticalAlign": "AUTO",
+                                  "layoutSizingHorizontal": "HUG",
+                                  "layoutSizingVertical": "HUG",
+                                  "characters": "ES510",
+                                  "hasMissingFont": false,
+                                  "hangingPunctuation": false,
+                                  "hangingList": false,
+                                  "listSpacing": 0,
+                                  "leadingTrim": "NONE",
+                                  "fontName": {
+                                    "family": "Inter",
+                                    "style": "Regular"
+                                  },
+                                  "fontWeight": 400,
+                                  "canUpgradeToNativeBidiSupport": false
+                                }
+                              ],
+                              "name": "Frame",
+                              "effects": [
+                                {
+                                  "type": "DROP_SHADOW",
+                                  "radius": 6,
+                                  "color": "#000000",
+                                  "offset": {
+                                    "x": 0,
+                                    "y": 2
+                                  },
+                                  "spread": 0,
+                                  "showShadowBehindNode": true
+                                }
+                              ],
+                              "x": 0,
+                              "y": 0,
+                              "width": 140,
+                              "height": 180,
+                              "gridRowSpan": 1,
+                              "gridColumnSpan": 1,
+                              "gridRowAnchorIndex": -1,
+                              "gridColumnAnchorIndex": -1,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#FFFFFF"
+                                }
+                              ],
+                              "strokes": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#E0E0E0"
+                                }
+                              ],
+                              "cornerRadius": 4,
+                              "topLeftRadius": 4,
+                              "topRightRadius": 4,
+                              "bottomLeftRadius": 4,
+                              "bottomRightRadius": 4,
+                              "paddingLeft": 10,
+                              "paddingRight": 10,
+                              "paddingTop": 10,
+                              "paddingBottom": 10,
+                              "backgrounds": [
+                                {
+                                  "type": "SOLID",
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 1,
+                                    "g": 1,
+                                    "b": 1
+                                  }
+                                }
+                              ],
+                              "layoutMode": "VERTICAL",
+                              "verticalPadding": 10,
+                              "itemSpacing": 10
+                            },
+                            {
+                              "id": "56:189",
+                              "type": "FRAME",
+                              "children": [
+                                {
+                                  "id": "56:190",
+                                  "type": "RECTANGLE",
+                                  "name": "Rectangle",
+                                  "fills": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#FFFFFF"
+                                    }
+                                  ],
+                                  "strokes": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#E0E0E0"
+                                    }
+                                  ],
+                                  "x": 10,
+                                  "y": 10,
+                                  "width": 120,
+                                  "height": 130,
+                                  "gridRowSpan": 1,
+                                  "gridColumnSpan": 1,
+                                  "gridRowAnchorIndex": -1,
+                                  "gridColumnAnchorIndex": -1
+                                },
+                                {
+                                  "id": "56:191",
+                                  "type": "TEXT",
+                                  "name": "ES510-1M",
+                                  "fills": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#333333"
+                                    }
+                                  ],
+                                  "x": 10,
+                                  "y": 150,
+                                  "width": 57,
+                                  "height": 15,
+                                  "gridRowSpan": 1,
+                                  "gridColumnSpan": 1,
+                                  "gridRowAnchorIndex": -1,
+                                  "gridColumnAnchorIndex": -1,
+                                  "gridChildHorizontalAlign": "AUTO",
+                                  "gridChildVerticalAlign": "AUTO",
+                                  "layoutSizingHorizontal": "HUG",
+                                  "layoutSizingVertical": "HUG",
+                                  "characters": "ES510-1M",
+                                  "hasMissingFont": false,
+                                  "hangingPunctuation": false,
+                                  "hangingList": false,
+                                  "listSpacing": 0,
+                                  "leadingTrim": "NONE",
+                                  "fontName": {
+                                    "family": "Inter",
+                                    "style": "Regular"
+                                  },
+                                  "fontWeight": 400,
+                                  "canUpgradeToNativeBidiSupport": false
+                                }
+                              ],
+                              "name": "Frame",
+                              "effects": [
+                                {
+                                  "type": "DROP_SHADOW",
+                                  "radius": 6,
+                                  "color": "#000000",
+                                  "offset": {
+                                    "x": 0,
+                                    "y": 2
+                                  },
+                                  "spread": 0,
+                                  "showShadowBehindNode": true
+                                }
+                              ],
+                              "x": 160,
+                              "y": 0,
+                              "width": 140,
+                              "height": 180,
+                              "gridRowSpan": 1,
+                              "gridColumnSpan": 1,
+                              "gridRowAnchorIndex": -1,
+                              "gridColumnAnchorIndex": -1,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#FFFFFF"
+                                }
+                              ],
+                              "strokes": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#E0E0E0"
+                                }
+                              ],
+                              "cornerRadius": 4,
+                              "topLeftRadius": 4,
+                              "topRightRadius": 4,
+                              "bottomLeftRadius": 4,
+                              "bottomRightRadius": 4,
+                              "paddingLeft": 10,
+                              "paddingRight": 10,
+                              "paddingTop": 10,
+                              "paddingBottom": 10,
+                              "backgrounds": [
+                                {
+                                  "type": "SOLID",
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 1,
+                                    "g": 1,
+                                    "b": 1
+                                  }
+                                }
+                              ],
+                              "layoutMode": "VERTICAL",
+                              "verticalPadding": 10,
+                              "itemSpacing": 10
+                            },
+                            {
+                              "id": "56:192",
+                              "type": "FRAME",
+                              "children": [
+                                {
+                                  "id": "56:193",
+                                  "type": "RECTANGLE",
+                                  "name": "Rectangle",
+                                  "fills": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#FFFFFF"
+                                    }
+                                  ],
+                                  "strokes": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#E0E0E0"
+                                    }
+                                  ],
+                                  "x": 10,
+                                  "y": 10,
+                                  "width": 120,
+                                  "height": 130,
+                                  "gridRowSpan": 1,
+                                  "gridColumnSpan": 1,
+                                  "gridRowAnchorIndex": -1,
+                                  "gridColumnAnchorIndex": -1
+                                },
+                                {
+                                  "id": "56:194",
+                                  "type": "TEXT",
+                                  "name": "ES590",
+                                  "fills": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#333333"
+                                    }
+                                  ],
+                                  "x": 10,
+                                  "y": 150,
+                                  "width": 38,
+                                  "height": 15,
+                                  "gridRowSpan": 1,
+                                  "gridColumnSpan": 1,
+                                  "gridRowAnchorIndex": -1,
+                                  "gridColumnAnchorIndex": -1,
+                                  "gridChildHorizontalAlign": "AUTO",
+                                  "gridChildVerticalAlign": "AUTO",
+                                  "layoutSizingHorizontal": "HUG",
+                                  "layoutSizingVertical": "HUG",
+                                  "characters": "ES590",
+                                  "hasMissingFont": false,
+                                  "hangingPunctuation": false,
+                                  "hangingList": false,
+                                  "listSpacing": 0,
+                                  "leadingTrim": "NONE",
+                                  "fontName": {
+                                    "family": "Inter",
+                                    "style": "Regular"
+                                  },
+                                  "fontWeight": 400,
+                                  "canUpgradeToNativeBidiSupport": false
+                                }
+                              ],
+                              "name": "Frame",
+                              "effects": [
+                                {
+                                  "type": "DROP_SHADOW",
+                                  "radius": 6,
+                                  "color": "#000000",
+                                  "offset": {
+                                    "x": 0,
+                                    "y": 2
+                                  },
+                                  "spread": 0,
+                                  "showShadowBehindNode": true
+                                }
+                              ],
+                              "x": 320,
+                              "y": 0,
+                              "width": 140,
+                              "height": 180,
+                              "gridRowSpan": 1,
+                              "gridColumnSpan": 1,
+                              "gridRowAnchorIndex": -1,
+                              "gridColumnAnchorIndex": -1,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#FFFFFF"
+                                }
+                              ],
+                              "strokes": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#E0E0E0"
+                                }
+                              ],
+                              "cornerRadius": 4,
+                              "topLeftRadius": 4,
+                              "topRightRadius": 4,
+                              "bottomLeftRadius": 4,
+                              "bottomRightRadius": 4,
+                              "paddingLeft": 10,
+                              "paddingRight": 10,
+                              "paddingTop": 10,
+                              "paddingBottom": 10,
+                              "backgrounds": [
+                                {
+                                  "type": "SOLID",
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 1,
+                                    "g": 1,
+                                    "b": 1
+                                  }
+                                }
+                              ],
+                              "layoutMode": "VERTICAL",
+                              "verticalPadding": 10,
+                              "itemSpacing": 10
+                            },
+                            {
+                              "id": "56:195",
+                              "type": "FRAME",
+                              "children": [
+                                {
+                                  "id": "56:196",
+                                  "type": "RECTANGLE",
+                                  "name": "Rectangle",
+                                  "fills": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#FFFFFF"
+                                    }
+                                  ],
+                                  "strokes": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#E0E0E0"
+                                    }
+                                  ],
+                                  "x": 10,
+                                  "y": 10,
+                                  "width": 120,
+                                  "height": 130,
+                                  "gridRowSpan": 1,
+                                  "gridColumnSpan": 1,
+                                  "gridRowAnchorIndex": -1,
+                                  "gridColumnAnchorIndex": -1
+                                },
+                                {
+                                  "id": "56:197",
+                                  "type": "TEXT",
+                                  "name": "ES590H",
+                                  "fills": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#333333"
+                                    }
+                                  ],
+                                  "x": 10,
+                                  "y": 150,
+                                  "width": 46,
+                                  "height": 15,
+                                  "gridRowSpan": 1,
+                                  "gridColumnSpan": 1,
+                                  "gridRowAnchorIndex": -1,
+                                  "gridColumnAnchorIndex": -1,
+                                  "gridChildHorizontalAlign": "AUTO",
+                                  "gridChildVerticalAlign": "AUTO",
+                                  "layoutSizingHorizontal": "HUG",
+                                  "layoutSizingVertical": "HUG",
+                                  "characters": "ES590H",
+                                  "hasMissingFont": false,
+                                  "hangingPunctuation": false,
+                                  "hangingList": false,
+                                  "listSpacing": 0,
+                                  "leadingTrim": "NONE",
+                                  "fontName": {
+                                    "family": "Inter",
+                                    "style": "Regular"
+                                  },
+                                  "fontWeight": 400,
+                                  "canUpgradeToNativeBidiSupport": false
+                                }
+                              ],
+                              "name": "Frame",
+                              "effects": [
+                                {
+                                  "type": "DROP_SHADOW",
+                                  "radius": 6,
+                                  "color": "#000000",
+                                  "offset": {
+                                    "x": 0,
+                                    "y": 2
+                                  },
+                                  "spread": 0,
+                                  "showShadowBehindNode": true
+                                }
+                              ],
+                              "x": 480,
+                              "y": 0,
+                              "width": 140,
+                              "height": 180,
+                              "gridRowSpan": 1,
+                              "gridColumnSpan": 1,
+                              "gridRowAnchorIndex": -1,
+                              "gridColumnAnchorIndex": -1,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#FFFFFF"
+                                }
+                              ],
+                              "strokes": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#E0E0E0"
+                                }
+                              ],
+                              "cornerRadius": 4,
+                              "topLeftRadius": 4,
+                              "topRightRadius": 4,
+                              "bottomLeftRadius": 4,
+                              "bottomRightRadius": 4,
+                              "paddingLeft": 10,
+                              "paddingRight": 10,
+                              "paddingTop": 10,
+                              "paddingBottom": 10,
+                              "backgrounds": [
+                                {
+                                  "type": "SOLID",
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 1,
+                                    "g": 1,
+                                    "b": 1
+                                  }
+                                }
+                              ],
+                              "layoutMode": "VERTICAL",
+                              "verticalPadding": 10,
+                              "itemSpacing": 10
+                            }
+                          ],
+                          "name": "Frame",
+                          "x": 0,
+                          "y": 200,
+                          "width": 620,
+                          "height": 180,
+                          "gridRowSpan": 1,
+                          "gridColumnSpan": 1,
+                          "gridRowAnchorIndex": -1,
+                          "gridColumnAnchorIndex": -1,
+                          "gridChildHorizontalAlign": "AUTO",
+                          "gridChildVerticalAlign": "AUTO",
+                          "layoutSizingHorizontal": "HUG",
+                          "layoutSizingVertical": "HUG",
+                          "primaryAxisSizingMode": "AUTO",
+                          "layoutMode": "HORIZONTAL",
+                          "counterAxisSizingMode": "AUTO",
+                          "verticalPadding": 0,
+                          "itemSpacing": 20
+                        }
+                      ],
+                      "name": "Frame",
+                      "x": 0,
+                      "y": 0,
+                      "width": 620,
+                      "height": 380,
+                      "gridRowSpan": 1,
+                      "gridColumnSpan": 1,
+                      "gridRowAnchorIndex": -1,
+                      "gridColumnAnchorIndex": -1,
+                      "gridChildHorizontalAlign": "AUTO",
+                      "gridChildVerticalAlign": "AUTO",
+                      "layoutSizingHorizontal": "HUG",
+                      "layoutSizingVertical": "HUG",
+                      "primaryAxisSizingMode": "AUTO",
+                      "layoutMode": "VERTICAL",
+                      "counterAxisSizingMode": "AUTO",
+                      "verticalPadding": 0,
+                      "itemSpacing": 20
+                    },
+                    {
+                      "id": "56:198",
+                      "type": "FRAME",
+                      "children": [
+                        {
+                          "id": "56:199",
+                          "type": "FRAME",
+                          "children": [
+                            {
+                              "id": "56:200",
+                              "type": "TEXT",
+                              "name": "通讯类型:",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#666666"
+                                }
+                              ],
+                              "x": 0,
+                              "y": 8,
+                              "width": 80,
+                              "height": 16,
+                              "gridRowSpan": 1,
+                              "gridColumnSpan": 1,
+                              "gridRowAnchorIndex": -1,
+                              "gridColumnAnchorIndex": -1,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "layoutSizingVertical": "HUG",
+                              "characters": "通讯类型:",
+                              "hasMissingFont": false,
+                              "fontSize": 13,
+                              "hangingPunctuation": false,
+                              "hangingList": false,
+                              "listSpacing": 0,
+                              "leadingTrim": "NONE",
+                              "fontName": {
+                                "family": "Inter",
+                                "style": "Regular"
+                              },
+                              "fontWeight": 400,
+                              "canUpgradeToNativeBidiSupport": false,
+                              "textAlignHorizontal": "RIGHT",
+                              "textAutoResize": "HEIGHT"
+                            },
+                            {
+                              "id": "56:201",
+                              "type": "FRAME",
+                              "children": [
+                                {
+                                  "id": "56:202",
+                                  "type": "TEXT",
+                                  "name": "串口",
+                                  "fills": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#333333"
+                                    }
+                                  ],
+                                  "x": 10,
+                                  "y": 8,
+                                  "width": 26,
+                                  "height": 16,
+                                  "gridRowSpan": 1,
+                                  "gridColumnSpan": 1,
+                                  "gridRowAnchorIndex": -1,
+                                  "gridColumnAnchorIndex": -1,
+                                  "gridChildHorizontalAlign": "AUTO",
+                                  "gridChildVerticalAlign": "AUTO",
+                                  "layoutSizingHorizontal": "HUG",
+                                  "layoutSizingVertical": "HUG",
+                                  "characters": "串口",
+                                  "hasMissingFont": false,
+                                  "fontSize": 13,
+                                  "hangingPunctuation": false,
+                                  "hangingList": false,
+                                  "listSpacing": 0,
+                                  "leadingTrim": "NONE",
+                                  "fontName": {
+                                    "family": "Inter",
+                                    "style": "Regular"
+                                  },
+                                  "fontWeight": 400,
+                                  "canUpgradeToNativeBidiSupport": false
+                                },
+                                {
+                                  "id": "56:203",
+                                  "type": "RECTANGLE",
+                                  "name": "Rectangle",
+                                  "fills": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#E0E0E0"
+                                    }
+                                  ],
+                                  "x": 132,
+                                  "y": 12,
+                                  "width": 8,
+                                  "height": 8,
+                                  "gridRowSpan": 1,
+                                  "gridColumnSpan": 1,
+                                  "gridRowAnchorIndex": -1,
+                                  "gridColumnAnchorIndex": -1
+                                }
+                              ],
+                              "name": "Frame",
+                              "x": 90,
+                              "y": 0,
+                              "width": 150,
+                              "height": 32,
+                              "gridRowSpan": 1,
+                              "gridColumnSpan": 1,
+                              "gridRowAnchorIndex": -1,
+                              "gridColumnAnchorIndex": -1,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#FFFFFF"
+                                }
+                              ],
+                              "strokes": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#E0E0E0"
+                                }
+                              ],
+                              "cornerRadius": 4,
+                              "topLeftRadius": 4,
+                              "topRightRadius": 4,
+                              "bottomLeftRadius": 4,
+                              "bottomRightRadius": 4,
+                              "paddingLeft": 10,
+                              "paddingRight": 10,
+                              "primaryAxisAlignItems": "SPACE_BETWEEN",
+                              "counterAxisAlignItems": "CENTER",
+                              "backgrounds": [
+                                {
+                                  "type": "SOLID",
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 1,
+                                    "g": 1,
+                                    "b": 1
+                                  }
+                                }
+                              ],
+                              "layoutMode": "HORIZONTAL",
+                              "verticalPadding": 0,
+                              "itemSpacing": 10
+                            }
+                          ],
+                          "name": "Frame",
+                          "x": 0,
+                          "y": 0,
+                          "width": 240,
+                          "height": 32,
+                          "gridRowSpan": 1,
+                          "gridColumnSpan": 1,
+                          "gridRowAnchorIndex": -1,
+                          "gridColumnAnchorIndex": -1,
+                          "gridChildHorizontalAlign": "AUTO",
+                          "gridChildVerticalAlign": "AUTO",
+                          "layoutSizingHorizontal": "HUG",
+                          "layoutSizingVertical": "HUG",
+                          "counterAxisAlignItems": "CENTER",
+                          "primaryAxisSizingMode": "AUTO",
+                          "layoutMode": "HORIZONTAL",
+                          "counterAxisSizingMode": "AUTO",
+                          "verticalPadding": 0,
+                          "itemSpacing": 10
+                        },
+                        {
+                          "id": "56:204",
+                          "type": "FRAME",
+                          "children": [
+                            {
+                              "id": "56:205",
+                              "type": "TEXT",
+                              "name": "串口号:",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#666666"
+                                }
+                              ],
+                              "x": 0,
+                              "y": 8,
+                              "width": 80,
+                              "height": 16,
+                              "gridRowSpan": 1,
+                              "gridColumnSpan": 1,
+                              "gridRowAnchorIndex": -1,
+                              "gridColumnAnchorIndex": -1,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "layoutSizingVertical": "HUG",
+                              "characters": "串口号:",
+                              "hasMissingFont": false,
+                              "fontSize": 13,
+                              "hangingPunctuation": false,
+                              "hangingList": false,
+                              "listSpacing": 0,
+                              "leadingTrim": "NONE",
+                              "fontName": {
+                                "family": "Inter",
+                                "style": "Regular"
+                              },
+                              "fontWeight": 400,
+                              "canUpgradeToNativeBidiSupport": false,
+                              "textAlignHorizontal": "RIGHT",
+                              "textAutoResize": "HEIGHT"
+                            },
+                            {
+                              "id": "56:206",
+                              "type": "FRAME",
+                              "children": [
+                                {
+                                  "id": "56:207",
+                                  "type": "TEXT",
+                                  "name": "COM3",
+                                  "fills": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#333333"
+                                    }
+                                  ],
+                                  "x": 10,
+                                  "y": 8,
+                                  "width": 40,
+                                  "height": 16,
+                                  "gridRowSpan": 1,
+                                  "gridColumnSpan": 1,
+                                  "gridRowAnchorIndex": -1,
+                                  "gridColumnAnchorIndex": -1,
+                                  "gridChildHorizontalAlign": "AUTO",
+                                  "gridChildVerticalAlign": "AUTO",
+                                  "layoutSizingHorizontal": "HUG",
+                                  "layoutSizingVertical": "HUG",
+                                  "characters": "COM3",
+                                  "hasMissingFont": false,
+                                  "fontSize": 13,
+                                  "hangingPunctuation": false,
+                                  "hangingList": false,
+                                  "listSpacing": 0,
+                                  "leadingTrim": "NONE",
+                                  "fontName": {
+                                    "family": "Inter",
+                                    "style": "Regular"
+                                  },
+                                  "fontWeight": 400,
+                                  "canUpgradeToNativeBidiSupport": false
+                                },
+                                {
+                                  "id": "56:208",
+                                  "type": "RECTANGLE",
+                                  "name": "Rectangle",
+                                  "fills": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#E0E0E0"
+                                    }
+                                  ],
+                                  "x": 132,
+                                  "y": 12,
+                                  "width": 8,
+                                  "height": 8,
+                                  "gridRowSpan": 1,
+                                  "gridColumnSpan": 1,
+                                  "gridRowAnchorIndex": -1,
+                                  "gridColumnAnchorIndex": -1
+                                }
+                              ],
+                              "name": "Frame",
+                              "x": 90,
+                              "y": 0,
+                              "width": 150,
+                              "height": 32,
+                              "gridRowSpan": 1,
+                              "gridColumnSpan": 1,
+                              "gridRowAnchorIndex": -1,
+                              "gridColumnAnchorIndex": -1,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#FFFFFF"
+                                }
+                              ],
+                              "strokes": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#E0E0E0"
+                                }
+                              ],
+                              "cornerRadius": 4,
+                              "topLeftRadius": 4,
+                              "topRightRadius": 4,
+                              "bottomLeftRadius": 4,
+                              "bottomRightRadius": 4,
+                              "paddingLeft": 10,
+                              "paddingRight": 10,
+                              "primaryAxisAlignItems": "SPACE_BETWEEN",
+                              "counterAxisAlignItems": "CENTER",
+                              "backgrounds": [
+                                {
+                                  "type": "SOLID",
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 1,
+                                    "g": 1,
+                                    "b": 1
+                                  }
+                                }
+                              ],
+                              "layoutMode": "HORIZONTAL",
+                              "verticalPadding": 0,
+                              "itemSpacing": 10
+                            }
+                          ],
+                          "name": "Frame",
+                          "x": 0,
+                          "y": 47,
+                          "width": 240,
+                          "height": 32,
+                          "gridRowSpan": 1,
+                          "gridColumnSpan": 1,
+                          "gridRowAnchorIndex": -1,
+                          "gridColumnAnchorIndex": -1,
+                          "gridChildHorizontalAlign": "AUTO",
+                          "gridChildVerticalAlign": "AUTO",
+                          "layoutSizingHorizontal": "HUG",
+                          "layoutSizingVertical": "HUG",
+                          "counterAxisAlignItems": "CENTER",
+                          "primaryAxisSizingMode": "AUTO",
+                          "layoutMode": "HORIZONTAL",
+                          "counterAxisSizingMode": "AUTO",
+                          "verticalPadding": 0,
+                          "itemSpacing": 10
+                        },
+                        {
+                          "id": "56:209",
+                          "type": "FRAME",
+                          "children": [
+                            {
+                              "id": "56:210",
+                              "type": "TEXT",
+                              "name": "波特率:",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#666666"
+                                }
+                              ],
+                              "x": 0,
+                              "y": 8,
+                              "width": 80,
+                              "height": 16,
+                              "gridRowSpan": 1,
+                              "gridColumnSpan": 1,
+                              "gridRowAnchorIndex": -1,
+                              "gridColumnAnchorIndex": -1,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "layoutSizingVertical": "HUG",
+                              "characters": "波特率:",
+                              "hasMissingFont": false,
+                              "fontSize": 13,
+                              "hangingPunctuation": false,
+                              "hangingList": false,
+                              "listSpacing": 0,
+                              "leadingTrim": "NONE",
+                              "fontName": {
+                                "family": "Inter",
+                                "style": "Regular"
+                              },
+                              "fontWeight": 400,
+                              "canUpgradeToNativeBidiSupport": false,
+                              "textAlignHorizontal": "RIGHT",
+                              "textAutoResize": "HEIGHT"
+                            },
+                            {
+                              "id": "56:211",
+                              "type": "FRAME",
+                              "children": [
+                                {
+                                  "id": "56:212",
+                                  "type": "TEXT",
+                                  "name": "115200",
+                                  "fills": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#333333"
+                                    }
+                                  ],
+                                  "x": 10,
+                                  "y": 8,
+                                  "width": 45,
+                                  "height": 16,
+                                  "gridRowSpan": 1,
+                                  "gridColumnSpan": 1,
+                                  "gridRowAnchorIndex": -1,
+                                  "gridColumnAnchorIndex": -1,
+                                  "gridChildHorizontalAlign": "AUTO",
+                                  "gridChildVerticalAlign": "AUTO",
+                                  "layoutSizingHorizontal": "HUG",
+                                  "layoutSizingVertical": "HUG",
+                                  "characters": "115200",
+                                  "hasMissingFont": false,
+                                  "fontSize": 13,
+                                  "hangingPunctuation": false,
+                                  "hangingList": false,
+                                  "listSpacing": 0,
+                                  "leadingTrim": "NONE",
+                                  "fontName": {
+                                    "family": "Inter",
+                                    "style": "Regular"
+                                  },
+                                  "fontWeight": 400,
+                                  "canUpgradeToNativeBidiSupport": false
+                                },
+                                {
+                                  "id": "56:213",
+                                  "type": "RECTANGLE",
+                                  "name": "Rectangle",
+                                  "fills": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#E0E0E0"
+                                    }
+                                  ],
+                                  "x": 132,
+                                  "y": 12,
+                                  "width": 8,
+                                  "height": 8,
+                                  "gridRowSpan": 1,
+                                  "gridColumnSpan": 1,
+                                  "gridRowAnchorIndex": -1,
+                                  "gridColumnAnchorIndex": -1
+                                }
+                              ],
+                              "name": "Frame",
+                              "x": 90,
+                              "y": 0,
+                              "width": 150,
+                              "height": 32,
+                              "gridRowSpan": 1,
+                              "gridColumnSpan": 1,
+                              "gridRowAnchorIndex": -1,
+                              "gridColumnAnchorIndex": -1,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#FFFFFF"
+                                }
+                              ],
+                              "strokes": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#E0E0E0"
+                                }
+                              ],
+                              "cornerRadius": 4,
+                              "topLeftRadius": 4,
+                              "topRightRadius": 4,
+                              "bottomLeftRadius": 4,
+                              "bottomRightRadius": 4,
+                              "paddingLeft": 10,
+                              "paddingRight": 10,
+                              "primaryAxisAlignItems": "SPACE_BETWEEN",
+                              "counterAxisAlignItems": "CENTER",
+                              "backgrounds": [
+                                {
+                                  "type": "SOLID",
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 1,
+                                    "g": 1,
+                                    "b": 1
+                                  }
+                                }
+                              ],
+                              "layoutMode": "HORIZONTAL",
+                              "verticalPadding": 0,
+                              "itemSpacing": 10
+                            }
+                          ],
+                          "name": "Frame",
+                          "x": 0,
+                          "y": 94,
+                          "width": 240,
+                          "height": 32,
+                          "gridRowSpan": 1,
+                          "gridColumnSpan": 1,
+                          "gridRowAnchorIndex": -1,
+                          "gridColumnAnchorIndex": -1,
+                          "gridChildHorizontalAlign": "AUTO",
+                          "gridChildVerticalAlign": "AUTO",
+                          "layoutSizingHorizontal": "HUG",
+                          "layoutSizingVertical": "HUG",
+                          "counterAxisAlignItems": "CENTER",
+                          "primaryAxisSizingMode": "AUTO",
+                          "layoutMode": "HORIZONTAL",
+                          "counterAxisSizingMode": "AUTO",
+                          "verticalPadding": 0,
+                          "itemSpacing": 10
+                        },
+                        {
+                          "id": "56:214",
+                          "type": "FRAME",
+                          "children": [
+                            {
+                              "id": "56:215",
+                              "type": "TEXT",
+                              "name": "数据位:",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#666666"
+                                }
+                              ],
+                              "x": 0,
+                              "y": 8,
+                              "width": 80,
+                              "height": 16,
+                              "gridRowSpan": 1,
+                              "gridColumnSpan": 1,
+                              "gridRowAnchorIndex": -1,
+                              "gridColumnAnchorIndex": -1,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "layoutSizingVertical": "HUG",
+                              "characters": "数据位:",
+                              "hasMissingFont": false,
+                              "fontSize": 13,
+                              "hangingPunctuation": false,
+                              "hangingList": false,
+                              "listSpacing": 0,
+                              "leadingTrim": "NONE",
+                              "fontName": {
+                                "family": "Inter",
+                                "style": "Regular"
+                              },
+                              "fontWeight": 400,
+                              "canUpgradeToNativeBidiSupport": false,
+                              "textAlignHorizontal": "RIGHT",
+                              "textAutoResize": "HEIGHT"
+                            },
+                            {
+                              "id": "56:216",
+                              "type": "FRAME",
+                              "children": [
+                                {
+                                  "id": "56:217",
+                                  "type": "TEXT",
+                                  "name": "8",
+                                  "fills": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#333333"
+                                    }
+                                  ],
+                                  "x": 10,
+                                  "y": 8,
+                                  "width": 9,
+                                  "height": 16,
+                                  "gridRowSpan": 1,
+                                  "gridColumnSpan": 1,
+                                  "gridRowAnchorIndex": -1,
+                                  "gridColumnAnchorIndex": -1,
+                                  "gridChildHorizontalAlign": "AUTO",
+                                  "gridChildVerticalAlign": "AUTO",
+                                  "layoutSizingHorizontal": "HUG",
+                                  "layoutSizingVertical": "HUG",
+                                  "characters": "8",
+                                  "hasMissingFont": false,
+                                  "fontSize": 13,
+                                  "hangingPunctuation": false,
+                                  "hangingList": false,
+                                  "listSpacing": 0,
+                                  "leadingTrim": "NONE",
+                                  "fontName": {
+                                    "family": "Inter",
+                                    "style": "Regular"
+                                  },
+                                  "fontWeight": 400,
+                                  "canUpgradeToNativeBidiSupport": false
+                                },
+                                {
+                                  "id": "56:218",
+                                  "type": "RECTANGLE",
+                                  "name": "Rectangle",
+                                  "fills": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#E0E0E0"
+                                    }
+                                  ],
+                                  "x": 132,
+                                  "y": 12,
+                                  "width": 8,
+                                  "height": 8,
+                                  "gridRowSpan": 1,
+                                  "gridColumnSpan": 1,
+                                  "gridRowAnchorIndex": -1,
+                                  "gridColumnAnchorIndex": -1
+                                }
+                              ],
+                              "name": "Frame",
+                              "x": 90,
+                              "y": 0,
+                              "width": 150,
+                              "height": 32,
+                              "gridRowSpan": 1,
+                              "gridColumnSpan": 1,
+                              "gridRowAnchorIndex": -1,
+                              "gridColumnAnchorIndex": -1,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#FFFFFF"
+                                }
+                              ],
+                              "strokes": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#E0E0E0"
+                                }
+                              ],
+                              "cornerRadius": 4,
+                              "topLeftRadius": 4,
+                              "topRightRadius": 4,
+                              "bottomLeftRadius": 4,
+                              "bottomRightRadius": 4,
+                              "paddingLeft": 10,
+                              "paddingRight": 10,
+                              "primaryAxisAlignItems": "SPACE_BETWEEN",
+                              "counterAxisAlignItems": "CENTER",
+                              "backgrounds": [
+                                {
+                                  "type": "SOLID",
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 1,
+                                    "g": 1,
+                                    "b": 1
+                                  }
+                                }
+                              ],
+                              "layoutMode": "HORIZONTAL",
+                              "verticalPadding": 0,
+                              "itemSpacing": 10
+                            }
+                          ],
+                          "name": "Frame",
+                          "x": 0,
+                          "y": 141,
+                          "width": 240,
+                          "height": 32,
+                          "gridRowSpan": 1,
+                          "gridColumnSpan": 1,
+                          "gridRowAnchorIndex": -1,
+                          "gridColumnAnchorIndex": -1,
+                          "gridChildHorizontalAlign": "AUTO",
+                          "gridChildVerticalAlign": "AUTO",
+                          "layoutSizingHorizontal": "HUG",
+                          "layoutSizingVertical": "HUG",
+                          "counterAxisAlignItems": "CENTER",
+                          "primaryAxisSizingMode": "AUTO",
+                          "layoutMode": "HORIZONTAL",
+                          "counterAxisSizingMode": "AUTO",
+                          "verticalPadding": 0,
+                          "itemSpacing": 10
+                        },
+                        {
+                          "id": "56:219",
+                          "type": "FRAME",
+                          "children": [
+                            {
+                              "id": "56:220",
+                              "type": "TEXT",
+                              "name": "校验位:",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#666666"
+                                }
+                              ],
+                              "x": 0,
+                              "y": 8,
+                              "width": 80,
+                              "height": 16,
+                              "gridRowSpan": 1,
+                              "gridColumnSpan": 1,
+                              "gridRowAnchorIndex": -1,
+                              "gridColumnAnchorIndex": -1,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "layoutSizingVertical": "HUG",
+                              "characters": "校验位:",
+                              "hasMissingFont": false,
+                              "fontSize": 13,
+                              "hangingPunctuation": false,
+                              "hangingList": false,
+                              "listSpacing": 0,
+                              "leadingTrim": "NONE",
+                              "fontName": {
+                                "family": "Inter",
+                                "style": "Regular"
+                              },
+                              "fontWeight": 400,
+                              "canUpgradeToNativeBidiSupport": false,
+                              "textAlignHorizontal": "RIGHT",
+                              "textAutoResize": "HEIGHT"
+                            },
+                            {
+                              "id": "56:221",
+                              "type": "FRAME",
+                              "children": [
+                                {
+                                  "id": "56:222",
+                                  "type": "TEXT",
+                                  "name": "None",
+                                  "fills": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#333333"
+                                    }
+                                  ],
+                                  "x": 10,
+                                  "y": 8,
+                                  "width": 33,
+                                  "height": 16,
+                                  "gridRowSpan": 1,
+                                  "gridColumnSpan": 1,
+                                  "gridRowAnchorIndex": -1,
+                                  "gridColumnAnchorIndex": -1,
+                                  "gridChildHorizontalAlign": "AUTO",
+                                  "gridChildVerticalAlign": "AUTO",
+                                  "layoutSizingHorizontal": "HUG",
+                                  "layoutSizingVertical": "HUG",
+                                  "characters": "None",
+                                  "hasMissingFont": false,
+                                  "fontSize": 13,
+                                  "hangingPunctuation": false,
+                                  "hangingList": false,
+                                  "listSpacing": 0,
+                                  "leadingTrim": "NONE",
+                                  "fontName": {
+                                    "family": "Inter",
+                                    "style": "Regular"
+                                  },
+                                  "fontWeight": 400,
+                                  "canUpgradeToNativeBidiSupport": false
+                                },
+                                {
+                                  "id": "56:223",
+                                  "type": "RECTANGLE",
+                                  "name": "Rectangle",
+                                  "fills": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#E0E0E0"
+                                    }
+                                  ],
+                                  "x": 132,
+                                  "y": 12,
+                                  "width": 8,
+                                  "height": 8,
+                                  "gridRowSpan": 1,
+                                  "gridColumnSpan": 1,
+                                  "gridRowAnchorIndex": -1,
+                                  "gridColumnAnchorIndex": -1
+                                }
+                              ],
+                              "name": "Frame",
+                              "x": 90,
+                              "y": 0,
+                              "width": 150,
+                              "height": 32,
+                              "gridRowSpan": 1,
+                              "gridColumnSpan": 1,
+                              "gridRowAnchorIndex": -1,
+                              "gridColumnAnchorIndex": -1,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#FFFFFF"
+                                }
+                              ],
+                              "strokes": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#E0E0E0"
+                                }
+                              ],
+                              "cornerRadius": 4,
+                              "topLeftRadius": 4,
+                              "topRightRadius": 4,
+                              "bottomLeftRadius": 4,
+                              "bottomRightRadius": 4,
+                              "paddingLeft": 10,
+                              "paddingRight": 10,
+                              "primaryAxisAlignItems": "SPACE_BETWEEN",
+                              "counterAxisAlignItems": "CENTER",
+                              "backgrounds": [
+                                {
+                                  "type": "SOLID",
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 1,
+                                    "g": 1,
+                                    "b": 1
+                                  }
+                                }
+                              ],
+                              "layoutMode": "HORIZONTAL",
+                              "verticalPadding": 0,
+                              "itemSpacing": 10
+                            }
+                          ],
+                          "name": "Frame",
+                          "x": 0,
+                          "y": 188,
+                          "width": 240,
+                          "height": 32,
+                          "gridRowSpan": 1,
+                          "gridColumnSpan": 1,
+                          "gridRowAnchorIndex": -1,
+                          "gridColumnAnchorIndex": -1,
+                          "gridChildHorizontalAlign": "AUTO",
+                          "gridChildVerticalAlign": "AUTO",
+                          "layoutSizingHorizontal": "HUG",
+                          "layoutSizingVertical": "HUG",
+                          "counterAxisAlignItems": "CENTER",
+                          "primaryAxisSizingMode": "AUTO",
+                          "layoutMode": "HORIZONTAL",
+                          "counterAxisSizingMode": "AUTO",
+                          "verticalPadding": 0,
+                          "itemSpacing": 10
+                        },
+                        {
+                          "id": "56:224",
+                          "type": "FRAME",
+                          "children": [
+                            {
+                              "id": "56:225",
+                              "type": "TEXT",
+                              "name": "停止位:",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#666666"
+                                }
+                              ],
+                              "x": 0,
+                              "y": 8,
+                              "width": 80,
+                              "height": 16,
+                              "gridRowSpan": 1,
+                              "gridColumnSpan": 1,
+                              "gridRowAnchorIndex": -1,
+                              "gridColumnAnchorIndex": -1,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "layoutSizingVertical": "HUG",
+                              "characters": "停止位:",
+                              "hasMissingFont": false,
+                              "fontSize": 13,
+                              "hangingPunctuation": false,
+                              "hangingList": false,
+                              "listSpacing": 0,
+                              "leadingTrim": "NONE",
+                              "fontName": {
+                                "family": "Inter",
+                                "style": "Regular"
+                              },
+                              "fontWeight": 400,
+                              "canUpgradeToNativeBidiSupport": false,
+                              "textAlignHorizontal": "RIGHT",
+                              "textAutoResize": "HEIGHT"
+                            },
+                            {
+                              "id": "56:226",
+                              "type": "FRAME",
+                              "children": [
+                                {
+                                  "id": "56:227",
+                                  "type": "TEXT",
+                                  "name": "1",
+                                  "fills": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#333333"
+                                    }
+                                  ],
+                                  "x": 10,
+                                  "y": 8,
+                                  "width": 7,
+                                  "height": 16,
+                                  "gridRowSpan": 1,
+                                  "gridColumnSpan": 1,
+                                  "gridRowAnchorIndex": -1,
+                                  "gridColumnAnchorIndex": -1,
+                                  "gridChildHorizontalAlign": "AUTO",
+                                  "gridChildVerticalAlign": "AUTO",
+                                  "layoutSizingHorizontal": "HUG",
+                                  "layoutSizingVertical": "HUG",
+                                  "characters": "1",
+                                  "hasMissingFont": false,
+                                  "fontSize": 13,
+                                  "hangingPunctuation": false,
+                                  "hangingList": false,
+                                  "listSpacing": 0,
+                                  "leadingTrim": "NONE",
+                                  "fontName": {
+                                    "family": "Inter",
+                                    "style": "Regular"
+                                  },
+                                  "fontWeight": 400,
+                                  "canUpgradeToNativeBidiSupport": false
+                                },
+                                {
+                                  "id": "56:228",
+                                  "type": "RECTANGLE",
+                                  "name": "Rectangle",
+                                  "fills": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": "#E0E0E0"
+                                    }
+                                  ],
+                                  "x": 132,
+                                  "y": 12,
+                                  "width": 8,
+                                  "height": 8,
+                                  "gridRowSpan": 1,
+                                  "gridColumnSpan": 1,
+                                  "gridRowAnchorIndex": -1,
+                                  "gridColumnAnchorIndex": -1
+                                }
+                              ],
+                              "name": "Frame",
+                              "x": 90,
+                              "y": 0,
+                              "width": 150,
+                              "height": 32,
+                              "gridRowSpan": 1,
+                              "gridColumnSpan": 1,
+                              "gridRowAnchorIndex": -1,
+                              "gridColumnAnchorIndex": -1,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#FFFFFF"
+                                }
+                              ],
+                              "strokes": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#E0E0E0"
+                                }
+                              ],
+                              "cornerRadius": 4,
+                              "topLeftRadius": 4,
+                              "topRightRadius": 4,
+                              "bottomLeftRadius": 4,
+                              "bottomRightRadius": 4,
+                              "paddingLeft": 10,
+                              "paddingRight": 10,
+                              "primaryAxisAlignItems": "SPACE_BETWEEN",
+                              "counterAxisAlignItems": "CENTER",
+                              "backgrounds": [
+                                {
+                                  "type": "SOLID",
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 1,
+                                    "g": 1,
+                                    "b": 1
+                                  }
+                                }
+                              ],
+                              "layoutMode": "HORIZONTAL",
+                              "verticalPadding": 0,
+                              "itemSpacing": 10
+                            }
+                          ],
+                          "name": "Frame",
+                          "x": 0,
+                          "y": 235,
+                          "width": 240,
+                          "height": 32,
+                          "gridRowSpan": 1,
+                          "gridColumnSpan": 1,
+                          "gridRowAnchorIndex": -1,
+                          "gridColumnAnchorIndex": -1,
+                          "gridChildHorizontalAlign": "AUTO",
+                          "gridChildVerticalAlign": "AUTO",
+                          "layoutSizingHorizontal": "HUG",
+                          "layoutSizingVertical": "HUG",
+                          "counterAxisAlignItems": "CENTER",
+                          "primaryAxisSizingMode": "AUTO",
+                          "layoutMode": "HORIZONTAL",
+                          "counterAxisSizingMode": "AUTO",
+                          "verticalPadding": 0,
+                          "itemSpacing": 10
+                        },
+                        {
+                          "id": "56:229",
+                          "type": "FRAME",
+                          "children": [
+                            {
+                              "id": "56:230",
+                              "type": "FRAME",
+                              "children": [],
+                              "name": "Frame",
+                              "x": 80,
+                              "y": 0,
+                              "width": 16,
+                              "height": 16,
+                              "gridRowSpan": 1,
+                              "gridColumnSpan": 1,
+                              "gridRowAnchorIndex": -1,
+                              "gridColumnAnchorIndex": -1,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#FFFFFF"
+                                }
+                              ],
+                              "strokes": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#E0E0E0"
+                                }
+                              ],
+                              "backgrounds": [
+                                {
+                                  "type": "SOLID",
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 1,
+                                    "g": 1,
+                                    "b": 1
+                                  }
+                                }
+                              ],
+                              "verticalPadding": 0
+                            },
+                            {
+                              "id": "56:231",
+                              "type": "TEXT",
+                              "name": "自速应漏特率",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": "#333333"
+                                }
+                              ],
+                              "x": 104,
+                              "y": 0.5,
+                              "width": 72,
+                              "height": 15,
+                              "gridRowSpan": 1,
+                              "gridColumnSpan": 1,
+                              "gridRowAnchorIndex": -1,
+                              "gridColumnAnchorIndex": -1,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "layoutSizingHorizontal": "HUG",
+                              "layoutSizingVertical": "HUG",
+                              "characters": "自速应漏特率",
+                              "hasMissingFont": false,
+                              "hangingPunctuation": false,
+                              "hangingList": false,
+                              "listSpacing": 0,
+                              "leadingTrim": "NONE",
+                              "fontName": {
+                                "family": "Inter",
+                                "style": "Regular"
+                              },
+                              "fontWeight": 400,
+                              "canUpgradeToNativeBidiSupport": false
+                            }
+                          ],
+                          "name": "Frame",
+                          "x": 0,
+                          "y": 282,
+                          "width": 176,
+                          "height": 16,
+                          "gridRowSpan": 1,
+                          "gridColumnSpan": 1,
+                          "gridRowAnchorIndex": -1,
+                          "gridColumnAnchorIndex": -1,
+                          "gridChildHorizontalAlign": "AUTO",
+                          "gridChildVerticalAlign": "AUTO",
+                          "layoutSizingHorizontal": "HUG",
+                          "layoutSizingVertical": "HUG",
+                          "paddingLeft": 80,
+                          "counterAxisAlignItems": "CENTER",
+                          "primaryAxisSizingMode": "AUTO",
+                          "layoutMode": "HORIZONTAL",
+                          "counterAxisSizingMode": "AUTO",
+                          "verticalPadding": 0,
+                          "itemSpacing": 8
+                        }
+                      ],
+                      "name": "Frame",
+                      "x": 650,
+                      "y": 0,
+                      "width": 240,
+                      "height": 298,
+                      "gridRowSpan": 1,
+                      "gridColumnSpan": 1,
+                      "gridRowAnchorIndex": -1,
+                      "gridColumnAnchorIndex": -1,
+                      "gridChildHorizontalAlign": "AUTO",
+                      "gridChildVerticalAlign": "AUTO",
+                      "layoutSizingHorizontal": "HUG",
+                      "layoutSizingVertical": "HUG",
+                      "primaryAxisSizingMode": "AUTO",
+                      "layoutMode": "VERTICAL",
+                      "counterAxisSizingMode": "AUTO",
+                      "verticalPadding": 0,
+                      "itemSpacing": 15
+                    }
+                  ],
+                  "name": "Frame",
+                  "x": 20,
+                  "y": 20,
+                  "width": 890,
+                  "height": 380,
+                  "gridRowSpan": 1,
+                  "gridColumnSpan": 1,
+                  "gridRowAnchorIndex": -1,
+                  "gridColumnAnchorIndex": -1,
+                  "gridChildHorizontalAlign": "AUTO",
+                  "gridChildVerticalAlign": "AUTO",
+                  "layoutSizingHorizontal": "HUG",
+                  "layoutSizingVertical": "HUG",
+                  "primaryAxisSizingMode": "AUTO",
+                  "layoutMode": "HORIZONTAL",
+                  "counterAxisSizingMode": "AUTO",
+                  "verticalPadding": 0,
+                  "itemSpacing": 30
+                },
+                {
+                  "id": "56:232",
+                  "type": "FRAME",
+                  "children": [
+                    {
+                      "id": "56:233",
+                      "type": "FRAME",
+                      "children": [
+                        {
+                          "id": "56:234",
+                          "type": "TEXT",
+                          "name": "下一页",
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": "#333333"
+                            }
+                          ],
+                          "x": 29,
+                          "y": 9.5,
+                          "width": 42,
+                          "height": 17,
+                          "gridRowSpan": 1,
+                          "gridColumnSpan": 1,
+                          "gridRowAnchorIndex": -1,
+                          "gridColumnAnchorIndex": -1,
+                          "gridChildHorizontalAlign": "AUTO",
+                          "gridChildVerticalAlign": "AUTO",
+                          "layoutSizingHorizontal": "HUG",
+                          "layoutSizingVertical": "HUG",
+                          "characters": "下一页",
+                          "hasMissingFont": false,
+                          "fontSize": 14,
+                          "hangingPunctuation": false,
+                          "hangingList": false,
+                          "listSpacing": 0,
+                          "leadingTrim": "NONE",
+                          "fontName": {
+                            "family": "Inter",
+                            "style": "Regular"
+                          },
+                          "fontWeight": 400,
+                          "canUpgradeToNativeBidiSupport": false
+                        }
+                      ],
+                      "name": "Frame",
+                      "x": 0,
+                      "y": 20,
+                      "width": 100,
+                      "height": 36,
+                      "gridRowSpan": 1,
+                      "gridColumnSpan": 1,
+                      "gridRowAnchorIndex": -1,
+                      "gridColumnAnchorIndex": -1,
+                      "gridChildHorizontalAlign": "AUTO",
+                      "gridChildVerticalAlign": "AUTO",
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": "#FFFFFF"
+                        }
+                      ],
+                      "strokes": [
+                        {
+                          "type": "SOLID",
+                          "color": "#E0E0E0"
+                        }
+                      ],
+                      "cornerRadius": 4,
+                      "topLeftRadius": 4,
+                      "topRightRadius": 4,
+                      "bottomLeftRadius": 4,
+                      "bottomRightRadius": 4,
+                      "primaryAxisAlignItems": "CENTER",
+                      "counterAxisAlignItems": "CENTER",
+                      "backgrounds": [
+                        {
+                          "type": "SOLID",
+                          "blendMode": "NORMAL",
+                          "color": {
+                            "r": 1,
+                            "g": 1,
+                            "b": 1
+                          }
+                        }
+                      ],
+                      "layoutMode": "HORIZONTAL",
+                      "verticalPadding": 0
+                    }
+                  ],
+                  "name": "Frame",
+                  "x": 20,
+                  "y": 420,
+                  "width": 100,
+                  "height": 1,
+                  "gridRowSpan": 1,
+                  "gridColumnSpan": 1,
+                  "gridRowAnchorIndex": -1,
+                  "gridColumnAnchorIndex": -1,
+                  "gridChildHorizontalAlign": "AUTO",
+                  "gridChildVerticalAlign": "AUTO",
+                  "layoutGrow": 1,
+                  "layoutSizingHorizontal": "HUG",
+                  "layoutSizingVertical": "FILL",
+                  "paddingTop": 20,
+                  "primaryAxisAlignItems": "CENTER",
+                  "primaryAxisSizingMode": "AUTO",
+                  "layoutMode": "HORIZONTAL",
+                  "verticalPadding": 20
+                }
+              ],
+              "name": "Frame",
+              "x": 50,
+              "y": 0,
+              "width": 50,
+              "height": 420,
+              "gridRowSpan": 1,
+              "gridColumnSpan": 1,
+              "gridRowAnchorIndex": -1,
+              "gridColumnAnchorIndex": -1,
+              "gridChildHorizontalAlign": "AUTO",
+              "gridChildVerticalAlign": "AUTO",
+              "layoutGrow": 1,
+              "layoutSizingHorizontal": "FILL",
+              "layoutSizingVertical": "HUG",
+              "paddingLeft": 20,
+              "paddingRight": 20,
+              "paddingTop": 20,
+              "paddingBottom": 20,
+              "primaryAxisSizingMode": "AUTO",
+              "layoutMode": "VERTICAL",
+              "verticalPadding": 20,
+              "itemSpacing": 20
+            }
+          ],
+          "name": "Frame",
+          "x": 0,
+          "y": 45,
+          "width": 100,
+          "height": 635,
+          "gridRowSpan": 1,
+          "gridColumnSpan": 1,
+          "gridRowAnchorIndex": -1,
+          "gridColumnAnchorIndex": -1,
+          "gridChildHorizontalAlign": "AUTO",
+          "gridChildVerticalAlign": "AUTO",
+          "layoutGrow": 1,
+          "layoutSizingVertical": "FILL",
+          "layoutMode": "HORIZONTAL",
+          "verticalPadding": 0
+        }
+      ],
+      "name": "工程向导",
+      "x": 0,
+      "y": 0,
+      "width": 1024,
+      "height": 680,
+      "gridRowSpan": 1,
+      "gridColumnSpan": 1,
+      "gridRowAnchorIndex": -1,
+      "gridColumnAnchorIndex": -1,
+      "gridChildHorizontalAlign": "AUTO",
+      "gridChildVerticalAlign": "AUTO",
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": "#F2F2F2"
+        }
+      ],
+      "backgrounds": [
+        {
+          "type": "SOLID",
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.949999988079071,
+            "g": 0.949999988079071,
+            "b": 0.949999988079071
+          }
+        }
+      ],
+      "layoutMode": "VERTICAL",
+      "verticalPadding": 0
+    }
+  ],
+  "defaults": {
+    "GLOBAL": {
+      "visible": true,
+      "locked": false,
+      "opacity": 1,
+      "blendMode": "PASS_THROUGH",
+      "isMask": false,
+      "maskType": "ALPHA",
+      "effects": [],
+      "effectStyleId": "",
+      "reactions": [],
+      "isAsset": false,
+      "detachedInfo": null,
+      "stuckNodes": [],
+      "attachedConnectors": [],
+      "componentPropertyReferences": null,
+      "variableConsumptionMap": {},
+      "boundVariables": {},
+      "resolvedVariableModes": {},
+      "inferredVariables": {},
+      "availableInferredVariables": {},
+      "explicitVariableModes": {},
+      "constrainProportions": false,
+      "layoutGrow": 0,
+      "layoutAlign": "INHERIT",
+      "layoutPositioning": "AUTO",
+      "minWidth": null,
+      "minHeight": null,
+      "maxWidth": null,
+      "maxHeight": null,
+      "rotation": 0,
+      "exportSettings": [],
+      "annotations": [],
+      "playbackSettings": {
+        "autoplay": true,
+        "loop": true,
+        "muted": false
+      }
+    },
+    "RECTANGLE": {
+      "fillStyleId": "",
+      "fills": [],
+      "strokes": [],
+      "strokeStyleId": "",
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "strokeJoin": "MITER",
+      "strokeCap": "NONE",
+      "strokeMiterLimit": 4,
+      "dashPattern": [],
+      "cornerRadius": 0,
+      "cornerSmoothing": 0,
+      "topLeftRadius": 0,
+      "topRightRadius": 0,
+      "bottomLeftRadius": 0,
+      "bottomRightRadius": 0,
+      "strokeTopWeight": 1,
+      "strokeBottomWeight": 1,
+      "strokeLeftWeight": 1,
+      "strokeRightWeight": 1,
+      "fillGeometry": [],
+      "strokeGeometry": [],
+      "layoutSizingHorizontal": "FIXED",
+      "layoutSizingVertical": "FIXED",
+      "constraints": {
+        "horizontal": "MIN",
+        "vertical": "MIN"
+      },
+      "targetAspectRatio": null,
+      "gridChildHorizontalAlign": "AUTO",
+      "gridChildVerticalAlign": "AUTO"
+    },
+    "FRAME": {
+      "fills": [],
+      "fillStyleId": "",
+      "strokes": [],
+      "strokeStyleId": "",
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "strokeJoin": "MITER",
+      "strokeCap": "NONE",
+      "strokeMiterLimit": 4,
+      "dashPattern": [],
+      "cornerRadius": 0,
+      "cornerSmoothing": 0,
+      "topLeftRadius": 0,
+      "topRightRadius": 0,
+      "bottomLeftRadius": 0,
+      "bottomRightRadius": 0,
+      "strokeTopWeight": 1,
+      "strokeBottomWeight": 1,
+      "strokeLeftWeight": 1,
+      "strokeRightWeight": 1,
+      "fillGeometry": [],
+      "strokeGeometry": [],
+      "layoutSizingHorizontal": "FIXED",
+      "layoutSizingVertical": "FIXED",
+      "clipsContent": true,
+      "layoutMode": "NONE",
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 0,
+      "paddingBottom": 0,
+      "itemSpacing": 0,
+      "counterAxisSpacing": 0,
+      "primaryAxisAlignItems": "MIN",
+      "counterAxisAlignItems": "MIN",
+      "primaryAxisSizingMode": "FIXED",
+      "counterAxisSizingMode": "FIXED",
+      "layoutWrap": "NO_WRAP",
+      "counterAxisAlignContent": "AUTO",
+      "layoutGrids": [],
+      "gridStyleId": "",
+      "backgrounds": [],
+      "backgroundStyleId": "",
+      "guides": [],
+      "constraints": {
+        "horizontal": "MIN",
+        "vertical": "MIN"
+      },
+      "overflowDirection": "NONE",
+      "numberOfFixedChildren": 0,
+      "overlayPositionType": "CENTER",
+      "overlayBackgroundInteraction": "NONE",
+      "itemReverseZIndex": false,
+      "strokesIncludedInLayout": false,
+      "devStatus": null
+    },
+    "TEXT": {
+      "fills": [],
+      "fillStyleId": "",
+      "strokes": [],
+      "strokeStyleId": "",
+      "strokeWeight": 1,
+      "strokeAlign": "OUTSIDE",
+      "strokeJoin": "MITER",
+      "strokeCap": "NONE",
+      "strokeMiterLimit": 4,
+      "dashPattern": [],
+      "textAlignHorizontal": "LEFT",
+      "textAlignVertical": "TOP",
+      "textAutoResize": "WIDTH_AND_HEIGHT",
+      "paragraphIndent": 0,
+      "paragraphSpacing": 0,
+      "autoRename": true,
+      "textStyleId": "",
+      "fontSize": 12,
+      "fontName": {
+        "family": "Roboto",
+        "style": "Regular"
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE",
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "constraints": {
+        "horizontal": "MIN",
+        "vertical": "MIN"
+      }
+    }
+  },
+  "metadata": {
+    "original_nodes": 1,
+    "compressed_nodes": 1,
+    "note": "本文件包含压缩后的 Figma 节点数据和默认值表。已删除所有默认值、可计算属性和空集合。"
+  }
+}

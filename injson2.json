@@ -1,0 +1,2766 @@
+[
+  {
+    "id": "60:316",
+    "type": "FRAME",
+    "children": [
+      {
+        "id": "60:317",
+        "type": "FRAME",
+        "children": [
+          {
+            "id": "60:318",
+            "type": "FRAME",
+            "children": [
+              {
+                "id": "60:319",
+                "type": "TEXT",
+                "parent": {
+                  "id": "60:318",
+                  "type": "TEXT"
+                },
+                "name": "开始扫描",
+                "isAsset": false,
+                "detachedInfo": null,
+                "visible": true,
+                "locked": false,
+                "stuckNodes": [],
+                "attachedConnectors": [],
+                "componentPropertyReferences": null,
+                "variableConsumptionMap": {},
+                "boundVariables": {},
+                "resolvedVariableModes": {},
+                "inferredVariables": {},
+                "availableInferredVariables": {},
+                "explicitVariableModes": {},
+                "opacity": 1,
+                "blendMode": "PASS_THROUGH",
+                "isMask": false,
+                "maskType": "ALPHA",
+                "effects": [],
+                "effectStyleId": "",
+                "fills": [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 0.10000000149011612,
+                      "g": 0.10000000149011612,
+                      "b": 0.10000000149011612
+                    },
+                    "boundVariables": {}
+                  }
+                ],
+                "fillStyleId": "",
+                "strokes": [],
+                "strokeStyleId": "",
+                "strokeWeight": 1,
+                "strokeAlign": "OUTSIDE",
+                "strokeJoin": "MITER",
+                "dashPattern": [],
+                "strokeCap": "NONE",
+                "strokeMiterLimit": 4,
+                "fillGeometry": [
+                  {
+                    "windingRule": "NONZERO",
+                    "data": "M1.068 2.7 L11.016 2.7 L11.016 3.564 L1.068 3.564 L1.068 2.7 Z M0.624 6.984 L11.388 6.984 L11.388 7.848 L0.624 7.848 L0.624 6.984 Z M7.788 3.156 L8.712 3.156 L8.712 12.972 L7.788 12.972 L7.788 3.156 Z M3.516 3.144 L4.428 3.144 L4.428 6.468 C4.428 7.052 4.396 7.64 4.332 8.232 C4.268 8.824 4.132 9.404 3.924 9.972 C3.724 10.532 3.42 11.072 3.012 11.592 C2.604 12.104 2.056 12.576 1.368 13.008 C1.312 12.928 1.244 12.848 1.164 12.768 C1.084 12.688 0.996 12.608 0.9 12.528 C0.812 12.448 0.728 12.384 0.648 12.336 C1.296 11.936 1.812 11.504 2.196 11.04 C2.58 10.576 2.864 10.092 3.048 9.588 C3.24 9.084 3.364 8.568 3.42 8.04 C3.484 7.512 3.516 6.988 3.516 6.468 L3.516 3.144 Z M18.336 11.604 L22.536 11.604 L22.536 12.432 L18.336 12.432 L18.336 11.604 Z M17.88 8.088 L23.004 8.088 L23.004 12.924 L22.104 12.924 L22.104 8.916 L18.744 8.916 L18.744 12.972 L17.88 12.972 L17.88 8.088 Z M17.052 6.084 C17.532 6.052 18.084 6.02 18.708 5.988 C19.34 5.956 20.008 5.92 20.712 5.88 C21.424 5.832 22.136 5.784 22.848 5.736 L22.836 6.552 C22.156 6.6 21.476 6.652 20.796 6.708 C20.116 6.764 19.464 6.812 18.84 6.852 C18.224 6.892 17.664 6.932 17.16 6.972 L17.052 6.084 Z M21.036 4.14 L21.756 3.78 C22.028 4.108 22.292 4.468 22.548 4.86 C22.804 5.244 23.036 5.624 23.244 6 C23.452 6.368 23.604 6.7 23.7 6.996 L22.92 7.428 C22.824 7.132 22.676 6.792 22.476 6.408 C22.276 6.024 22.052 5.636 21.804 5.244 C21.556 4.852 21.3 4.484 21.036 4.14 Z M19.392 1.908 L20.388 2.124 C20.22 2.604 20.036 3.116 19.836 3.66 C19.644 4.204 19.444 4.728 19.236 5.232 C19.028 5.736 18.828 6.18 18.636 6.564 L17.88 6.348 C18.016 6.052 18.156 5.72 18.3 5.352 C18.444 4.984 18.58 4.6 18.708 4.2 C18.844 3.792 18.972 3.396 19.092 3.012 C19.212 2.62 19.312 2.252 19.392 1.908 Z M12.528 4.404 L16.488 4.404 L16.488 5.244 L12.528 5.244 L12.528 4.404 Z M14.352 1.908 L15.204 2.016 C15.084 2.608 14.948 3.248 14.796 3.936 C14.644 4.616 14.484 5.3 14.316 5.988 C14.156 6.676 13.996 7.336 13.836 7.968 C13.676 8.592 13.528 9.152 13.392 9.648 L12.636 9.252 C12.772 8.796 12.916 8.268 13.068 7.668 C13.228 7.06 13.384 6.42 13.536 5.748 C13.688 5.076 13.836 4.412 13.98 3.756 C14.124 3.092 14.248 2.476 14.352 1.908 Z M13.128 8.88 L13.62 8.256 C14.068 8.504 14.528 8.788 15 9.108 C15.48 9.428 15.92 9.756 16.32 10.092 C16.72 10.428 17.04 10.748 17.28 11.052 L16.74 11.772 C16.5 11.476 16.18 11.156 15.78 10.812 C15.388 10.46 14.96 10.116 14.496 9.78 C14.032 9.436 13.576 9.136 13.128 8.88 Z M16.14 4.404 L16.296 4.404 L16.452 4.368 L16.992 4.488 C16.888 6.032 16.672 7.36 16.344 8.472 C16.016 9.576 15.588 10.496 15.06 11.232 C14.532 11.968 13.896 12.556 13.152 12.996 C13.088 12.884 13 12.756 12.888 12.612 C12.784 12.468 12.684 12.352 12.588 12.264 C13.26 11.912 13.84 11.396 14.328 10.716 C14.824 10.028 15.224 9.176 15.528 8.16 C15.84 7.136 16.044 5.944 16.14 4.584 L16.14 4.404 Z M24.456 8.22 C24.832 8.14 25.256 8.044 25.728 7.932 C26.208 7.82 26.712 7.7 27.24 7.572 C27.768 7.444 28.296 7.312 28.824 7.176 L28.932 8.004 C28.196 8.196 27.456 8.392 26.712 8.592 C25.976 8.784 25.312 8.952 24.72 9.096 L24.456 8.22 Z M24.612 4.272 L28.836 4.272 L28.836 5.112 L24.612 5.112 L24.612 4.272 Z M26.376 1.956 L27.264 1.956 L27.264 11.844 C27.264 12.1 27.228 12.296 27.156 12.432 C27.092 12.568 26.98 12.668 26.82 12.732 C26.668 12.804 26.46 12.848 26.196 12.864 C25.932 12.888 25.592 12.9 25.176 12.9 C25.168 12.788 25.136 12.648 25.08 12.48 C25.024 12.32 24.964 12.184 24.9 12.072 C25.18 12.08 25.436 12.084 25.668 12.084 C25.908 12.084 26.068 12.084 26.148 12.084 C26.236 12.076 26.296 12.056 26.328 12.024 C26.36 11.992 26.376 11.936 26.376 11.856 L26.376 1.956 Z M28.956 11.196 L34.392 11.196 L34.392 12.048 L28.956 12.048 L28.956 11.196 Z M29.328 6.864 L34.428 6.864 L34.428 7.764 L29.328 7.764 L29.328 6.864 Z M29.04 3.048 L34.848 3.048 L34.848 12.924 L33.984 12.924 L33.984 3.888 L29.04 3.888 L29.04 3.048 Z M40.296 3.648 L47.424 3.648 L47.424 4.464 L40.296 4.464 L40.296 3.648 Z M41.964 1.92 L42.828 1.92 L42.828 6.036 L41.964 6.036 L41.964 1.92 Z M44.976 1.92 L45.84 1.92 L45.84 6.036 L44.976 6.036 L44.976 1.92 Z M40.824 6.576 L46.992 6.576 L46.992 12.876 L46.128 12.876 L46.128 7.38 L41.652 7.38 L41.652 12.936 L40.824 12.936 L40.824 6.576 Z M41.28 9.036 L46.524 9.036 L46.524 9.828 L41.28 9.828 L41.28 9.036 Z M41.292 11.52 L46.548 11.52 L46.548 12.324 L41.292 12.324 L41.292 11.52 Z M43.464 6.936 L44.292 6.936 L44.292 12.072 L43.464 12.072 L43.464 6.936 Z M36.336 8.292 C36.8 8.172 37.356 8.012 38.004 7.812 C38.66 7.612 39.324 7.404 39.996 7.188 L40.116 8.016 C39.5 8.216 38.88 8.42 38.256 8.628 C37.64 8.828 37.076 9.012 36.564 9.18 L36.336 8.292 Z M36.504 4.344 L40.08 4.344 L40.08 5.184 L36.504 5.184 L36.504 4.344 Z M37.956 1.932 L38.796 1.932 L38.796 11.832 C38.796 12.08 38.764 12.268 38.7 12.396 C38.636 12.532 38.532 12.636 38.388 12.708 C38.244 12.78 38.052 12.828 37.812 12.852 C37.572 12.876 37.26 12.884 36.876 12.876 C36.86 12.772 36.828 12.636 36.78 12.468 C36.732 12.308 36.676 12.168 36.612 12.048 C36.876 12.056 37.112 12.06 37.32 12.06 C37.536 12.06 37.676 12.056 37.74 12.048 C37.82 12.048 37.876 12.032 37.908 12 C37.94 11.968 37.956 11.912 37.956 11.832 L37.956 1.932 Z"
+                  }
+                ],
+                "strokeGeometry": [],
+                "relativeTransform": [
+                  [
+                    1,
+                    0,
+                    16
+                  ],
+                  [
+                    0,
+                    1,
+                    6.5
+                  ]
+                ],
+                "absoluteTransform": [
+                  [
+                    1,
+                    0,
+                    32
+                  ],
+                  [
+                    0,
+                    1,
+                    18.5
+                  ]
+                ],
+                "x": 16,
+                "y": 6.5,
+                "width": 48,
+                "height": 15,
+                "absoluteBoundingBox": {
+                  "x": 32,
+                  "y": 18.5,
+                  "width": 48,
+                  "height": 15
+                },
+                "targetAspectRatio": null,
+                "gridRowSpan": 1,
+                "gridColumnSpan": 1,
+                "gridRowAnchorIndex": -1,
+                "gridColumnAnchorIndex": -1,
+                "gridChildHorizontalAlign": "AUTO",
+                "gridChildVerticalAlign": "AUTO",
+                "absoluteRenderBounds": {
+                  "x": 32.624000549316406,
+                  "y": 20.40799903869629,
+                  "width": 46.79999542236328,
+                  "height": 11.100000381469727
+                },
+                "rotation": 0,
+                "layoutAlign": "INHERIT",
+                "constrainProportions": false,
+                "layoutGrow": 0,
+                "layoutPositioning": "AUTO",
+                "minWidth": null,
+                "minHeight": null,
+                "maxWidth": null,
+                "maxHeight": null,
+                "layoutSizingHorizontal": "HUG",
+                "layoutSizingVertical": "HUG",
+                "exportSettings": [],
+                "constraints": {
+                  "horizontal": "MIN",
+                  "vertical": "MIN"
+                },
+                "characters": "开始扫描",
+                "hasMissingFont": false,
+                "fontSize": 12,
+                "hangingPunctuation": false,
+                "hangingList": false,
+                "paragraphIndent": 0,
+                "paragraphSpacing": 0,
+                "listSpacing": 0,
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE",
+                "textDecorationStyle": null,
+                "textDecorationSkipInk": null,
+                "textDecorationOffset": null,
+                "textDecorationThickness": null,
+                "textDecorationColor": null,
+                "letterSpacing": {
+                  "unit": "PERCENT",
+                  "value": 0
+                },
+                "lineHeight": {
+                  "unit": "AUTO"
+                },
+                "leadingTrim": "NONE",
+                "fontName": {
+                  "family": "Inter",
+                  "style": "Regular"
+                },
+                "fontWeight": 400,
+                "openTypeFeatures": {},
+                "hyperlink": null,
+                "canUpgradeToNativeBidiSupport": false,
+                "autoRename": true,
+                "textAlignHorizontal": "LEFT",
+                "textAlignVertical": "TOP",
+                "textAutoResize": "WIDTH_AND_HEIGHT",
+                "textStyleId": "",
+                "maxLines": null,
+                "reactions": [],
+                "playbackSettings": {
+                  "autoplay": true,
+                  "loop": true,
+                  "muted": false
+                },
+                "annotations": []
+              }
+            ],
+            "parent": {
+              "id": "60:317",
+              "type": "FRAME"
+            },
+            "name": "Frame",
+            "isAsset": false,
+            "detachedInfo": null,
+            "visible": true,
+            "locked": false,
+            "stuckNodes": [],
+            "attachedConnectors": [],
+            "componentPropertyReferences": null,
+            "variableConsumptionMap": {},
+            "boundVariables": {},
+            "resolvedVariableModes": {},
+            "inferredVariables": {},
+            "availableInferredVariables": {},
+            "explicitVariableModes": {},
+            "opacity": 1,
+            "blendMode": "PASS_THROUGH",
+            "isMask": false,
+            "maskType": "ALPHA",
+            "effects": [],
+            "effectStyleId": "",
+            "relativeTransform": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ]
+            ],
+            "absoluteTransform": [
+              [
+                1,
+                0,
+                16
+              ],
+              [
+                0,
+                1,
+                12
+              ]
+            ],
+            "x": 0,
+            "y": 0,
+            "width": 80,
+            "height": 28,
+            "absoluteBoundingBox": {
+              "x": 16,
+              "y": 12,
+              "width": 80,
+              "height": 28
+            },
+            "targetAspectRatio": null,
+            "gridRowSpan": 1,
+            "gridColumnSpan": 1,
+            "gridRowAnchorIndex": -1,
+            "gridColumnAnchorIndex": -1,
+            "gridChildHorizontalAlign": "AUTO",
+            "gridChildVerticalAlign": "AUTO",
+            "absoluteRenderBounds": {
+              "x": 16,
+              "y": 12,
+              "width": 80,
+              "height": 28
+            },
+            "rotation": 0,
+            "layoutAlign": "INHERIT",
+            "constrainProportions": false,
+            "layoutGrow": 0,
+            "layoutPositioning": "AUTO",
+            "minWidth": null,
+            "minHeight": null,
+            "maxWidth": null,
+            "maxHeight": null,
+            "layoutSizingHorizontal": "FIXED",
+            "layoutSizingVertical": "FIXED",
+            "exportSettings": [],
+            "fills": [
+              {
+                "type": "SOLID",
+                "visible": true,
+                "opacity": 1,
+                "blendMode": "NORMAL",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "boundVariables": {}
+              }
+            ],
+            "fillStyleId": "",
+            "strokes": [
+              {
+                "type": "SOLID",
+                "visible": true,
+                "opacity": 1,
+                "blendMode": "NORMAL",
+                "color": {
+                  "r": 0.800000011920929,
+                  "g": 0.800000011920929,
+                  "b": 0.800000011920929
+                },
+                "boundVariables": {}
+              }
+            ],
+            "strokeStyleId": "",
+            "strokeWeight": 1,
+            "strokeAlign": "INSIDE",
+            "strokeJoin": "MITER",
+            "dashPattern": [],
+            "strokeCap": "NONE",
+            "strokeMiterLimit": 4,
+            "fillGeometry": [
+              {
+                "windingRule": "NONZERO",
+                "data": "M0 0 L80 0 L80 28 L0 28 L0 0 Z"
+              }
+            ],
+            "strokeGeometry": [
+              {
+                "windingRule": "NONZERO",
+                "data": "M0 0 L0 -1 L-1 -1 L-1 0 L0 0 Z M80 0 L81 0 L81 -1 L80 -1 L80 0 Z M80 28 L80 29 L81 29 L81 28 L80 28 Z M0 28 L-1 28 L-1 29 L0 29 L0 28 Z M0 0 L0 1 L80 1 L80 0 L80 -1 L0 -1 L0 0 Z M80 0 L79 0 L79 28 L80 28 L81 28 L81 0 L80 0 Z M80 28 L80 27 L0 27 L0 28 L0 29 L80 29 L80 28 Z M0 28 L1 28 L1 0 L0 0 L-1 0 L-1 28 L0 28 Z"
+              }
+            ],
+            "cornerRadius": 0,
+            "cornerSmoothing": 0,
+            "topLeftRadius": 0,
+            "topRightRadius": 0,
+            "bottomLeftRadius": 0,
+            "bottomRightRadius": 0,
+            "paddingLeft": 12,
+            "paddingRight": 12,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "primaryAxisAlignItems": "CENTER",
+            "counterAxisAlignItems": "CENTER",
+            "primaryAxisSizingMode": "FIXED",
+            "layoutWrap": "NO_WRAP",
+            "counterAxisSpacing": 0,
+            "counterAxisAlignContent": "AUTO",
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowSizingCSS": "",
+            "gridColumnSizingCSS": "",
+            "gridRowSizes": [],
+            "gridColumnSizes": [],
+            "strokeTopWeight": 1,
+            "strokeBottomWeight": 1,
+            "strokeLeftWeight": 1,
+            "strokeRightWeight": 1,
+            "inferredAutoLayout": {
+              "layoutMode": "HORIZONTAL",
+              "paddingLeft": 12,
+              "paddingRight": 12,
+              "paddingTop": 0,
+              "paddingBottom": 0,
+              "counterAxisSizingMode": "FIXED",
+              "primaryAxisSizingMode": "FIXED",
+              "primaryAxisAlignItems": "CENTER",
+              "counterAxisAlignItems": "CENTER",
+              "layoutAlign": "INHERIT",
+              "layoutGrow": 0,
+              "itemSpacing": 0,
+              "layoutPositioning": "AUTO"
+            },
+            "annotations": [],
+            "layoutGrids": [],
+            "gridStyleId": "",
+            "backgrounds": [
+              {
+                "type": "SOLID",
+                "visible": true,
+                "opacity": 1,
+                "blendMode": "NORMAL",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "boundVariables": {}
+              }
+            ],
+            "backgroundStyleId": "",
+            "clipsContent": true,
+            "guides": [],
+            "expanded": false,
+            "constraints": {
+              "horizontal": "MIN",
+              "vertical": "MIN"
+            },
+            "layoutMode": "HORIZONTAL",
+            "counterAxisSizingMode": "FIXED",
+            "verticalPadding": 0,
+            "itemSpacing": 0,
+            "overflowDirection": "NONE",
+            "numberOfFixedChildren": 0,
+            "overlayPositionType": "CENTER",
+            "overlayBackground": {
+              "type": "NONE"
+            },
+            "overlayBackgroundInteraction": "NONE",
+            "itemReverseZIndex": false,
+            "strokesIncludedInLayout": false,
+            "devStatus": null,
+            "reactions": [],
+            "playbackSettings": {
+              "autoplay": true,
+              "loop": true,
+              "muted": false
+            }
+          },
+          {
+            "id": "60:320",
+            "type": "FRAME",
+            "children": [
+              {
+                "id": "60:321",
+                "type": "TEXT",
+                "parent": {
+                  "id": "60:320",
+                  "type": "TEXT"
+                },
+                "name": "停止扫描",
+                "isAsset": false,
+                "detachedInfo": null,
+                "visible": true,
+                "locked": false,
+                "stuckNodes": [],
+                "attachedConnectors": [],
+                "componentPropertyReferences": null,
+                "variableConsumptionMap": {},
+                "boundVariables": {},
+                "resolvedVariableModes": {},
+                "inferredVariables": {},
+                "availableInferredVariables": {},
+                "explicitVariableModes": {},
+                "opacity": 1,
+                "blendMode": "PASS_THROUGH",
+                "isMask": false,
+                "maskType": "ALPHA",
+                "effects": [],
+                "effectStyleId": "",
+                "fills": [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 0.10000000149011612,
+                      "g": 0.10000000149011612,
+                      "b": 0.10000000149011612
+                    },
+                    "boundVariables": {}
+                  }
+                ],
+                "fillStyleId": "",
+                "strokes": [],
+                "strokeStyleId": "",
+                "strokeWeight": 1,
+                "strokeAlign": "OUTSIDE",
+                "strokeJoin": "MITER",
+                "dashPattern": [],
+                "strokeCap": "NONE",
+                "strokeMiterLimit": 4,
+                "fillGeometry": [
+                  {
+                    "windingRule": "NONZERO",
+                    "data": "M3.768 3.084 L11.46 3.084 L11.46 3.876 L3.768 3.876 L3.768 3.084 Z M7.116 1.968 L8.016 1.968 L8.016 3.456 L7.116 3.456 L7.116 1.968 Z M5.568 5.184 L5.568 6.288 L9.636 6.288 L9.636 5.184 L5.568 5.184 Z M4.704 4.536 L10.536 4.536 L10.536 6.948 L4.704 6.948 L4.704 4.536 Z M3.576 7.632 L11.58 7.632 L11.58 9.696 L10.74 9.696 L10.74 8.364 L4.38 8.364 L4.38 9.708 L3.576 9.708 L3.576 7.632 Z M4.944 9.168 L10.296 9.168 L10.296 9.924 L4.944 9.924 L4.944 9.168 Z M7.116 9.336 L8.016 9.336 L8.016 11.988 C8.016 12.236 7.984 12.424 7.92 12.552 C7.856 12.68 7.728 12.776 7.536 12.84 C7.344 12.904 7.092 12.94 6.78 12.948 C6.468 12.964 6.084 12.972 5.628 12.972 C5.612 12.852 5.576 12.716 5.52 12.564 C5.472 12.412 5.416 12.276 5.352 12.156 C5.592 12.164 5.816 12.168 6.024 12.168 C6.232 12.176 6.412 12.176 6.564 12.168 C6.716 12.168 6.824 12.168 6.888 12.168 C6.984 12.16 7.044 12.144 7.068 12.12 C7.1 12.096 7.116 12.048 7.116 11.976 L7.116 9.336 Z M3.168 1.968 L4.02 2.22 C3.764 2.9 3.46 3.572 3.108 4.236 C2.756 4.892 2.376 5.512 1.968 6.096 C1.56 6.68 1.136 7.196 0.696 7.644 C0.672 7.572 0.628 7.48 0.564 7.368 C0.508 7.256 0.444 7.144 0.372 7.032 C0.308 6.912 0.248 6.82 0.192 6.756 C0.592 6.364 0.976 5.912 1.344 5.4 C1.712 4.888 2.052 4.34 2.364 3.756 C2.676 3.164 2.944 2.568 3.168 1.968 Z M1.92 5.052 L2.772 4.2 L2.784 4.212 L2.784 12.936 L1.92 12.936 L1.92 5.052 Z M18.468 5.94 L22.86 5.94 L22.86 6.84 L18.468 6.84 L18.468 5.94 Z M12.588 11.472 L23.388 11.472 L23.388 12.36 L12.588 12.36 L12.588 11.472 Z M17.988 1.956 L18.924 1.956 L18.924 11.916 L17.988 11.916 L17.988 1.956 Z M14.256 4.572 L15.18 4.572 L15.18 11.892 L14.256 11.892 L14.256 4.572 Z M24.456 8.22 C24.832 8.14 25.256 8.044 25.728 7.932 C26.208 7.82 26.712 7.7 27.24 7.572 C27.768 7.444 28.296 7.312 28.824 7.176 L28.932 8.004 C28.196 8.196 27.456 8.392 26.712 8.592 C25.976 8.784 25.312 8.952 24.72 9.096 L24.456 8.22 Z M24.612 4.272 L28.836 4.272 L28.836 5.112 L24.612 5.112 L24.612 4.272 Z M26.376 1.956 L27.264 1.956 L27.264 11.844 C27.264 12.1 27.228 12.296 27.156 12.432 C27.092 12.568 26.98 12.668 26.82 12.732 C26.668 12.804 26.46 12.848 26.196 12.864 C25.932 12.888 25.592 12.9 25.176 12.9 C25.168 12.788 25.136 12.648 25.08 12.48 C25.024 12.32 24.964 12.184 24.9 12.072 C25.18 12.08 25.436 12.084 25.668 12.084 C25.908 12.084 26.068 12.084 26.148 12.084 C26.236 12.076 26.296 12.056 26.328 12.024 C26.36 11.992 26.376 11.936 26.376 11.856 L26.376 1.956 Z M28.956 11.196 L34.392 11.196 L34.392 12.048 L28.956 12.048 L28.956 11.196 Z M29.328 6.864 L34.428 6.864 L34.428 7.764 L29.328 7.764 L29.328 6.864 Z M29.04 3.048 L34.848 3.048 L34.848 12.924 L33.984 12.924 L33.984 3.888 L29.04 3.888 L29.04 3.048 Z M40.296 3.648 L47.424 3.648 L47.424 4.464 L40.296 4.464 L40.296 3.648 Z M41.964 1.92 L42.828 1.92 L42.828 6.036 L41.964 6.036 L41.964 1.92 Z M44.976 1.92 L45.84 1.92 L45.84 6.036 L44.976 6.036 L44.976 1.92 Z M40.824 6.576 L46.992 6.576 L46.992 12.876 L46.128 12.876 L46.128 7.38 L41.652 7.38 L41.652 12.936 L40.824 12.936 L40.824 6.576 Z M41.28 9.036 L46.524 9.036 L46.524 9.828 L41.28 9.828 L41.28 9.036 Z M41.292 11.52 L46.548 11.52 L46.548 12.324 L41.292 12.324 L41.292 11.52 Z M43.464 6.936 L44.292 6.936 L44.292 12.072 L43.464 12.072 L43.464 6.936 Z M36.336 8.292 C36.8 8.172 37.356 8.012 38.004 7.812 C38.66 7.612 39.324 7.404 39.996 7.188 L40.116 8.016 C39.5 8.216 38.88 8.42 38.256 8.628 C37.64 8.828 37.076 9.012 36.564 9.18 L36.336 8.292 Z M36.504 4.344 L40.08 4.344 L40.08 5.184 L36.504 5.184 L36.504 4.344 Z M37.956 1.932 L38.796 1.932 L38.796 11.832 C38.796 12.08 38.764 12.268 38.7 12.396 C38.636 12.532 38.532 12.636 38.388 12.708 C38.244 12.78 38.052 12.828 37.812 12.852 C37.572 12.876 37.26 12.884 36.876 12.876 C36.86 12.772 36.828 12.636 36.78 12.468 C36.732 12.308 36.676 12.168 36.612 12.048 C36.876 12.056 37.112 12.06 37.32 12.06 C37.536 12.06 37.676 12.056 37.74 12.048 C37.82 12.048 37.876 12.032 37.908 12 C37.94 11.968 37.956 11.912 37.956 11.832 L37.956 1.932 Z"
+                  }
+                ],
+                "strokeGeometry": [],
+                "relativeTransform": [
+                  [
+                    1,
+                    0,
+                    16
+                  ],
+                  [
+                    0,
+                    1,
+                    6.5
+                  ]
+                ],
+                "absoluteTransform": [
+                  [
+                    1,
+                    0,
+                    124
+                  ],
+                  [
+                    0,
+                    1,
+                    18.5
+                  ]
+                ],
+                "x": 16,
+                "y": 6.5,
+                "width": 48,
+                "height": 15,
+                "absoluteBoundingBox": {
+                  "x": 124,
+                  "y": 18.5,
+                  "width": 48,
+                  "height": 15
+                },
+                "targetAspectRatio": null,
+                "gridRowSpan": 1,
+                "gridColumnSpan": 1,
+                "gridRowAnchorIndex": -1,
+                "gridColumnAnchorIndex": -1,
+                "gridChildHorizontalAlign": "AUTO",
+                "gridChildVerticalAlign": "AUTO",
+                "absoluteRenderBounds": {
+                  "x": 124.19200134277344,
+                  "y": 20.420000076293945,
+                  "width": 47.23199462890625,
+                  "height": 11.052000045776367
+                },
+                "rotation": 0,
+                "layoutAlign": "INHERIT",
+                "constrainProportions": false,
+                "layoutGrow": 0,
+                "layoutPositioning": "AUTO",
+                "minWidth": null,
+                "minHeight": null,
+                "maxWidth": null,
+                "maxHeight": null,
+                "layoutSizingHorizontal": "HUG",
+                "layoutSizingVertical": "HUG",
+                "exportSettings": [],
+                "constraints": {
+                  "horizontal": "MIN",
+                  "vertical": "MIN"
+                },
+                "characters": "停止扫描",
+                "hasMissingFont": false,
+                "fontSize": 12,
+                "hangingPunctuation": false,
+                "hangingList": false,
+                "paragraphIndent": 0,
+                "paragraphSpacing": 0,
+                "listSpacing": 0,
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE",
+                "textDecorationStyle": null,
+                "textDecorationSkipInk": null,
+                "textDecorationOffset": null,
+                "textDecorationThickness": null,
+                "textDecorationColor": null,
+                "letterSpacing": {
+                  "unit": "PERCENT",
+                  "value": 0
+                },
+                "lineHeight": {
+                  "unit": "AUTO"
+                },
+                "leadingTrim": "NONE",
+                "fontName": {
+                  "family": "Inter",
+                  "style": "Regular"
+                },
+                "fontWeight": 400,
+                "openTypeFeatures": {},
+                "hyperlink": null,
+                "canUpgradeToNativeBidiSupport": false,
+                "autoRename": true,
+                "textAlignHorizontal": "LEFT",
+                "textAlignVertical": "TOP",
+                "textAutoResize": "WIDTH_AND_HEIGHT",
+                "textStyleId": "",
+                "maxLines": null,
+                "reactions": [],
+                "playbackSettings": {
+                  "autoplay": true,
+                  "loop": true,
+                  "muted": false
+                },
+                "annotations": []
+              }
+            ],
+            "parent": {
+              "id": "60:317",
+              "type": "FRAME"
+            },
+            "name": "Frame",
+            "isAsset": false,
+            "detachedInfo": null,
+            "visible": true,
+            "locked": false,
+            "stuckNodes": [],
+            "attachedConnectors": [],
+            "componentPropertyReferences": null,
+            "variableConsumptionMap": {},
+            "boundVariables": {},
+            "resolvedVariableModes": {},
+            "inferredVariables": {},
+            "availableInferredVariables": {},
+            "explicitVariableModes": {},
+            "opacity": 1,
+            "blendMode": "PASS_THROUGH",
+            "isMask": false,
+            "maskType": "ALPHA",
+            "effects": [],
+            "effectStyleId": "",
+            "relativeTransform": [
+              [
+                1,
+                0,
+                92
+              ],
+              [
+                0,
+                1,
+                0
+              ]
+            ],
+            "absoluteTransform": [
+              [
+                1,
+                0,
+                108
+              ],
+              [
+                0,
+                1,
+                12
+              ]
+            ],
+            "x": 92,
+            "y": 0,
+            "width": 80,
+            "height": 28,
+            "absoluteBoundingBox": {
+              "x": 108,
+              "y": 12,
+              "width": 80,
+              "height": 28
+            },
+            "targetAspectRatio": null,
+            "gridRowSpan": 1,
+            "gridColumnSpan": 1,
+            "gridRowAnchorIndex": -1,
+            "gridColumnAnchorIndex": -1,
+            "gridChildHorizontalAlign": "AUTO",
+            "gridChildVerticalAlign": "AUTO",
+            "absoluteRenderBounds": {
+              "x": 108,
+              "y": 12,
+              "width": 80,
+              "height": 28
+            },
+            "rotation": 0,
+            "layoutAlign": "INHERIT",
+            "constrainProportions": false,
+            "layoutGrow": 0,
+            "layoutPositioning": "AUTO",
+            "minWidth": null,
+            "minHeight": null,
+            "maxWidth": null,
+            "maxHeight": null,
+            "layoutSizingHorizontal": "FIXED",
+            "layoutSizingVertical": "FIXED",
+            "exportSettings": [],
+            "fills": [
+              {
+                "type": "SOLID",
+                "visible": true,
+                "opacity": 1,
+                "blendMode": "NORMAL",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "boundVariables": {}
+              }
+            ],
+            "fillStyleId": "",
+            "strokes": [
+              {
+                "type": "SOLID",
+                "visible": true,
+                "opacity": 1,
+                "blendMode": "NORMAL",
+                "color": {
+                  "r": 0.800000011920929,
+                  "g": 0.800000011920929,
+                  "b": 0.800000011920929
+                },
+                "boundVariables": {}
+              }
+            ],
+            "strokeStyleId": "",
+            "strokeWeight": 1,
+            "strokeAlign": "INSIDE",
+            "strokeJoin": "MITER",
+            "dashPattern": [],
+            "strokeCap": "NONE",
+            "strokeMiterLimit": 4,
+            "fillGeometry": [
+              {
+                "windingRule": "NONZERO",
+                "data": "M0 0 L80 0 L80 28 L0 28 L0 0 Z"
+              }
+            ],
+            "strokeGeometry": [
+              {
+                "windingRule": "NONZERO",
+                "data": "M0 0 L0 -1 L-1 -1 L-1 0 L0 0 Z M80 0 L81 0 L81 -1 L80 -1 L80 0 Z M80 28 L80 29 L81 29 L81 28 L80 28 Z M0 28 L-1 28 L-1 29 L0 29 L0 28 Z M0 0 L0 1 L80 1 L80 0 L80 -1 L0 -1 L0 0 Z M80 0 L79 0 L79 28 L80 28 L81 28 L81 0 L80 0 Z M80 28 L80 27 L0 27 L0 28 L0 29 L80 29 L80 28 Z M0 28 L1 28 L1 0 L0 0 L-1 0 L-1 28 L0 28 Z"
+              }
+            ],
+            "cornerRadius": 0,
+            "cornerSmoothing": 0,
+            "topLeftRadius": 0,
+            "topRightRadius": 0,
+            "bottomLeftRadius": 0,
+            "bottomRightRadius": 0,
+            "paddingLeft": 12,
+            "paddingRight": 12,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "primaryAxisAlignItems": "CENTER",
+            "counterAxisAlignItems": "CENTER",
+            "primaryAxisSizingMode": "FIXED",
+            "layoutWrap": "NO_WRAP",
+            "counterAxisSpacing": 0,
+            "counterAxisAlignContent": "AUTO",
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowSizingCSS": "",
+            "gridColumnSizingCSS": "",
+            "gridRowSizes": [],
+            "gridColumnSizes": [],
+            "strokeTopWeight": 1,
+            "strokeBottomWeight": 1,
+            "strokeLeftWeight": 1,
+            "strokeRightWeight": 1,
+            "inferredAutoLayout": {
+              "layoutMode": "HORIZONTAL",
+              "paddingLeft": 12,
+              "paddingRight": 12,
+              "paddingTop": 0,
+              "paddingBottom": 0,
+              "counterAxisSizingMode": "FIXED",
+              "primaryAxisSizingMode": "FIXED",
+              "primaryAxisAlignItems": "CENTER",
+              "counterAxisAlignItems": "CENTER",
+              "layoutAlign": "INHERIT",
+              "layoutGrow": 0,
+              "itemSpacing": 0,
+              "layoutPositioning": "AUTO"
+            },
+            "annotations": [],
+            "layoutGrids": [],
+            "gridStyleId": "",
+            "backgrounds": [
+              {
+                "type": "SOLID",
+                "visible": true,
+                "opacity": 1,
+                "blendMode": "NORMAL",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "boundVariables": {}
+              }
+            ],
+            "backgroundStyleId": "",
+            "clipsContent": true,
+            "guides": [],
+            "expanded": true,
+            "constraints": {
+              "horizontal": "MIN",
+              "vertical": "MIN"
+            },
+            "layoutMode": "HORIZONTAL",
+            "counterAxisSizingMode": "FIXED",
+            "verticalPadding": 0,
+            "itemSpacing": 0,
+            "overflowDirection": "NONE",
+            "numberOfFixedChildren": 0,
+            "overlayPositionType": "CENTER",
+            "overlayBackground": {
+              "type": "NONE"
+            },
+            "overlayBackgroundInteraction": "NONE",
+            "itemReverseZIndex": false,
+            "strokesIncludedInLayout": false,
+            "devStatus": null,
+            "reactions": [],
+            "playbackSettings": {
+              "autoplay": true,
+              "loop": true,
+              "muted": false
+            }
+          },
+          {
+            "id": "60:322",
+            "type": "FRAME",
+            "children": [
+              {
+                "id": "60:323",
+                "type": "TEXT",
+                "parent": {
+                  "id": "60:322",
+                  "type": "TEXT"
+                },
+                "name": "站号范围",
+                "isAsset": false,
+                "detachedInfo": null,
+                "visible": true,
+                "locked": false,
+                "stuckNodes": [],
+                "attachedConnectors": [],
+                "componentPropertyReferences": null,
+                "variableConsumptionMap": {},
+                "boundVariables": {},
+                "resolvedVariableModes": {},
+                "inferredVariables": {},
+                "availableInferredVariables": {},
+                "explicitVariableModes": {},
+                "opacity": 1,
+                "blendMode": "PASS_THROUGH",
+                "isMask": false,
+                "maskType": "ALPHA",
+                "effects": [],
+                "effectStyleId": "",
+                "fills": [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 0.10000000149011612,
+                      "g": 0.10000000149011612,
+                      "b": 0.10000000149011612
+                    },
+                    "boundVariables": {}
+                  }
+                ],
+                "fillStyleId": "",
+                "strokes": [],
+                "strokeStyleId": "",
+                "strokeWeight": 1,
+                "strokeAlign": "OUTSIDE",
+                "strokeJoin": "MITER",
+                "dashPattern": [],
+                "strokeCap": "NONE",
+                "strokeMiterLimit": 4,
+                "fillGeometry": [
+                  {
+                    "windingRule": "NONZERO",
+                    "data": "M0.684 4.296 L5.316 4.296 L5.316 5.148 L0.684 5.148 L0.684 4.296 Z M2.592 2.076 L3.444 2.076 L3.444 4.728 L2.592 4.728 L2.592 2.076 Z M8.076 4.404 L11.52 4.404 L11.52 5.268 L8.076 5.268 L8.076 4.404 Z M6.012 11.532 L10.548 11.532 L10.548 12.372 L6.012 12.372 L6.012 11.532 Z M7.62 1.908 L8.544 1.908 L8.544 8.028 L7.62 8.028 L7.62 1.908 Z M5.604 7.656 L11.016 7.656 L11.016 12.9 L10.104 12.9 L10.104 8.508 L6.48 8.508 L6.48 12.948 L5.604 12.948 L5.604 7.656 Z M0.456 10.704 C0.872 10.624 1.348 10.528 1.884 10.416 C2.42 10.296 2.992 10.168 3.6 10.032 C4.208 9.896 4.812 9.76 5.412 9.624 L5.496 10.464 C4.928 10.592 4.356 10.728 3.78 10.872 C3.204 11.008 2.648 11.14 2.112 11.268 C1.584 11.388 1.1 11.5 0.66 11.604 L0.456 10.704 Z M1.152 5.772 L1.884 5.64 C1.988 6.08 2.076 6.552 2.148 7.056 C2.228 7.56 2.292 8.056 2.34 8.544 C2.388 9.024 2.412 9.456 2.412 9.84 L1.632 9.984 C1.632 9.6 1.608 9.168 1.56 8.688 C1.52 8.2 1.464 7.704 1.392 7.2 C1.32 6.696 1.24 6.22 1.152 5.772 Z M3.948 5.508 L4.824 5.676 C4.76 6.18 4.68 6.716 4.584 7.284 C4.496 7.844 4.4 8.388 4.296 8.916 C4.2 9.444 4.104 9.904 4.008 10.296 L3.252 10.128 C3.324 9.824 3.392 9.48 3.456 9.096 C3.528 8.712 3.592 8.312 3.648 7.896 C3.712 7.472 3.768 7.056 3.816 6.648 C3.872 6.24 3.916 5.86 3.948 5.508 Z M15.132 3.216 L15.132 5.148 L20.964 5.148 L20.964 3.216 L15.132 3.216 Z M14.244 2.412 L21.9 2.412 L21.9 5.94 L14.244 5.94 L14.244 2.412 Z M12.588 6.876 L23.4 6.876 L23.4 7.704 L12.588 7.704 L12.588 6.876 Z M15.144 8.772 L21.264 8.772 L21.264 9.6 L15.144 9.6 L15.144 8.772 Z M20.94 8.772 L21.912 8.772 C21.912 8.772 21.908 8.796 21.9 8.844 C21.892 8.892 21.884 8.952 21.876 9.024 C21.876 9.088 21.872 9.14 21.864 9.18 C21.76 9.884 21.656 10.468 21.552 10.932 C21.448 11.388 21.336 11.752 21.216 12.024 C21.096 12.296 20.96 12.496 20.808 12.624 C20.664 12.752 20.512 12.836 20.352 12.876 C20.192 12.924 19.996 12.952 19.764 12.96 C19.564 12.976 19.276 12.976 18.9 12.96 C18.532 12.952 18.136 12.94 17.712 12.924 C17.704 12.788 17.672 12.64 17.616 12.48 C17.56 12.32 17.488 12.18 17.4 12.06 C17.688 12.084 17.968 12.104 18.24 12.12 C18.512 12.136 18.756 12.144 18.972 12.144 C19.196 12.152 19.36 12.156 19.464 12.156 C19.608 12.156 19.724 12.148 19.812 12.132 C19.9 12.124 19.976 12.092 20.04 12.036 C20.168 11.94 20.28 11.772 20.376 11.532 C20.48 11.292 20.58 10.956 20.676 10.524 C20.772 10.092 20.86 9.552 20.94 8.904 L20.94 8.772 Z M15.372 7.104 L16.332 7.248 C16.22 7.592 16.1 7.96 15.972 8.352 C15.844 8.736 15.712 9.108 15.576 9.468 C15.448 9.828 15.324 10.148 15.204 10.428 L14.256 10.26 C14.376 9.98 14.504 9.66 14.64 9.3 C14.776 8.94 14.908 8.568 15.036 8.184 C15.164 7.792 15.276 7.432 15.372 7.104 Z M29.424 5.508 L34.008 5.508 L34.008 6.36 L29.424 6.36 L29.424 5.508 Z M24.9 12.18 C25.156 11.94 25.452 11.656 25.788 11.328 C26.124 10.992 26.464 10.636 26.808 10.26 C27.16 9.884 27.492 9.512 27.804 9.144 L28.296 9.828 C28.016 10.164 27.72 10.516 27.408 10.884 C27.096 11.244 26.776 11.6 26.448 11.952 C26.128 12.296 25.82 12.62 25.524 12.924 L24.9 12.18 Z M25.392 5.664 L25.896 5.076 C26.136 5.196 26.392 5.336 26.664 5.496 C26.944 5.648 27.212 5.8 27.468 5.952 C27.724 6.096 27.936 6.224 28.104 6.336 L27.588 7.02 C27.42 6.9 27.208 6.76 26.952 6.6 C26.704 6.44 26.44 6.276 26.16 6.108 C25.888 5.94 25.632 5.792 25.392 5.664 Z M24.672 7.944 L25.164 7.332 C25.404 7.436 25.664 7.556 25.944 7.692 C26.232 7.82 26.508 7.952 26.772 8.088 C27.036 8.216 27.256 8.332 27.432 8.436 L26.928 9.132 C26.76 9.02 26.548 8.896 26.292 8.76 C26.036 8.616 25.764 8.472 25.476 8.328 C25.188 8.184 24.92 8.056 24.672 7.944 Z M33.552 5.508 L34.452 5.508 L34.452 8.544 C34.452 8.792 34.416 8.988 34.344 9.132 C34.28 9.276 34.14 9.384 33.924 9.456 C33.724 9.52 33.452 9.56 33.108 9.576 C32.764 9.592 32.336 9.6 31.824 9.6 C31.8 9.472 31.752 9.328 31.68 9.168 C31.616 9.008 31.548 8.868 31.476 8.748 C31.764 8.756 32.028 8.764 32.268 8.772 C32.516 8.772 32.728 8.772 32.904 8.772 C33.088 8.764 33.212 8.76 33.276 8.76 C33.388 8.752 33.46 8.732 33.492 8.7 C33.532 8.668 33.552 8.616 33.552 8.544 L33.552 5.508 Z M28.92 5.508 L29.844 5.508 L29.844 11.22 C29.844 11.404 29.868 11.548 29.916 11.652 C29.964 11.748 30.056 11.812 30.192 11.844 C30.336 11.876 30.544 11.892 30.816 11.892 C30.896 11.892 31.032 11.892 31.224 11.892 C31.416 11.892 31.632 11.892 31.872 11.892 C32.12 11.892 32.364 11.892 32.604 11.892 C32.852 11.892 33.076 11.892 33.276 11.892 C33.484 11.892 33.636 11.892 33.732 11.892 C33.98 11.892 34.16 11.852 34.272 11.772 C34.392 11.692 34.48 11.532 34.536 11.292 C34.592 11.052 34.632 10.708 34.656 10.26 C34.768 10.332 34.904 10.404 35.064 10.476 C35.232 10.54 35.384 10.588 35.52 10.62 C35.472 11.172 35.396 11.604 35.292 11.916 C35.188 12.22 35.016 12.436 34.776 12.564 C34.544 12.692 34.212 12.756 33.78 12.756 C33.708 12.756 33.572 12.756 33.372 12.756 C33.172 12.756 32.94 12.756 32.676 12.756 C32.412 12.756 32.144 12.756 31.872 12.756 C31.608 12.756 31.376 12.756 31.176 12.756 C30.976 12.756 30.844 12.756 30.78 12.756 C30.308 12.756 29.936 12.712 29.664 12.624 C29.392 12.544 29.2 12.392 29.088 12.168 C28.976 11.944 28.92 11.628 28.92 11.22 L28.92 5.508 Z M24.696 2.964 L35.328 2.964 L35.328 3.804 L24.696 3.804 L24.696 2.964 Z M27.396 1.92 L28.308 1.92 L28.308 4.968 L27.396 4.968 L27.396 1.92 Z M31.656 1.92 L32.58 1.92 L32.58 4.968 L31.656 4.968 L31.656 1.92 Z M38.496 8.004 L44.904 8.004 L44.904 8.772 L38.496 8.772 L38.496 8.004 Z M39.18 6.24 L44.868 6.24 L44.868 6.972 L39.18 6.972 L39.18 6.24 Z M41.496 3.54 L42.348 3.54 L42.348 11.232 L41.496 11.232 L41.496 3.54 Z M38.664 4.5 L45.336 4.5 L45.336 5.256 L38.664 5.256 L38.664 4.5 Z M44.64 8.004 L45.444 8.004 C45.444 8.004 45.44 8.044 45.432 8.124 C45.432 8.204 45.424 8.276 45.408 8.34 C45.352 8.956 45.288 9.42 45.216 9.732 C45.144 10.044 45.048 10.26 44.928 10.38 C44.84 10.46 44.748 10.52 44.652 10.56 C44.564 10.592 44.452 10.612 44.316 10.62 C44.204 10.628 44.044 10.636 43.836 10.644 C43.628 10.644 43.412 10.636 43.188 10.62 C43.18 10.508 43.156 10.388 43.116 10.26 C43.084 10.124 43.04 10.004 42.984 9.9 C43.208 9.924 43.404 9.94 43.572 9.948 C43.748 9.948 43.876 9.948 43.956 9.948 C44.036 9.948 44.1 9.944 44.148 9.936 C44.204 9.928 44.248 9.904 44.28 9.864 C44.352 9.784 44.416 9.616 44.472 9.36 C44.528 9.096 44.584 8.68 44.64 8.112 L44.64 8.004 Z M36.984 2.412 L47.04 2.412 L47.04 12.948 L46.152 12.948 L46.152 3.204 L37.836 3.204 L37.836 12.948 L36.984 12.948 L36.984 2.412 Z M37.512 11.58 L46.62 11.58 L46.62 12.36 L37.512 12.36 L37.512 11.58 Z"
+                  }
+                ],
+                "strokeGeometry": [],
+                "relativeTransform": [
+                  [
+                    1,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    1,
+                    0
+                  ]
+                ],
+                "absoluteTransform": [
+                  [
+                    1,
+                    0,
+                    200
+                  ],
+                  [
+                    0,
+                    1,
+                    12
+                  ]
+                ],
+                "x": 0,
+                "y": 0,
+                "width": 48,
+                "height": 15,
+                "absoluteBoundingBox": {
+                  "x": 200,
+                  "y": 12,
+                  "width": 48,
+                  "height": 15
+                },
+                "targetAspectRatio": null,
+                "gridRowSpan": 1,
+                "gridColumnSpan": 1,
+                "gridRowAnchorIndex": -1,
+                "gridColumnAnchorIndex": -1,
+                "gridChildHorizontalAlign": "AUTO",
+                "gridChildVerticalAlign": "AUTO",
+                "absoluteRenderBounds": {
+                  "x": 200.45599365234375,
+                  "y": 13.907999992370605,
+                  "width": 46.58399963378906,
+                  "height": 11.07599925994873
+                },
+                "rotation": 0,
+                "layoutAlign": "INHERIT",
+                "constrainProportions": false,
+                "layoutGrow": 0,
+                "layoutPositioning": "AUTO",
+                "minWidth": null,
+                "minHeight": null,
+                "maxWidth": null,
+                "maxHeight": null,
+                "layoutSizingHorizontal": "HUG",
+                "layoutSizingVertical": "HUG",
+                "exportSettings": [],
+                "constraints": {
+                  "horizontal": "MIN",
+                  "vertical": "MIN"
+                },
+                "characters": "站号范围",
+                "hasMissingFont": false,
+                "fontSize": 12,
+                "hangingPunctuation": false,
+                "hangingList": false,
+                "paragraphIndent": 0,
+                "paragraphSpacing": 0,
+                "listSpacing": 0,
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE",
+                "textDecorationStyle": null,
+                "textDecorationSkipInk": null,
+                "textDecorationOffset": null,
+                "textDecorationThickness": null,
+                "textDecorationColor": null,
+                "letterSpacing": {
+                  "unit": "PERCENT",
+                  "value": 0
+                },
+                "lineHeight": {
+                  "unit": "AUTO"
+                },
+                "leadingTrim": "NONE",
+                "fontName": {
+                  "family": "Inter",
+                  "style": "Regular"
+                },
+                "fontWeight": 400,
+                "openTypeFeatures": {},
+                "hyperlink": null,
+                "canUpgradeToNativeBidiSupport": false,
+                "autoRename": true,
+                "textAlignHorizontal": "LEFT",
+                "textAlignVertical": "TOP",
+                "textAutoResize": "WIDTH_AND_HEIGHT",
+                "textStyleId": "",
+                "maxLines": null,
+                "reactions": [],
+                "playbackSettings": {
+                  "autoplay": true,
+                  "loop": true,
+                  "muted": false
+                },
+                "annotations": []
+              },
+              {
+                "id": "60:324",
+                "type": "FRAME",
+                "children": [
+                  {
+                    "id": "60:325",
+                    "type": "TEXT",
+                    "parent": {
+                      "id": "60:324",
+                      "type": "TEXT"
+                    },
+                    "name": "1",
+                    "isAsset": false,
+                    "detachedInfo": null,
+                    "visible": true,
+                    "locked": false,
+                    "stuckNodes": [],
+                    "attachedConnectors": [],
+                    "componentPropertyReferences": null,
+                    "variableConsumptionMap": {},
+                    "boundVariables": {},
+                    "resolvedVariableModes": {},
+                    "inferredVariables": {},
+                    "availableInferredVariables": {},
+                    "explicitVariableModes": {},
+                    "opacity": 1,
+                    "blendMode": "PASS_THROUGH",
+                    "isMask": false,
+                    "maskType": "ALPHA",
+                    "effects": [],
+                    "effectStyleId": "",
+                    "fills": [
+                      {
+                        "type": "SOLID",
+                        "visible": true,
+                        "opacity": 1,
+                        "blendMode": "NORMAL",
+                        "color": {
+                          "r": 0.4000000059604645,
+                          "g": 0.4000000059604645,
+                          "b": 0.4000000059604645
+                        },
+                        "boundVariables": {}
+                      }
+                    ],
+                    "fillStyleId": "",
+                    "strokes": [],
+                    "strokeStyleId": "",
+                    "strokeWeight": 1,
+                    "strokeAlign": "OUTSIDE",
+                    "strokeJoin": "MITER",
+                    "dashPattern": [],
+                    "strokeCap": "NONE",
+                    "strokeMiterLimit": 4,
+                    "fillGeometry": [
+                      {
+                        "windingRule": "NONZERO",
+                        "data": "M3.64062 3 L3.64062 11 L2.67188 11 L2.67188 4.01562 L2.625 4.01562 L0.671875 5.3125 L0.671875 4.32812 L2.67188 3 L3.64062 3 Z"
+                      }
+                    ],
+                    "strokeGeometry": [],
+                    "relativeTransform": [
+                      [
+                        1,
+                        0,
+                        22
+                      ],
+                      [
+                        0,
+                        1,
+                        0
+                      ]
+                    ],
+                    "absoluteTransform": [
+                      [
+                        1,
+                        0,
+                        278
+                      ],
+                      [
+                        0,
+                        1,
+                        12
+                      ]
+                    ],
+                    "x": 22,
+                    "y": 0,
+                    "width": 6,
+                    "height": 13,
+                    "absoluteBoundingBox": {
+                      "x": 278,
+                      "y": 12,
+                      "width": 6,
+                      "height": 13
+                    },
+                    "targetAspectRatio": null,
+                    "gridRowSpan": 1,
+                    "gridColumnSpan": 1,
+                    "gridRowAnchorIndex": -1,
+                    "gridColumnAnchorIndex": -1,
+                    "gridChildHorizontalAlign": "AUTO",
+                    "gridChildVerticalAlign": "AUTO",
+                    "absoluteRenderBounds": {
+                      "x": 278.671875,
+                      "y": 15,
+                      "width": 2.96875,
+                      "height": 8
+                    },
+                    "rotation": 0,
+                    "layoutAlign": "INHERIT",
+                    "constrainProportions": false,
+                    "layoutGrow": 0,
+                    "layoutPositioning": "AUTO",
+                    "minWidth": null,
+                    "minHeight": null,
+                    "maxWidth": null,
+                    "maxHeight": null,
+                    "layoutSizingHorizontal": "HUG",
+                    "layoutSizingVertical": "HUG",
+                    "exportSettings": [],
+                    "constraints": {
+                      "horizontal": "MIN",
+                      "vertical": "MIN"
+                    },
+                    "characters": "1",
+                    "hasMissingFont": false,
+                    "fontSize": 11,
+                    "hangingPunctuation": false,
+                    "hangingList": false,
+                    "paragraphIndent": 0,
+                    "paragraphSpacing": 0,
+                    "listSpacing": 0,
+                    "textCase": "ORIGINAL",
+                    "textDecoration": "NONE",
+                    "textDecorationStyle": null,
+                    "textDecorationSkipInk": null,
+                    "textDecorationOffset": null,
+                    "textDecorationThickness": null,
+                    "textDecorationColor": null,
+                    "letterSpacing": {
+                      "unit": "PERCENT",
+                      "value": 0
+                    },
+                    "lineHeight": {
+                      "unit": "AUTO"
+                    },
+                    "leadingTrim": "NONE",
+                    "fontName": {
+                      "family": "Inter",
+                      "style": "Regular"
+                    },
+                    "fontWeight": 400,
+                    "openTypeFeatures": {},
+                    "hyperlink": null,
+                    "canUpgradeToNativeBidiSupport": false,
+                    "autoRename": true,
+                    "textAlignHorizontal": "LEFT",
+                    "textAlignVertical": "TOP",
+                    "textAutoResize": "WIDTH_AND_HEIGHT",
+                    "textStyleId": "",
+                    "maxLines": null,
+                    "reactions": [],
+                    "playbackSettings": {
+                      "autoplay": true,
+                      "loop": true,
+                      "muted": false
+                    },
+                    "annotations": []
+                  }
+                ],
+                "parent": {
+                  "id": "60:322",
+                  "type": "FRAME"
+                },
+                "name": "Frame",
+                "isAsset": false,
+                "detachedInfo": null,
+                "visible": true,
+                "locked": false,
+                "stuckNodes": [],
+                "attachedConnectors": [],
+                "componentPropertyReferences": null,
+                "variableConsumptionMap": {},
+                "boundVariables": {},
+                "resolvedVariableModes": {},
+                "inferredVariables": {},
+                "availableInferredVariables": {},
+                "explicitVariableModes": {},
+                "opacity": 1,
+                "blendMode": "PASS_THROUGH",
+                "isMask": false,
+                "maskType": "ALPHA",
+                "effects": [],
+                "effectStyleId": "",
+                "relativeTransform": [
+                  [
+                    1,
+                    0,
+                    56
+                  ],
+                  [
+                    0,
+                    1,
+                    0
+                  ]
+                ],
+                "absoluteTransform": [
+                  [
+                    1,
+                    0,
+                    256
+                  ],
+                  [
+                    0,
+                    1,
+                    12
+                  ]
+                ],
+                "x": 56,
+                "y": 0,
+                "width": 50,
+                "height": 24,
+                "absoluteBoundingBox": {
+                  "x": 256,
+                  "y": 12,
+                  "width": 50,
+                  "height": 24
+                },
+                "targetAspectRatio": null,
+                "gridRowSpan": 1,
+                "gridColumnSpan": 1,
+                "gridRowAnchorIndex": -1,
+                "gridColumnAnchorIndex": -1,
+                "gridChildHorizontalAlign": "AUTO",
+                "gridChildVerticalAlign": "AUTO",
+                "absoluteRenderBounds": {
+                  "x": 256,
+                  "y": 12,
+                  "width": 50,
+                  "height": 24
+                },
+                "rotation": 0,
+                "layoutAlign": "INHERIT",
+                "constrainProportions": false,
+                "layoutGrow": 0,
+                "layoutPositioning": "AUTO",
+                "minWidth": null,
+                "minHeight": null,
+                "maxWidth": null,
+                "maxHeight": null,
+                "layoutSizingHorizontal": "FIXED",
+                "layoutSizingVertical": "FIXED",
+                "exportSettings": [],
+                "fills": [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 1,
+                      "g": 1,
+                      "b": 1
+                    },
+                    "boundVariables": {}
+                  }
+                ],
+                "fillStyleId": "",
+                "strokes": [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 0.800000011920929,
+                      "g": 0.800000011920929,
+                      "b": 0.800000011920929
+                    },
+                    "boundVariables": {}
+                  }
+                ],
+                "strokeStyleId": "",
+                "strokeWeight": 1,
+                "strokeAlign": "INSIDE",
+                "strokeJoin": "MITER",
+                "dashPattern": [],
+                "strokeCap": "NONE",
+                "strokeMiterLimit": 4,
+                "fillGeometry": [
+                  {
+                    "windingRule": "NONZERO",
+                    "data": "M0 0 L50 0 L50 24 L0 24 L0 0 Z"
+                  }
+                ],
+                "strokeGeometry": [
+                  {
+                    "windingRule": "NONZERO",
+                    "data": "M0 0 L0 -1 L-1 -1 L-1 0 L0 0 Z M50 0 L51 0 L51 -1 L50 -1 L50 0 Z M50 24 L50 25 L51 25 L51 24 L50 24 Z M0 24 L-1 24 L-1 25 L0 25 L0 24 Z M0 0 L0 1 L50 1 L50 0 L50 -1 L0 -1 L0 0 Z M50 0 L49 0 L49 24 L50 24 L51 24 L51 0 L50 0 Z M50 24 L50 23 L0 23 L0 24 L0 25 L50 25 L50 24 Z M0 24 L1 24 L1 0 L0 0 L-1 0 L-1 24 L0 24 Z"
+                  }
+                ],
+                "cornerRadius": 0,
+                "cornerSmoothing": 0,
+                "topLeftRadius": 0,
+                "topRightRadius": 0,
+                "bottomLeftRadius": 0,
+                "bottomRightRadius": 0,
+                "paddingLeft": 8,
+                "paddingRight": 8,
+                "paddingTop": 0,
+                "paddingBottom": 0,
+                "primaryAxisAlignItems": "CENTER",
+                "counterAxisAlignItems": "MIN",
+                "primaryAxisSizingMode": "FIXED",
+                "layoutWrap": "NO_WRAP",
+                "counterAxisSpacing": 0,
+                "counterAxisAlignContent": "AUTO",
+                "gridRowCount": 0,
+                "gridColumnCount": 0,
+                "gridRowGap": 0,
+                "gridColumnGap": 0,
+                "gridRowSizingCSS": "",
+                "gridColumnSizingCSS": "",
+                "gridRowSizes": [],
+                "gridColumnSizes": [],
+                "strokeTopWeight": 1,
+                "strokeBottomWeight": 1,
+                "strokeLeftWeight": 1,
+                "strokeRightWeight": 1,
+                "inferredAutoLayout": {
+                  "layoutMode": "HORIZONTAL",
+                  "paddingLeft": 8,
+                  "paddingRight": 8,
+                  "paddingTop": 0,
+                  "paddingBottom": 0,
+                  "counterAxisSizingMode": "FIXED",
+                  "primaryAxisSizingMode": "FIXED",
+                  "primaryAxisAlignItems": "CENTER",
+                  "counterAxisAlignItems": "MIN",
+                  "layoutAlign": "INHERIT",
+                  "layoutGrow": 0,
+                  "itemSpacing": 0,
+                  "layoutPositioning": "AUTO"
+                },
+                "annotations": [],
+                "layoutGrids": [],
+                "gridStyleId": "",
+                "backgrounds": [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 1,
+                      "g": 1,
+                      "b": 1
+                    },
+                    "boundVariables": {}
+                  }
+                ],
+                "backgroundStyleId": "",
+                "clipsContent": true,
+                "guides": [],
+                "expanded": false,
+                "constraints": {
+                  "horizontal": "MIN",
+                  "vertical": "MIN"
+                },
+                "layoutMode": "HORIZONTAL",
+                "counterAxisSizingMode": "FIXED",
+                "verticalPadding": 0,
+                "itemSpacing": 0,
+                "overflowDirection": "NONE",
+                "numberOfFixedChildren": 0,
+                "overlayPositionType": "CENTER",
+                "overlayBackground": {
+                  "type": "NONE"
+                },
+                "overlayBackgroundInteraction": "NONE",
+                "itemReverseZIndex": false,
+                "strokesIncludedInLayout": false,
+                "devStatus": null,
+                "reactions": [],
+                "playbackSettings": {
+                  "autoplay": true,
+                  "loop": true,
+                  "muted": false
+                }
+              },
+              {
+                "id": "60:326",
+                "type": "TEXT",
+                "parent": {
+                  "id": "60:322",
+                  "type": "TEXT"
+                },
+                "name": "-",
+                "isAsset": false,
+                "detachedInfo": null,
+                "visible": true,
+                "locked": false,
+                "stuckNodes": [],
+                "attachedConnectors": [],
+                "componentPropertyReferences": null,
+                "variableConsumptionMap": {},
+                "boundVariables": {},
+                "resolvedVariableModes": {},
+                "inferredVariables": {},
+                "availableInferredVariables": {},
+                "explicitVariableModes": {},
+                "opacity": 1,
+                "blendMode": "PASS_THROUGH",
+                "isMask": false,
+                "maskType": "ALPHA",
+                "effects": [],
+                "effectStyleId": "",
+                "fills": [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 0.10000000149011612,
+                      "g": 0.10000000149011612,
+                      "b": 0.10000000149011612
+                    },
+                    "boundVariables": {}
+                  }
+                ],
+                "fillStyleId": "",
+                "strokes": [],
+                "strokeStyleId": "",
+                "strokeWeight": 1,
+                "strokeAlign": "OUTSIDE",
+                "strokeJoin": "MITER",
+                "dashPattern": [],
+                "strokeCap": "NONE",
+                "strokeMiterLimit": 4,
+                "fillGeometry": [
+                  {
+                    "windingRule": "NONZERO",
+                    "data": "M4.67045 7.78977 L4.67045 8.72727 L0.852273 8.72727 L0.852273 7.78977 L4.67045 7.78977 Z"
+                  }
+                ],
+                "strokeGeometry": [],
+                "relativeTransform": [
+                  [
+                    1,
+                    0,
+                    114
+                  ],
+                  [
+                    0,
+                    1,
+                    0
+                  ]
+                ],
+                "absoluteTransform": [
+                  [
+                    1,
+                    0,
+                    314
+                  ],
+                  [
+                    0,
+                    1,
+                    12
+                  ]
+                ],
+                "x": 114,
+                "y": 0,
+                "width": 6,
+                "height": 15,
+                "absoluteBoundingBox": {
+                  "x": 314,
+                  "y": 12,
+                  "width": 6,
+                  "height": 15
+                },
+                "targetAspectRatio": null,
+                "gridRowSpan": 1,
+                "gridColumnSpan": 1,
+                "gridRowAnchorIndex": -1,
+                "gridColumnAnchorIndex": -1,
+                "gridChildHorizontalAlign": "AUTO",
+                "gridChildVerticalAlign": "AUTO",
+                "absoluteRenderBounds": {
+                  "x": 314.8522644042969,
+                  "y": 19.789772033691406,
+                  "width": 3.81817626953125,
+                  "height": 0.9375
+                },
+                "rotation": 0,
+                "layoutAlign": "INHERIT",
+                "constrainProportions": false,
+                "layoutGrow": 0,
+                "layoutPositioning": "AUTO",
+                "minWidth": null,
+                "minHeight": null,
+                "maxWidth": null,
+                "maxHeight": null,
+                "layoutSizingHorizontal": "HUG",
+                "layoutSizingVertical": "HUG",
+                "exportSettings": [],
+                "constraints": {
+                  "horizontal": "MIN",
+                  "vertical": "MIN"
+                },
+                "characters": "-",
+                "hasMissingFont": false,
+                "fontSize": 12,
+                "hangingPunctuation": false,
+                "hangingList": false,
+                "paragraphIndent": 0,
+                "paragraphSpacing": 0,
+                "listSpacing": 0,
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE",
+                "textDecorationStyle": null,
+                "textDecorationSkipInk": null,
+                "textDecorationOffset": null,
+                "textDecorationThickness": null,
+                "textDecorationColor": null,
+                "letterSpacing": {
+                  "unit": "PERCENT",
+                  "value": 0
+                },
+                "lineHeight": {
+                  "unit": "AUTO"
+                },
+                "leadingTrim": "NONE",
+                "fontName": {
+                  "family": "Inter",
+                  "style": "Regular"
+                },
+                "fontWeight": 400,
+                "openTypeFeatures": {},
+                "hyperlink": null,
+                "canUpgradeToNativeBidiSupport": false,
+                "autoRename": true,
+                "textAlignHorizontal": "LEFT",
+                "textAlignVertical": "TOP",
+                "textAutoResize": "WIDTH_AND_HEIGHT",
+                "textStyleId": "",
+                "maxLines": null,
+                "reactions": [],
+                "playbackSettings": {
+                  "autoplay": true,
+                  "loop": true,
+                  "muted": false
+                },
+                "annotations": []
+              },
+              {
+                "id": "60:327",
+                "type": "FRAME",
+                "children": [
+                  {
+                    "id": "60:328",
+                    "type": "TEXT",
+                    "parent": {
+                      "id": "60:327",
+                      "type": "TEXT"
+                    },
+                    "name": "16",
+                    "isAsset": false,
+                    "detachedInfo": null,
+                    "visible": true,
+                    "locked": false,
+                    "stuckNodes": [],
+                    "attachedConnectors": [],
+                    "componentPropertyReferences": null,
+                    "variableConsumptionMap": {},
+                    "boundVariables": {},
+                    "resolvedVariableModes": {},
+                    "inferredVariables": {},
+                    "availableInferredVariables": {},
+                    "explicitVariableModes": {},
+                    "opacity": 1,
+                    "blendMode": "PASS_THROUGH",
+                    "isMask": false,
+                    "maskType": "ALPHA",
+                    "effects": [],
+                    "effectStyleId": "",
+                    "fills": [
+                      {
+                        "type": "SOLID",
+                        "visible": true,
+                        "opacity": 1,
+                        "blendMode": "NORMAL",
+                        "color": {
+                          "r": 0.4000000059604645,
+                          "g": 0.4000000059604645,
+                          "b": 0.4000000059604645
+                        },
+                        "boundVariables": {}
+                      }
+                    ],
+                    "fillStyleId": "",
+                    "strokes": [],
+                    "strokeStyleId": "",
+                    "strokeWeight": 1,
+                    "strokeAlign": "OUTSIDE",
+                    "strokeJoin": "MITER",
+                    "dashPattern": [],
+                    "strokeCap": "NONE",
+                    "strokeMiterLimit": 4,
+                    "fillGeometry": [
+                      {
+                        "windingRule": "NONZERO",
+                        "data": "M3.64062 3 L3.64062 11 L2.67188 11 L2.67188 4.01562 L2.625 4.01562 L0.671875 5.3125 L0.671875 4.32812 L2.67188 3 L3.64062 3 Z M8.59766 11.1094 C8.26953 11.1042 7.94141 11.0417 7.61328 10.9219 C7.28516 10.8021 6.98568 10.6003 6.71484 10.3164 C6.44401 10.0299 6.22656 9.64323 6.0625 9.15625 C5.89844 8.66667 5.81641 8.05208 5.81641 7.3125 C5.81641 6.60417 5.88281 5.97656 6.01562 5.42969 C6.14844 4.88021 6.34115 4.41797 6.59375 4.04297 C6.84635 3.66536 7.15104 3.37891 7.50781 3.18359 C7.86719 2.98828 8.27214 2.89062 8.72266 2.89062 C9.17057 2.89062 9.56901 2.98047 9.91797 3.16016 C10.2695 3.33724 10.556 3.58464 10.7773 3.90234 C10.9987 4.22005 11.1419 4.58594 11.207 5 L10.2539 5 C10.1654 4.64062 9.99349 4.34245 9.73828 4.10547 C9.48307 3.86849 9.14453 3.75 8.72266 3.75 C8.10286 3.75 7.61458 4.01953 7.25781 4.55859 C6.90365 5.09766 6.72526 5.85417 6.72266 6.82812 L6.78516 6.82812 C6.93099 6.60677 7.10417 6.41797 7.30469 6.26172 C7.50781 6.10286 7.73177 5.98047 7.97656 5.89453 C8.22135 5.80859 8.48047 5.76562 8.75391 5.76562 C9.21224 5.76562 9.63151 5.88021 10.0117 6.10938 C10.3919 6.33594 10.6966 6.64974 10.9258 7.05078 C11.1549 7.44922 11.2695 7.90625 11.2695 8.42188 C11.2695 8.91667 11.1589 9.36979 10.9375 9.78125 C10.7161 10.1901 10.4049 10.5156 10.0039 10.7578 C9.60547 10.9974 9.13672 11.1146 8.59766 11.1094 Z M8.59766 10.25 C8.92578 10.25 9.22005 10.168 9.48047 10.0039 C9.74349 9.83984 9.95052 9.61979 10.1016 9.34375 C10.2552 9.06771 10.332 8.76042 10.332 8.42188 C10.332 8.09115 10.2578 7.79036 10.1094 7.51953 C9.96354 7.24609 9.76172 7.02865 9.50391 6.86719 C9.2487 6.70573 8.95703 6.625 8.62891 6.625 C8.38151 6.625 8.15104 6.67448 7.9375 6.77344 C7.72396 6.86979 7.53646 7.0026 7.375 7.17188 C7.21615 7.34115 7.09115 7.53516 7 7.75391 C6.90885 7.97005 6.86328 8.19792 6.86328 8.4375 C6.86328 8.75521 6.9375 9.05208 7.08594 9.32812 C7.23698 9.60417 7.44271 9.82682 7.70312 9.99609 C7.96615 10.1654 8.26432 10.25 8.59766 10.25 Z"
+                      }
+                    ],
+                    "strokeGeometry": [],
+                    "relativeTransform": [
+                      [
+                        1,
+                        0,
+                        19
+                      ],
+                      [
+                        0,
+                        1,
+                        0
+                      ]
+                    ],
+                    "absoluteTransform": [
+                      [
+                        1,
+                        0,
+                        347
+                      ],
+                      [
+                        0,
+                        1,
+                        12
+                      ]
+                    ],
+                    "x": 19,
+                    "y": 0,
+                    "width": 12,
+                    "height": 13,
+                    "absoluteBoundingBox": {
+                      "x": 347,
+                      "y": 12,
+                      "width": 12,
+                      "height": 13
+                    },
+                    "targetAspectRatio": null,
+                    "gridRowSpan": 1,
+                    "gridColumnSpan": 1,
+                    "gridRowAnchorIndex": -1,
+                    "gridColumnAnchorIndex": -1,
+                    "gridChildHorizontalAlign": "AUTO",
+                    "gridChildVerticalAlign": "AUTO",
+                    "absoluteRenderBounds": {
+                      "x": 347.671875,
+                      "y": 14.890625,
+                      "width": 10.59765625,
+                      "height": 8.2265625
+                    },
+                    "rotation": 0,
+                    "layoutAlign": "INHERIT",
+                    "constrainProportions": false,
+                    "layoutGrow": 0,
+                    "layoutPositioning": "AUTO",
+                    "minWidth": null,
+                    "minHeight": null,
+                    "maxWidth": null,
+                    "maxHeight": null,
+                    "layoutSizingHorizontal": "HUG",
+                    "layoutSizingVertical": "HUG",
+                    "exportSettings": [],
+                    "constraints": {
+                      "horizontal": "MIN",
+                      "vertical": "MIN"
+                    },
+                    "characters": "16",
+                    "hasMissingFont": false,
+                    "fontSize": 11,
+                    "hangingPunctuation": false,
+                    "hangingList": false,
+                    "paragraphIndent": 0,
+                    "paragraphSpacing": 0,
+                    "listSpacing": 0,
+                    "textCase": "ORIGINAL",
+                    "textDecoration": "NONE",
+                    "textDecorationStyle": null,
+                    "textDecorationSkipInk": null,
+                    "textDecorationOffset": null,
+                    "textDecorationThickness": null,
+                    "textDecorationColor": null,
+                    "letterSpacing": {
+                      "unit": "PERCENT",
+                      "value": 0
+                    },
+                    "lineHeight": {
+                      "unit": "AUTO"
+                    },
+                    "leadingTrim": "NONE",
+                    "fontName": {
+                      "family": "Inter",
+                      "style": "Regular"
+                    },
+                    "fontWeight": 400,
+                    "openTypeFeatures": {},
+                    "hyperlink": null,
+                    "canUpgradeToNativeBidiSupport": false,
+                    "autoRename": true,
+                    "textAlignHorizontal": "LEFT",
+                    "textAlignVertical": "TOP",
+                    "textAutoResize": "WIDTH_AND_HEIGHT",
+                    "textStyleId": "",
+                    "maxLines": null,
+                    "reactions": [],
+                    "playbackSettings": {
+                      "autoplay": true,
+                      "loop": true,
+                      "muted": false
+                    },
+                    "annotations": []
+                  }
+                ],
+                "parent": {
+                  "id": "60:322",
+                  "type": "FRAME"
+                },
+                "name": "Frame",
+                "isAsset": false,
+                "detachedInfo": null,
+                "visible": true,
+                "locked": false,
+                "stuckNodes": [],
+                "attachedConnectors": [],
+                "componentPropertyReferences": null,
+                "variableConsumptionMap": {},
+                "boundVariables": {},
+                "resolvedVariableModes": {},
+                "inferredVariables": {},
+                "availableInferredVariables": {},
+                "explicitVariableModes": {},
+                "opacity": 1,
+                "blendMode": "PASS_THROUGH",
+                "isMask": false,
+                "maskType": "ALPHA",
+                "effects": [],
+                "effectStyleId": "",
+                "relativeTransform": [
+                  [
+                    1,
+                    0,
+                    128
+                  ],
+                  [
+                    0,
+                    1,
+                    0
+                  ]
+                ],
+                "absoluteTransform": [
+                  [
+                    1,
+                    0,
+                    328
+                  ],
+                  [
+                    0,
+                    1,
+                    12
+                  ]
+                ],
+                "x": 128,
+                "y": 0,
+                "width": 50,
+                "height": 24,
+                "absoluteBoundingBox": {
+                  "x": 328,
+                  "y": 12,
+                  "width": 50,
+                  "height": 24
+                },
+                "targetAspectRatio": null,
+                "gridRowSpan": 1,
+                "gridColumnSpan": 1,
+                "gridRowAnchorIndex": -1,
+                "gridColumnAnchorIndex": -1,
+                "gridChildHorizontalAlign": "AUTO",
+                "gridChildVerticalAlign": "AUTO",
+                "absoluteRenderBounds": {
+                  "x": 328,
+                  "y": 12,
+                  "width": 50,
+                  "height": 24
+                },
+                "rotation": 0,
+                "layoutAlign": "INHERIT",
+                "constrainProportions": false,
+                "layoutGrow": 0,
+                "layoutPositioning": "AUTO",
+                "minWidth": null,
+                "minHeight": null,
+                "maxWidth": null,
+                "maxHeight": null,
+                "layoutSizingHorizontal": "FIXED",
+                "layoutSizingVertical": "FIXED",
+                "exportSettings": [],
+                "fills": [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 1,
+                      "g": 1,
+                      "b": 1
+                    },
+                    "boundVariables": {}
+                  }
+                ],
+                "fillStyleId": "",
+                "strokes": [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 0.800000011920929,
+                      "g": 0.800000011920929,
+                      "b": 0.800000011920929
+                    },
+                    "boundVariables": {}
+                  }
+                ],
+                "strokeStyleId": "",
+                "strokeWeight": 1,
+                "strokeAlign": "INSIDE",
+                "strokeJoin": "MITER",
+                "dashPattern": [],
+                "strokeCap": "NONE",
+                "strokeMiterLimit": 4,
+                "fillGeometry": [
+                  {
+                    "windingRule": "NONZERO",
+                    "data": "M0 0 L50 0 L50 24 L0 24 L0 0 Z"
+                  }
+                ],
+                "strokeGeometry": [
+                  {
+                    "windingRule": "NONZERO",
+                    "data": "M0 0 L0 -1 L-1 -1 L-1 0 L0 0 Z M50 0 L51 0 L51 -1 L50 -1 L50 0 Z M50 24 L50 25 L51 25 L51 24 L50 24 Z M0 24 L-1 24 L-1 25 L0 25 L0 24 Z M0 0 L0 1 L50 1 L50 0 L50 -1 L0 -1 L0 0 Z M50 0 L49 0 L49 24 L50 24 L51 24 L51 0 L50 0 Z M50 24 L50 23 L0 23 L0 24 L0 25 L50 25 L50 24 Z M0 24 L1 24 L1 0 L0 0 L-1 0 L-1 24 L0 24 Z"
+                  }
+                ],
+                "cornerRadius": 0,
+                "cornerSmoothing": 0,
+                "topLeftRadius": 0,
+                "topRightRadius": 0,
+                "bottomLeftRadius": 0,
+                "bottomRightRadius": 0,
+                "paddingLeft": 8,
+                "paddingRight": 8,
+                "paddingTop": 0,
+                "paddingBottom": 0,
+                "primaryAxisAlignItems": "CENTER",
+                "counterAxisAlignItems": "MIN",
+                "primaryAxisSizingMode": "FIXED",
+                "layoutWrap": "NO_WRAP",
+                "counterAxisSpacing": 0,
+                "counterAxisAlignContent": "AUTO",
+                "gridRowCount": 0,
+                "gridColumnCount": 0,
+                "gridRowGap": 0,
+                "gridColumnGap": 0,
+                "gridRowSizingCSS": "",
+                "gridColumnSizingCSS": "",
+                "gridRowSizes": [],
+                "gridColumnSizes": [],
+                "strokeTopWeight": 1,
+                "strokeBottomWeight": 1,
+                "strokeLeftWeight": 1,
+                "strokeRightWeight": 1,
+                "inferredAutoLayout": {
+                  "layoutMode": "HORIZONTAL",
+                  "paddingLeft": 8,
+                  "paddingRight": 8,
+                  "paddingTop": 0,
+                  "paddingBottom": 0,
+                  "counterAxisSizingMode": "FIXED",
+                  "primaryAxisSizingMode": "FIXED",
+                  "primaryAxisAlignItems": "CENTER",
+                  "counterAxisAlignItems": "MIN",
+                  "layoutAlign": "INHERIT",
+                  "layoutGrow": 0,
+                  "itemSpacing": 0,
+                  "layoutPositioning": "AUTO"
+                },
+                "annotations": [],
+                "layoutGrids": [],
+                "gridStyleId": "",
+                "backgrounds": [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 1,
+                      "g": 1,
+                      "b": 1
+                    },
+                    "boundVariables": {}
+                  }
+                ],
+                "backgroundStyleId": "",
+                "clipsContent": true,
+                "guides": [],
+                "expanded": true,
+                "constraints": {
+                  "horizontal": "MIN",
+                  "vertical": "MIN"
+                },
+                "layoutMode": "HORIZONTAL",
+                "counterAxisSizingMode": "FIXED",
+                "verticalPadding": 0,
+                "itemSpacing": 0,
+                "overflowDirection": "NONE",
+                "numberOfFixedChildren": 0,
+                "overlayPositionType": "CENTER",
+                "overlayBackground": {
+                  "type": "NONE"
+                },
+                "overlayBackgroundInteraction": "NONE",
+                "itemReverseZIndex": false,
+                "strokesIncludedInLayout": false,
+                "devStatus": null,
+                "reactions": [],
+                "playbackSettings": {
+                  "autoplay": true,
+                  "loop": true,
+                  "muted": false
+                }
+              }
+            ],
+            "parent": {
+              "id": "60:317",
+              "type": "FRAME"
+            },
+            "name": "Frame",
+            "isAsset": false,
+            "detachedInfo": null,
+            "visible": true,
+            "locked": false,
+            "stuckNodes": [],
+            "attachedConnectors": [],
+            "componentPropertyReferences": null,
+            "variableConsumptionMap": {},
+            "boundVariables": {},
+            "resolvedVariableModes": {},
+            "inferredVariables": {},
+            "availableInferredVariables": {},
+            "explicitVariableModes": {},
+            "opacity": 1,
+            "blendMode": "PASS_THROUGH",
+            "isMask": false,
+            "maskType": "ALPHA",
+            "effects": [],
+            "effectStyleId": "",
+            "relativeTransform": [
+              [
+                1,
+                0,
+                184
+              ],
+              [
+                0,
+                1,
+                0
+              ]
+            ],
+            "absoluteTransform": [
+              [
+                1,
+                0,
+                200
+              ],
+              [
+                0,
+                1,
+                12
+              ]
+            ],
+            "x": 184,
+            "y": 0,
+            "width": 178,
+            "height": 24,
+            "absoluteBoundingBox": {
+              "x": 200,
+              "y": 12,
+              "width": 178,
+              "height": 24
+            },
+            "targetAspectRatio": null,
+            "gridRowSpan": 1,
+            "gridColumnSpan": 1,
+            "gridRowAnchorIndex": -1,
+            "gridColumnAnchorIndex": -1,
+            "gridChildHorizontalAlign": "AUTO",
+            "gridChildVerticalAlign": "AUTO",
+            "absoluteRenderBounds": {
+              "x": 200,
+              "y": 12,
+              "width": 178,
+              "height": 24
+            },
+            "rotation": 0,
+            "layoutAlign": "INHERIT",
+            "constrainProportions": false,
+            "layoutGrow": 0,
+            "layoutPositioning": "AUTO",
+            "minWidth": null,
+            "minHeight": null,
+            "maxWidth": null,
+            "maxHeight": null,
+            "layoutSizingHorizontal": "HUG",
+            "layoutSizingVertical": "HUG",
+            "exportSettings": [],
+            "fills": [],
+            "fillStyleId": "",
+            "strokes": [],
+            "strokeStyleId": "",
+            "strokeWeight": 1,
+            "strokeAlign": "INSIDE",
+            "strokeJoin": "MITER",
+            "dashPattern": [],
+            "strokeCap": "NONE",
+            "strokeMiterLimit": 4,
+            "fillGeometry": [
+              {
+                "windingRule": "NONZERO",
+                "data": "M0 0 L178 0 L178 24 L0 24 L0 0 Z"
+              }
+            ],
+            "strokeGeometry": [],
+            "cornerRadius": 0,
+            "cornerSmoothing": 0,
+            "topLeftRadius": 0,
+            "topRightRadius": 0,
+            "bottomLeftRadius": 0,
+            "bottomRightRadius": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "primaryAxisAlignItems": "CENTER",
+            "counterAxisAlignItems": "MIN",
+            "primaryAxisSizingMode": "AUTO",
+            "layoutWrap": "NO_WRAP",
+            "counterAxisSpacing": 0,
+            "counterAxisAlignContent": "AUTO",
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowSizingCSS": "",
+            "gridColumnSizingCSS": "",
+            "gridRowSizes": [],
+            "gridColumnSizes": [],
+            "strokeTopWeight": 1,
+            "strokeBottomWeight": 1,
+            "strokeLeftWeight": 1,
+            "strokeRightWeight": 1,
+            "inferredAutoLayout": {
+              "layoutMode": "HORIZONTAL",
+              "paddingLeft": 0,
+              "paddingRight": 0,
+              "paddingTop": 0,
+              "paddingBottom": 0,
+              "counterAxisSizingMode": "AUTO",
+              "primaryAxisSizingMode": "AUTO",
+              "primaryAxisAlignItems": "CENTER",
+              "counterAxisAlignItems": "MIN",
+              "layoutAlign": "INHERIT",
+              "layoutGrow": 0,
+              "itemSpacing": 8,
+              "layoutPositioning": "AUTO"
+            },
+            "annotations": [],
+            "layoutGrids": [],
+            "gridStyleId": "",
+            "backgrounds": [],
+            "backgroundStyleId": "",
+            "clipsContent": true,
+            "guides": [],
+            "expanded": true,
+            "constraints": {
+              "horizontal": "MIN",
+              "vertical": "MIN"
+            },
+            "layoutMode": "HORIZONTAL",
+            "counterAxisSizingMode": "AUTO",
+            "verticalPadding": 0,
+            "itemSpacing": 8,
+            "overflowDirection": "NONE",
+            "numberOfFixedChildren": 0,
+            "overlayPositionType": "CENTER",
+            "overlayBackground": {
+              "type": "NONE"
+            },
+            "overlayBackgroundInteraction": "NONE",
+            "itemReverseZIndex": false,
+            "strokesIncludedInLayout": false,
+            "devStatus": null,
+            "reactions": [],
+            "playbackSettings": {
+              "autoplay": true,
+              "loop": true,
+              "muted": false
+            }
+          },
+          {
+            "id": "60:329",
+            "type": "FRAME",
+            "children": [],
+            "parent": {
+              "id": "60:317",
+              "type": "FRAME"
+            },
+            "name": "Frame",
+            "isAsset": false,
+            "detachedInfo": null,
+            "visible": true,
+            "locked": false,
+            "stuckNodes": [],
+            "attachedConnectors": [],
+            "componentPropertyReferences": null,
+            "variableConsumptionMap": {},
+            "boundVariables": {},
+            "resolvedVariableModes": {},
+            "inferredVariables": {},
+            "availableInferredVariables": {},
+            "explicitVariableModes": {},
+            "opacity": 1,
+            "blendMode": "PASS_THROUGH",
+            "isMask": false,
+            "maskType": "ALPHA",
+            "effects": [],
+            "effectStyleId": "",
+            "relativeTransform": [
+              [
+                1,
+                0,
+                374
+              ],
+              [
+                0,
+                1,
+                0
+              ]
+            ],
+            "absoluteTransform": [
+              [
+                1,
+                0,
+                390
+              ],
+              [
+                0,
+                1,
+                12
+              ]
+            ],
+            "x": 374,
+            "y": 0,
+            "width": 1,
+            "height": 100,
+            "absoluteBoundingBox": {
+              "x": 390,
+              "y": 12,
+              "width": 1,
+              "height": 100
+            },
+            "targetAspectRatio": null,
+            "gridRowSpan": 1,
+            "gridColumnSpan": 1,
+            "gridRowAnchorIndex": -1,
+            "gridColumnAnchorIndex": -1,
+            "gridChildHorizontalAlign": "AUTO",
+            "gridChildVerticalAlign": "AUTO",
+            "absoluteRenderBounds": {
+              "x": 390,
+              "y": 12,
+              "width": 1,
+              "height": 100
+            },
+            "rotation": 0,
+            "layoutAlign": "INHERIT",
+            "constrainProportions": false,
+            "layoutGrow": 0,
+            "layoutPositioning": "AUTO",
+            "minWidth": null,
+            "minHeight": null,
+            "maxWidth": null,
+            "maxHeight": null,
+            "layoutSizingHorizontal": "FIXED",
+            "layoutSizingVertical": "FIXED",
+            "exportSettings": [],
+            "fills": [],
+            "fillStyleId": "",
+            "strokes": [],
+            "strokeStyleId": "",
+            "strokeWeight": 1,
+            "strokeAlign": "INSIDE",
+            "strokeJoin": "MITER",
+            "dashPattern": [],
+            "strokeCap": "NONE",
+            "strokeMiterLimit": 4,
+            "fillGeometry": [
+              {
+                "windingRule": "NONZERO",
+                "data": "M0 0 L1 0 L1 100 L0 100 L0 0 Z"
+              }
+            ],
+            "strokeGeometry": [],
+            "cornerRadius": 0,
+            "cornerSmoothing": 0,
+            "topLeftRadius": 0,
+            "topRightRadius": 0,
+            "bottomLeftRadius": 0,
+            "bottomRightRadius": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "primaryAxisAlignItems": "MIN",
+            "counterAxisAlignItems": "MIN",
+            "primaryAxisSizingMode": "AUTO",
+            "layoutWrap": "NO_WRAP",
+            "counterAxisSpacing": 0,
+            "counterAxisAlignContent": "AUTO",
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowSizingCSS": "",
+            "gridColumnSizingCSS": "",
+            "gridRowSizes": [],
+            "gridColumnSizes": [],
+            "strokeTopWeight": 1,
+            "strokeBottomWeight": 1,
+            "strokeLeftWeight": 1,
+            "strokeRightWeight": 1,
+            "inferredAutoLayout": null,
+            "annotations": [],
+            "layoutGrids": [],
+            "gridStyleId": "",
+            "backgrounds": [],
+            "backgroundStyleId": "",
+            "clipsContent": true,
+            "guides": [],
+            "expanded": false,
+            "constraints": {
+              "horizontal": "MIN",
+              "vertical": "MIN"
+            },
+            "layoutMode": "NONE",
+            "counterAxisSizingMode": "FIXED",
+            "verticalPadding": 0,
+            "itemSpacing": 0,
+            "overflowDirection": "NONE",
+            "numberOfFixedChildren": 0,
+            "overlayPositionType": "CENTER",
+            "overlayBackground": {
+              "type": "NONE"
+            },
+            "overlayBackgroundInteraction": "NONE",
+            "itemReverseZIndex": false,
+            "strokesIncludedInLayout": false,
+            "devStatus": null,
+            "reactions": [],
+            "playbackSettings": {
+              "autoplay": true,
+              "loop": true,
+              "muted": false
+            }
+          },
+          {
+            "id": "60:330",
+            "type": "TEXT",
+            "parent": {
+              "id": "60:317",
+              "type": "TEXT"
+            },
+            "name": "设备无法连接？",
+            "isAsset": false,
+            "detachedInfo": null,
+            "visible": true,
+            "locked": false,
+            "stuckNodes": [],
+            "attachedConnectors": [],
+            "componentPropertyReferences": null,
+            "variableConsumptionMap": {},
+            "boundVariables": {},
+            "resolvedVariableModes": {},
+            "inferredVariables": {},
+            "availableInferredVariables": {},
+            "explicitVariableModes": {},
+            "opacity": 1,
+            "blendMode": "PASS_THROUGH",
+            "isMask": false,
+            "maskType": "ALPHA",
+            "effects": [],
+            "effectStyleId": "",
+            "fills": [
+              {
+                "type": "SOLID",
+                "visible": true,
+                "opacity": 1,
+                "blendMode": "NORMAL",
+                "color": {
+                  "r": 0.20000000298023224,
+                  "g": 0.4000000059604645,
+                  "b": 0.800000011920929
+                },
+                "boundVariables": {}
+              }
+            ],
+            "fillStyleId": "",
+            "strokes": [],
+            "strokeStyleId": "",
+            "strokeWeight": 1,
+            "strokeAlign": "OUTSIDE",
+            "strokeJoin": "MITER",
+            "dashPattern": [],
+            "strokeCap": "NONE",
+            "strokeMiterLimit": 4,
+            "fillGeometry": [
+              {
+                "windingRule": "NONZERO",
+                "data": "M1.464 2.688 L2.052 2.136 C2.268 2.312 2.492 2.508 2.724 2.724 C2.964 2.94 3.188 3.156 3.396 3.372 C3.604 3.58 3.768 3.768 3.888 3.936 L3.276 4.572 C3.156 4.396 2.992 4.2 2.784 3.984 C2.584 3.768 2.368 3.548 2.136 3.324 C1.904 3.092 1.68 2.88 1.464 2.688 Z M2.1 12.72 L1.932 11.904 L2.16 11.544 L4.416 9.9 C4.448 10.02 4.496 10.156 4.56 10.308 C4.632 10.452 4.692 10.568 4.74 10.656 C4.212 11.048 3.78 11.368 3.444 11.616 C3.116 11.856 2.864 12.044 2.688 12.18 C2.512 12.324 2.38 12.432 2.292 12.504 C2.212 12.584 2.148 12.656 2.1 12.72 Z M0.516 5.688 L2.652 5.688 L2.652 6.552 L0.516 6.552 L0.516 5.688 Z M6.144 2.352 L9.276 2.352 L9.276 3.192 L6.144 3.192 L6.144 2.352 Z M4.608 7.224 L10.212 7.224 L10.212 8.064 L4.608 8.064 L4.608 7.224 Z M9.924 7.224 L10.092 7.224 L10.26 7.188 L10.812 7.428 C10.564 8.212 10.228 8.908 9.804 9.516 C9.388 10.124 8.9 10.652 8.34 11.1 C7.788 11.548 7.188 11.924 6.54 12.228 C5.9 12.532 5.228 12.776 4.524 12.96 C4.492 12.848 4.432 12.712 4.344 12.552 C4.256 12.4 4.172 12.276 4.092 12.18 C4.74 12.028 5.368 11.816 5.976 11.544 C6.584 11.272 7.148 10.94 7.668 10.548 C8.188 10.148 8.64 9.684 9.024 9.156 C9.416 8.628 9.716 8.032 9.924 7.368 L9.924 7.224 Z M5.82 7.86 C6.14 8.588 6.572 9.244 7.116 9.828 C7.66 10.412 8.308 10.904 9.06 11.304 C9.812 11.704 10.644 12 11.556 12.192 C11.492 12.256 11.424 12.336 11.352 12.432 C11.28 12.528 11.212 12.624 11.148 12.72 C11.084 12.816 11.036 12.908 11.004 12.996 C9.588 12.652 8.38 12.064 7.38 11.232 C6.38 10.4 5.608 9.364 5.064 8.124 L5.82 7.86 Z M5.892 2.352 L6.744 2.352 L6.744 3.708 C6.744 4.076 6.688 4.46 6.576 4.86 C6.464 5.26 6.256 5.64 5.952 6 C5.648 6.36 5.208 6.68 4.632 6.96 C4.592 6.896 4.536 6.824 4.464 6.744 C4.392 6.656 4.316 6.572 4.236 6.492 C4.164 6.404 4.1 6.336 4.044 6.288 C4.572 6.048 4.968 5.784 5.232 5.496 C5.496 5.2 5.672 4.9 5.76 4.596 C5.848 4.284 5.892 3.98 5.892 3.684 L5.892 2.352 Z M8.868 2.352 L9.72 2.352 L9.72 5.136 C9.72 5.312 9.732 5.432 9.756 5.496 C9.78 5.56 9.84 5.592 9.936 5.592 C9.984 5.592 10.064 5.592 10.176 5.592 C10.288 5.592 10.4 5.592 10.512 5.592 C10.632 5.592 10.716 5.592 10.764 5.592 C10.852 5.592 10.948 5.588 11.052 5.58 C11.164 5.564 11.256 5.548 11.328 5.532 C11.336 5.644 11.348 5.776 11.364 5.928 C11.38 6.08 11.396 6.208 11.412 6.312 C11.34 6.336 11.244 6.352 11.124 6.36 C11.012 6.368 10.896 6.372 10.776 6.372 C10.72 6.372 10.628 6.372 10.5 6.372 C10.372 6.372 10.248 6.372 10.128 6.372 C10.008 6.372 9.924 6.372 9.876 6.372 C9.596 6.372 9.384 6.332 9.24 6.252 C9.096 6.172 8.996 6.04 8.94 5.856 C8.892 5.672 8.868 5.428 8.868 5.124 L8.868 2.352 Z M2.1 12.72 C2.076 12.648 2.036 12.564 1.98 12.468 C1.924 12.372 1.86 12.276 1.788 12.18 C1.724 12.084 1.664 12.008 1.608 11.952 C1.688 11.904 1.772 11.828 1.86 11.724 C1.956 11.62 2.036 11.496 2.1 11.352 C2.172 11.208 2.208 11.044 2.208 10.86 L2.208 5.688 L3.084 5.688 L3.084 11.64 C3.084 11.64 3.032 11.68 2.928 11.76 C2.832 11.832 2.72 11.924 2.592 12.036 C2.464 12.156 2.348 12.276 2.244 12.396 C2.148 12.524 2.1 12.632 2.1 12.72 Z M15.912 2.952 L21.048 2.952 L21.048 3.744 L15.912 3.744 L15.912 2.952 Z M20.76 2.952 L20.952 2.952 L21.108 2.904 L21.696 3.276 C21.36 3.796 20.94 4.272 20.436 4.704 C19.94 5.128 19.392 5.512 18.792 5.856 C18.192 6.2 17.556 6.504 16.884 6.768 C16.212 7.024 15.528 7.244 14.832 7.428 C14.136 7.612 13.448 7.76 12.768 7.872 C12.752 7.784 12.72 7.688 12.672 7.584 C12.624 7.48 12.572 7.376 12.516 7.272 C12.468 7.168 12.416 7.084 12.36 7.02 C13.016 6.932 13.68 6.808 14.352 6.648 C15.024 6.488 15.68 6.292 16.32 6.06 C16.96 5.828 17.564 5.564 18.132 5.268 C18.7 4.964 19.208 4.632 19.656 4.272 C20.112 3.904 20.48 3.508 20.76 3.084 L20.76 2.952 Z M15.852 3.768 C16.348 4.328 16.996 4.82 17.796 5.244 C18.604 5.668 19.512 6.016 20.52 6.288 C21.528 6.56 22.58 6.756 23.676 6.876 C23.612 6.94 23.544 7.024 23.472 7.128 C23.4 7.224 23.332 7.324 23.268 7.428 C23.204 7.524 23.152 7.616 23.112 7.704 C22.024 7.56 20.972 7.336 19.956 7.032 C18.948 6.728 18.024 6.34 17.184 5.868 C16.344 5.388 15.64 4.824 15.072 4.176 L15.852 3.768 Z M14.04 7.716 L21.924 7.716 L21.924 12.936 L20.952 12.936 L20.952 8.508 L14.976 8.508 L14.976 12.96 L14.04 12.96 L14.04 7.716 Z M14.412 9.72 L21.372 9.72 L21.372 10.452 L14.412 10.452 L14.412 9.72 Z M14.412 11.784 L21.372 11.784 L21.372 12.576 L14.412 12.576 L14.412 11.784 Z M17.52 8.088 L18.444 8.088 L18.444 12.228 L17.52 12.228 L17.52 8.088 Z M16.428 1.884 L17.4 2.076 C16.992 2.724 16.472 3.356 15.84 3.972 C15.216 4.58 14.448 5.124 13.536 5.604 C13.488 5.532 13.428 5.456 13.356 5.376 C13.284 5.288 13.208 5.204 13.128 5.124 C13.056 5.044 12.984 4.984 12.912 4.944 C13.496 4.664 14.012 4.356 14.46 4.02 C14.916 3.676 15.308 3.32 15.636 2.952 C15.964 2.584 16.228 2.228 16.428 1.884 Z M24.624 6.276 L35.388 6.276 L35.388 7.128 L24.624 7.128 L24.624 6.276 Z M25.368 2.724 L34.704 2.724 L34.704 3.588 L25.368 3.588 L25.368 2.724 Z M30.144 7.632 L31.08 7.632 L31.08 11.46 C31.08 11.66 31.124 11.792 31.212 11.856 C31.308 11.92 31.512 11.952 31.824 11.952 C31.896 11.952 32.028 11.952 32.22 11.952 C32.412 11.952 32.624 11.952 32.856 11.952 C33.088 11.952 33.304 11.952 33.504 11.952 C33.712 11.952 33.86 11.952 33.948 11.952 C34.156 11.952 34.308 11.908 34.404 11.82 C34.508 11.724 34.58 11.54 34.62 11.268 C34.66 10.988 34.692 10.576 34.716 10.032 C34.788 10.08 34.876 10.132 34.98 10.188 C35.084 10.236 35.188 10.28 35.292 10.32 C35.404 10.352 35.5 10.38 35.58 10.404 C35.54 11.044 35.472 11.54 35.376 11.892 C35.28 12.244 35.124 12.488 34.908 12.624 C34.7 12.768 34.4 12.84 34.008 12.84 C33.96 12.84 33.856 12.84 33.696 12.84 C33.544 12.84 33.368 12.84 33.168 12.84 C32.968 12.84 32.768 12.84 32.568 12.84 C32.368 12.84 32.192 12.84 32.04 12.84 C31.888 12.84 31.788 12.84 31.74 12.84 C31.324 12.84 31 12.8 30.768 12.72 C30.536 12.64 30.372 12.496 30.276 12.288 C30.188 12.088 30.144 11.808 30.144 11.448 L30.144 7.632 Z M29.376 3.06 L30.288 3.06 C30.272 3.988 30.24 4.876 30.192 5.724 C30.144 6.564 30.032 7.352 29.856 8.088 C29.688 8.824 29.42 9.504 29.052 10.128 C28.684 10.744 28.176 11.292 27.528 11.772 C26.888 12.252 26.064 12.656 25.056 12.984 C25 12.872 24.916 12.74 24.804 12.588 C24.692 12.436 24.584 12.316 24.48 12.228 C25.448 11.924 26.236 11.556 26.844 11.124 C27.46 10.684 27.936 10.18 28.272 9.612 C28.616 9.044 28.864 8.42 29.016 7.74 C29.176 7.052 29.272 6.32 29.304 5.544 C29.344 4.76 29.368 3.932 29.376 3.06 Z M39.696 6.96 L47.4 6.96 L47.4 7.824 L39.696 7.824 L39.696 6.96 Z M40.296 3.888 L46.836 3.888 L46.836 4.74 L40.296 4.74 L40.296 3.888 Z M43.044 1.92 L43.968 1.92 L43.968 7.572 L43.044 7.572 L43.044 1.92 Z M39.708 11.496 C40.252 11.464 40.888 11.432 41.616 11.4 C42.352 11.36 43.132 11.316 43.956 11.268 C44.78 11.22 45.604 11.172 46.428 11.124 L46.428 11.94 C45.636 12.004 44.84 12.064 44.04 12.12 C43.248 12.176 42.488 12.228 41.76 12.276 C41.04 12.324 40.396 12.368 39.828 12.408 L39.708 11.496 Z M44.532 9.444 L45.312 9.036 C45.616 9.388 45.916 9.772 46.212 10.188 C46.516 10.604 46.792 11.016 47.04 11.424 C47.288 11.824 47.476 12.188 47.604 12.516 L46.764 12.984 C46.644 12.656 46.464 12.288 46.224 11.88 C45.992 11.472 45.728 11.056 45.432 10.632 C45.136 10.2 44.836 9.804 44.532 9.444 Z M42.252 7.524 L43.224 7.8 C43.048 8.264 42.852 8.752 42.636 9.264 C42.428 9.776 42.212 10.272 41.988 10.752 C41.772 11.224 41.564 11.64 41.364 12 L40.572 11.724 C40.724 11.452 40.876 11.14 41.028 10.788 C41.188 10.436 41.34 10.072 41.484 9.696 C41.636 9.312 41.776 8.936 41.904 8.568 C42.04 8.2 42.156 7.852 42.252 7.524 Z M37.104 2.664 L37.596 2.004 C37.876 2.1 38.164 2.22 38.46 2.364 C38.756 2.5 39.036 2.644 39.3 2.796 C39.572 2.948 39.796 3.096 39.972 3.24 L39.444 3.984 C39.284 3.84 39.072 3.688 38.808 3.528 C38.544 3.368 38.264 3.212 37.968 3.06 C37.672 2.908 37.384 2.776 37.104 2.664 Z M36.468 5.976 L36.924 5.292 C37.204 5.372 37.492 5.476 37.788 5.604 C38.092 5.724 38.38 5.856 38.652 6 C38.932 6.136 39.16 6.268 39.336 6.396 L38.844 7.164 C38.676 7.028 38.456 6.892 38.184 6.756 C37.92 6.612 37.636 6.472 37.332 6.336 C37.036 6.192 36.748 6.072 36.468 5.976 Z M36.876 12.216 C37.084 11.904 37.312 11.536 37.56 11.112 C37.816 10.68 38.072 10.224 38.328 9.744 C38.592 9.264 38.832 8.8 39.048 8.352 L39.72 8.928 C39.52 9.352 39.304 9.792 39.072 10.248 C38.84 10.704 38.6 11.152 38.352 11.592 C38.112 12.032 37.88 12.44 37.656 12.816 L36.876 12.216 Z M50.988 5.988 L50.988 11.148 L50.112 11.148 L50.112 6.828 L48.54 6.828 L48.54 5.988 L50.988 5.988 Z M48.996 2.496 L49.692 2.052 C49.9 2.268 50.112 2.504 50.328 2.76 C50.552 3.016 50.76 3.272 50.952 3.528 C51.152 3.776 51.308 3.996 51.42 4.188 L50.676 4.692 C50.572 4.5 50.424 4.276 50.232 4.02 C50.048 3.764 49.848 3.504 49.632 3.24 C49.416 2.968 49.204 2.72 48.996 2.496 Z M50.508 10.512 C50.708 10.512 50.9 10.592 51.084 10.752 C51.276 10.912 51.548 11.104 51.9 11.328 C52.3 11.584 52.764 11.748 53.292 11.82 C53.828 11.892 54.448 11.928 55.152 11.928 C55.52 11.928 55.904 11.924 56.304 11.916 C56.712 11.9 57.116 11.88 57.516 11.856 C57.924 11.832 58.312 11.808 58.68 11.784 C59.048 11.752 59.384 11.72 59.688 11.688 C59.648 11.768 59.608 11.872 59.568 12 C59.528 12.12 59.492 12.24 59.46 12.36 C59.428 12.488 59.408 12.6 59.4 12.696 C59.184 12.712 58.9 12.728 58.548 12.744 C58.196 12.76 57.812 12.772 57.396 12.78 C56.988 12.796 56.58 12.808 56.172 12.816 C55.772 12.824 55.42 12.828 55.116 12.828 C54.332 12.828 53.672 12.78 53.136 12.684 C52.6 12.596 52.112 12.416 51.672 12.144 C51.424 11.976 51.196 11.808 50.988 11.64 C50.788 11.472 50.624 11.388 50.496 11.388 C50.376 11.388 50.236 11.464 50.076 11.616 C49.916 11.76 49.748 11.952 49.572 12.192 C49.396 12.44 49.216 12.704 49.032 12.984 L48.36 12.108 C48.752 11.644 49.132 11.264 49.5 10.968 C49.876 10.664 50.212 10.512 50.508 10.512 Z M55.464 4.608 L56.388 4.608 L56.388 11.616 L55.464 11.616 L55.464 4.608 Z M51.792 8.568 L59.292 8.568 L59.292 9.408 L51.792 9.408 L51.792 8.568 Z M51.888 3.168 L59.076 3.168 L59.076 3.96 L51.888 3.96 L51.888 3.168 Z M52.512 7.104 L52.512 6.36 L53.052 6.084 L58.728 6.084 L58.716 6.924 L53.616 6.924 C53.328 6.924 53.084 6.94 52.884 6.972 C52.692 7.004 52.568 7.048 52.512 7.104 Z M52.512 7.104 C52.504 7.04 52.48 6.956 52.44 6.852 C52.408 6.74 52.372 6.628 52.332 6.516 C52.292 6.404 52.256 6.308 52.224 6.228 C52.328 6.204 52.432 6.124 52.536 5.988 C52.64 5.844 52.752 5.664 52.872 5.448 C52.936 5.344 53.024 5.172 53.136 4.932 C53.248 4.692 53.372 4.412 53.508 4.092 C53.652 3.764 53.792 3.416 53.928 3.048 C54.064 2.672 54.184 2.296 54.288 1.92 L55.224 2.172 C55.04 2.7 54.836 3.232 54.612 3.768 C54.396 4.296 54.164 4.8 53.916 5.28 C53.676 5.76 53.436 6.192 53.196 6.576 L53.196 6.6 C53.196 6.6 53.16 6.616 53.088 6.648 C53.024 6.68 52.944 6.724 52.848 6.78 C52.76 6.828 52.68 6.884 52.608 6.948 C52.544 7.004 52.512 7.056 52.512 7.104 Z M67.344 1.92 L68.244 1.92 L68.244 3.552 L67.344 3.552 L67.344 1.92 Z M64.488 3.192 L71.16 3.192 L71.16 3.984 L64.488 3.984 L64.488 3.192 Z M64.008 6.012 L71.508 6.012 L71.508 6.804 L64.008 6.804 L64.008 6.012 Z M65.628 4.092 L66.408 3.936 C66.496 4.152 66.576 4.384 66.648 4.632 C66.728 4.872 66.792 5.104 66.84 5.328 C66.896 5.552 66.932 5.752 66.948 5.928 L66.12 6.132 C66.112 5.956 66.084 5.752 66.036 5.52 C65.988 5.28 65.928 5.036 65.856 4.788 C65.792 4.54 65.716 4.308 65.628 4.092 Z M69.192 3.912 L70.08 4.032 C69.952 4.384 69.816 4.752 69.672 5.136 C69.536 5.512 69.404 5.832 69.276 6.096 L68.508 5.964 C68.588 5.78 68.668 5.568 68.748 5.328 C68.836 5.08 68.92 4.832 69 4.584 C69.08 4.336 69.144 4.112 69.192 3.912 Z M64.08 7.98 L71.46 7.98 L71.46 8.772 L64.08 8.772 L64.08 7.98 Z M66.828 6.588 L67.728 6.768 C67.52 7.224 67.292 7.712 67.044 8.232 C66.804 8.744 66.564 9.244 66.324 9.732 C66.084 10.212 65.86 10.636 65.652 11.004 L64.86 10.74 C65.06 10.38 65.276 9.96 65.508 9.48 C65.748 9 65.984 8.508 66.216 8.004 C66.448 7.492 66.652 7.02 66.828 6.588 Z M65.484 10.572 L66.012 9.96 C66.46 10.096 66.928 10.252 67.416 10.428 C67.904 10.604 68.384 10.796 68.856 11.004 C69.328 11.212 69.768 11.424 70.176 11.64 C70.592 11.856 70.944 12.072 71.232 12.288 L70.668 12.972 C70.388 12.764 70.048 12.548 69.648 12.324 C69.248 12.1 68.812 11.884 68.34 11.676 C67.876 11.46 67.396 11.256 66.9 11.064 C66.412 10.872 65.94 10.708 65.484 10.572 Z M69.18 8.484 L70.056 8.616 C69.912 9.288 69.696 9.872 69.408 10.368 C69.12 10.856 68.74 11.272 68.268 11.616 C67.804 11.952 67.232 12.228 66.552 12.444 C65.872 12.66 65.068 12.828 64.14 12.948 C64.108 12.828 64.056 12.696 63.984 12.552 C63.912 12.408 63.844 12.292 63.78 12.204 C64.636 12.108 65.376 11.972 66 11.796 C66.632 11.62 67.16 11.388 67.584 11.1 C68.008 10.804 68.348 10.444 68.604 10.02 C68.868 9.588 69.06 9.076 69.18 8.484 Z M60.324 8.304 C60.812 8.184 61.4 8.024 62.088 7.824 C62.776 7.624 63.476 7.42 64.188 7.212 L64.296 8.016 C63.64 8.224 62.984 8.432 62.328 8.64 C61.672 8.84 61.076 9.02 60.54 9.18 L60.324 8.304 Z M60.528 4.344 L64.188 4.344 L64.188 5.184 L60.528 5.184 L60.528 4.344 Z M62.16 1.932 L63.024 1.932 L63.024 11.856 C63.024 12.12 62.992 12.32 62.928 12.456 C62.872 12.6 62.764 12.708 62.604 12.78 C62.452 12.852 62.248 12.9 61.992 12.924 C61.736 12.948 61.412 12.956 61.02 12.948 C61.004 12.836 60.968 12.696 60.912 12.528 C60.864 12.36 60.808 12.212 60.744 12.084 C61.016 12.092 61.264 12.096 61.488 12.096 C61.712 12.096 61.864 12.096 61.944 12.096 C62.024 12.096 62.08 12.076 62.112 12.036 C62.144 12.004 62.16 11.948 62.16 11.868 L62.16 1.932 Z M77.34 9.096 C77.276 8.768 77.288 8.472 77.376 8.208 C77.472 7.944 77.612 7.708 77.796 7.5 C77.988 7.284 78.196 7.088 78.42 6.912 C78.652 6.728 78.872 6.548 79.08 6.372 C79.288 6.196 79.46 6.016 79.596 5.832 C79.732 5.64 79.8 5.432 79.8 5.208 C79.8 4.928 79.732 4.68 79.596 4.464 C79.46 4.248 79.26 4.08 78.996 3.96 C78.732 3.832 78.392 3.768 77.976 3.768 C77.568 3.768 77.172 3.86 76.788 4.044 C76.412 4.22 76.052 4.492 75.708 4.86 L75.06 4.26 C75.46 3.836 75.904 3.5 76.392 3.252 C76.88 2.996 77.448 2.868 78.096 2.868 C78.664 2.868 79.152 2.96 79.56 3.144 C79.976 3.328 80.296 3.588 80.52 3.924 C80.752 4.252 80.868 4.648 80.868 5.112 C80.868 5.416 80.8 5.684 80.664 5.916 C80.528 6.148 80.352 6.36 80.136 6.552 C79.928 6.744 79.708 6.932 79.476 7.116 C79.244 7.292 79.028 7.476 78.828 7.668 C78.636 7.86 78.488 8.072 78.384 8.304 C78.288 8.536 78.268 8.8 78.324 9.096 L77.34 9.096 Z M77.856 12.06 C77.64 12.06 77.456 11.988 77.304 11.844 C77.152 11.7 77.076 11.508 77.076 11.268 C77.076 11.028 77.152 10.836 77.304 10.692 C77.456 10.54 77.64 10.464 77.856 10.464 C78.064 10.464 78.244 10.54 78.396 10.692 C78.548 10.836 78.624 11.028 78.624 11.268 C78.624 11.508 78.548 11.7 78.396 11.844 C78.244 11.988 78.064 12.06 77.856 12.06 Z"
+              }
+            ],
+            "strokeGeometry": [],
+            "relativeTransform": [
+              [
+                1,
+                0,
+                387
+              ],
+              [
+                0,
+                1,
+                0
+              ]
+            ],
+            "absoluteTransform": [
+              [
+                1,
+                0,
+                403
+              ],
+              [
+                0,
+                1,
+                12
+              ]
+            ],
+            "x": 387,
+            "y": 0,
+            "width": 84,
+            "height": 15,
+            "absoluteBoundingBox": {
+              "x": 403,
+              "y": 12,
+              "width": 84,
+              "height": 15
+            },
+            "targetAspectRatio": null,
+            "gridRowSpan": 1,
+            "gridColumnSpan": 1,
+            "gridRowAnchorIndex": -1,
+            "gridColumnAnchorIndex": -1,
+            "gridChildHorizontalAlign": "AUTO",
+            "gridChildVerticalAlign": "AUTO",
+            "absoluteRenderBounds": {
+              "x": 403.5159912109375,
+              "y": 13.883999824523926,
+              "width": 80.35202026367188,
+              "height": 11.112000465393066
+            },
+            "rotation": 0,
+            "layoutAlign": "INHERIT",
+            "constrainProportions": false,
+            "layoutGrow": 0,
+            "layoutPositioning": "AUTO",
+            "minWidth": null,
+            "minHeight": null,
+            "maxWidth": null,
+            "maxHeight": null,
+            "layoutSizingHorizontal": "HUG",
+            "layoutSizingVertical": "HUG",
+            "exportSettings": [],
+            "constraints": {
+              "horizontal": "MIN",
+              "vertical": "MIN"
+            },
+            "characters": "设备无法连接？",
+            "hasMissingFont": false,
+            "fontSize": 12,
+            "hangingPunctuation": false,
+            "hangingList": false,
+            "paragraphIndent": 0,
+            "paragraphSpacing": 0,
+            "listSpacing": 0,
+            "textCase": "ORIGINAL",
+            "textDecoration": "NONE",
+            "textDecorationStyle": null,
+            "textDecorationSkipInk": null,
+            "textDecorationOffset": null,
+            "textDecorationThickness": null,
+            "textDecorationColor": null,
+            "letterSpacing": {
+              "unit": "PERCENT",
+              "value": 0
+            },
+            "lineHeight": {
+              "unit": "AUTO"
+            },
+            "leadingTrim": "NONE",
+            "fontName": {
+              "family": "Inter",
+              "style": "Regular"
+            },
+            "fontWeight": 400,
+            "openTypeFeatures": {},
+            "hyperlink": null,
+            "canUpgradeToNativeBidiSupport": false,
+            "autoRename": true,
+            "textAlignHorizontal": "LEFT",
+            "textAlignVertical": "TOP",
+            "textAutoResize": "WIDTH_AND_HEIGHT",
+            "textStyleId": "",
+            "maxLines": null,
+            "reactions": [],
+            "playbackSettings": {
+              "autoplay": true,
+              "loop": true,
+              "muted": false
+            },
+            "annotations": []
+          }
+        ],
+        "parent": {
+          "id": "60:316",
+          "type": "FRAME"
+        },
+        "name": "Frame",
+        "isAsset": false,
+        "detachedInfo": null,
+        "visible": true,
+        "locked": false,
+        "stuckNodes": [],
+        "attachedConnectors": [],
+        "componentPropertyReferences": null,
+        "variableConsumptionMap": {},
+        "boundVariables": {},
+        "resolvedVariableModes": {},
+        "inferredVariables": {},
+        "availableInferredVariables": {},
+        "explicitVariableModes": {},
+        "opacity": 1,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "maskType": "ALPHA",
+        "effects": [],
+        "effectStyleId": "",
+        "relativeTransform": [
+          [
+            1,
+            0,
+            16
+          ],
+          [
+            0,
+            1,
+            12
+          ]
+        ],
+        "absoluteTransform": [
+          [
+            1,
+            0,
+            16
+          ],
+          [
+            0,
+            1,
+            12
+          ]
+        ],
+        "x": 16,
+        "y": 12,
+        "width": 471,
+        "height": 100,
+        "absoluteBoundingBox": {
+          "x": 16,
+          "y": 12,
+          "width": 471,
+          "height": 100
+        },
+        "targetAspectRatio": null,
+        "gridRowSpan": 1,
+        "gridColumnSpan": 1,
+        "gridRowAnchorIndex": -1,
+        "gridColumnAnchorIndex": -1,
+        "gridChildHorizontalAlign": "AUTO",
+        "gridChildVerticalAlign": "AUTO",
+        "absoluteRenderBounds": {
+          "x": 16,
+          "y": 12,
+          "width": 471,
+          "height": 100
+        },
+        "rotation": 0,
+        "layoutAlign": "INHERIT",
+        "constrainProportions": false,
+        "layoutGrow": 0,
+        "layoutPositioning": "AUTO",
+        "minWidth": null,
+        "minHeight": null,
+        "maxWidth": null,
+        "maxHeight": null,
+        "layoutSizingHorizontal": "HUG",
+        "layoutSizingVertical": "HUG",
+        "exportSettings": [],
+        "fills": [],
+        "fillStyleId": "",
+        "strokes": [],
+        "strokeStyleId": "",
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "strokeJoin": "MITER",
+        "dashPattern": [],
+        "strokeCap": "NONE",
+        "strokeMiterLimit": 4,
+        "fillGeometry": [
+          {
+            "windingRule": "NONZERO",
+            "data": "M0 0 L471 0 L471 100 L0 100 L0 0 Z"
+          }
+        ],
+        "strokeGeometry": [],
+        "cornerRadius": 0,
+        "cornerSmoothing": 0,
+        "topLeftRadius": 0,
+        "topRightRadius": 0,
+        "bottomLeftRadius": 0,
+        "bottomRightRadius": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "primaryAxisSizingMode": "AUTO",
+        "layoutWrap": "NO_WRAP",
+        "counterAxisSpacing": 0,
+        "counterAxisAlignContent": "AUTO",
+        "gridRowCount": 0,
+        "gridColumnCount": 0,
+        "gridRowGap": 0,
+        "gridColumnGap": 0,
+        "gridRowSizingCSS": "",
+        "gridColumnSizingCSS": "",
+        "gridRowSizes": [],
+        "gridColumnSizes": [],
+        "strokeTopWeight": 1,
+        "strokeBottomWeight": 1,
+        "strokeLeftWeight": 1,
+        "strokeRightWeight": 1,
+        "inferredAutoLayout": {
+          "layoutMode": "HORIZONTAL",
+          "paddingLeft": 0,
+          "paddingRight": 0,
+          "paddingTop": 0,
+          "paddingBottom": 0,
+          "counterAxisSizingMode": "AUTO",
+          "primaryAxisSizingMode": "AUTO",
+          "primaryAxisAlignItems": "MIN",
+          "counterAxisAlignItems": "MIN",
+          "layoutAlign": "INHERIT",
+          "layoutGrow": 0,
+          "itemSpacing": 12,
+          "layoutPositioning": "AUTO"
+        },
+        "annotations": [],
+        "layoutGrids": [],
+        "gridStyleId": "",
+        "backgrounds": [],
+        "backgroundStyleId": "",
+        "clipsContent": true,
+        "guides": [],
+        "expanded": true,
+        "constraints": {
+          "horizontal": "MIN",
+          "vertical": "MIN"
+        },
+        "layoutMode": "HORIZONTAL",
+        "counterAxisSizingMode": "AUTO",
+        "verticalPadding": 0,
+        "itemSpacing": 12,
+        "overflowDirection": "NONE",
+        "numberOfFixedChildren": 0,
+        "overlayPositionType": "CENTER",
+        "overlayBackground": {
+          "type": "NONE"
+        },
+        "overlayBackgroundInteraction": "NONE",
+        "itemReverseZIndex": false,
+        "strokesIncludedInLayout": false,
+        "devStatus": null,
+        "reactions": [],
+        "playbackSettings": {
+          "autoplay": true,
+          "loop": true,
+          "muted": false
+        }
+      }
+    ],
+    "parent": {
+      "id": "60:312",
+      "type": "FRAME"
+    },
+    "name": "Frame",
+    "isAsset": false,
+    "detachedInfo": null,
+    "visible": true,
+    "locked": false,
+    "stuckNodes": [],
+    "attachedConnectors": [],
+    "componentPropertyReferences": null,
+    "variableConsumptionMap": {},
+    "boundVariables": {},
+    "resolvedVariableModes": {},
+    "inferredVariables": {},
+    "availableInferredVariables": {},
+    "explicitVariableModes": {},
+    "opacity": 1,
+    "blendMode": "PASS_THROUGH",
+    "isMask": false,
+    "maskType": "ALPHA",
+    "effects": [],
+    "effectStyleId": "",
+    "relativeTransform": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "absoluteTransform": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "x": 0,
+    "y": 0,
+    "width": 503,
+    "height": 124,
+    "absoluteBoundingBox": {
+      "x": 0,
+      "y": 0,
+      "width": 503,
+      "height": 124
+    },
+    "targetAspectRatio": null,
+    "gridRowSpan": 1,
+    "gridColumnSpan": 1,
+    "gridRowAnchorIndex": -1,
+    "gridColumnAnchorIndex": -1,
+    "gridChildHorizontalAlign": "AUTO",
+    "gridChildVerticalAlign": "AUTO",
+    "absoluteRenderBounds": {
+      "x": 0,
+      "y": 0,
+      "width": 503,
+      "height": 124
+    },
+    "rotation": 0,
+    "layoutAlign": "STRETCH",
+    "constrainProportions": false,
+    "layoutGrow": 1,
+    "layoutPositioning": "AUTO",
+    "minWidth": null,
+    "minHeight": null,
+    "maxWidth": null,
+    "maxHeight": null,
+    "layoutSizingHorizontal": "HUG",
+    "layoutSizingVertical": "HUG",
+    "exportSettings": [],
+    "fills": [],
+    "fillStyleId": "",
+    "strokes": [],
+    "strokeStyleId": "",
+    "strokeWeight": 1,
+    "strokeAlign": "INSIDE",
+    "strokeJoin": "MITER",
+    "dashPattern": [],
+    "strokeCap": "NONE",
+    "strokeMiterLimit": 4,
+    "fillGeometry": [
+      {
+        "windingRule": "NONZERO",
+        "data": "M0 0 L503 0 L503 124 L0 124 L0 0 Z"
+      }
+    ],
+    "strokeGeometry": [],
+    "cornerRadius": 0,
+    "cornerSmoothing": 0,
+    "topLeftRadius": 0,
+    "topRightRadius": 0,
+    "bottomLeftRadius": 0,
+    "bottomRightRadius": 0,
+    "paddingLeft": 16,
+    "paddingRight": 16,
+    "paddingTop": 12,
+    "paddingBottom": 12,
+    "primaryAxisAlignItems": "MIN",
+    "counterAxisAlignItems": "MIN",
+    "primaryAxisSizingMode": "AUTO",
+    "layoutWrap": "NO_WRAP",
+    "counterAxisSpacing": 0,
+    "counterAxisAlignContent": "AUTO",
+    "gridRowCount": 0,
+    "gridColumnCount": 0,
+    "gridRowGap": 0,
+    "gridColumnGap": 0,
+    "gridRowSizingCSS": "",
+    "gridColumnSizingCSS": "",
+    "gridRowSizes": [],
+    "gridColumnSizes": [],
+    "strokeTopWeight": 1,
+    "strokeBottomWeight": 1,
+    "strokeLeftWeight": 1,
+    "strokeRightWeight": 1,
+    "inferredAutoLayout": {
+      "layoutMode": "VERTICAL",
+      "paddingLeft": 16,
+      "paddingRight": 16,
+      "paddingTop": 12,
+      "paddingBottom": 12,
+      "counterAxisSizingMode": "AUTO",
+      "primaryAxisSizingMode": "AUTO",
+      "primaryAxisAlignItems": "MIN",
+      "counterAxisAlignItems": "MIN",
+      "layoutAlign": "STRETCH",
+      "layoutGrow": 1,
+      "itemSpacing": 8,
+      "layoutPositioning": "AUTO"
+    },
+    "annotations": [],
+    "layoutGrids": [],
+    "gridStyleId": "",
+    "backgrounds": [],
+    "backgroundStyleId": "",
+    "clipsContent": true,
+    "guides": [],
+    "expanded": true,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "layoutMode": "VERTICAL",
+    "counterAxisSizingMode": "AUTO",
+    "verticalPadding": 12,
+    "itemSpacing": 8,
+    "overflowDirection": "NONE",
+    "numberOfFixedChildren": 0,
+    "overlayPositionType": "CENTER",
+    "overlayBackground": {
+      "type": "NONE"
+    },
+    "overlayBackgroundInteraction": "NONE",
+    "itemReverseZIndex": false,
+    "strokesIncludedInLayout": false,
+    "devStatus": null,
+    "reactions": [],
+    "playbackSettings": {
+      "autoplay": true,
+      "loop": true,
+      "muted": false
+    }
+  }
+]

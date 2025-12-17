@@ -1,0 +1,166 @@
+根据图片生成Figma Plugin API 代码。我不是要创建插件，我找到了可以直接使用该代码生成figma设计图的插件，你只需设计出来即可，最关键的点是布局，布局要准确，你要自动判断图片ui有哪些容器，这个容器应该使用哪些布局，能创建并通过类似wpf的grid stackpanel border TextBlock控件类来生成Figma Plugin API 代码，忽略图标 图片 等不规则图形，直接使用 Rectangle 替换即可，不需要关注高级控件如button，checkbox等，这些全部都可以使用 grid stackpanel border TextBlock 来生成，先对齐思路不要生成代码
+
+
+
+
+Figma Plugin API 代码生成 - 完整指南
+一、核心要求
+1. 布局原则
+
+外层容器可以定宽高，内部容器使用 Auto Layout
+内部容器不要定宽高，能 fill 就 fill，只有最小子节点（叶子节点）可以有固定宽高
+叶子节点包括：文本、图标占位矩形、图片占位等
+
+2. 背景和透明度
+
+只有需要白色背景的元素才设置 fills（标题栏、左侧菜单、卡片、下拉框、按钮等）
+所有中间容器必须透明 fills = []，让主背景色透出来
+主容器背景：{r:.95, g:.95, b:.95} 灰色
+
+3. 边框设置
+
+所有需要边框的元素必须同时设置三个属性：
+
+javascript  element.strokes = [{type: 'SOLID', color: border}];
+  element.strokeWeight = 1;
+  element.strokeAlign = 'INSIDE';  // ⚠️ 关键！不能省略
+4. 字体设置
+
+统一使用 Inter 字体（支持中文显示）
+必须先加载字体：await figma.loadFontAsync({ family: "Inter", style: "Regular" });
+
+
+二、Auto Layout 关键概念
+1. layoutMode（布局方向）
+javascriptframe.layoutMode = 'VERTICAL';    // 垂直排列
+frame.layoutMode = 'HORIZONTAL';  // 水平排列
+frame.layoutMode = 'NONE';        // 无自动布局
+2. Sizing Mode（尺寸模式）
+重要概念：
+
+VERTICAL 布局：主轴 = 垂直，交叉轴 = 水平
+HORIZONTAL 布局：主轴 = 水平，交叉轴 = 垂直
+
+javascript// primaryAxisSizingMode（主轴尺寸模式）
+frame.primaryAxisSizingMode = 'FIXED';  // 固定尺寸
+frame.primaryAxisSizingMode = 'AUTO';   // 自适应内容（HUG）
+
+// counterAxisSizingMode（交叉轴尺寸模式）
+frame.counterAxisSizingMode = 'FIXED';  // 固定尺寸
+frame.counterAxisSizingMode = 'AUTO';   // 自适应内容（HUG）
+3. layoutGrow 和 layoutAlign（填充和拉伸）
+⚠️ 最容易出错的地方！
+javascript// layoutGrow：在主轴方向上填充剩余空间
+child.layoutGrow = 1;  // 在 VERTICAL 父容器中 → 拉伸高度
+                       // 在 HORIZONTAL 父容器中 → 拉伸宽度
+
+// layoutAlign：在交叉轴方向上的对齐方式
+child.layoutAlign = 'STRETCH';  // 在 VERTICAL 父容器中 → 拉伸宽度
+                                // 在 HORIZONTAL 父容器中 → 拉伸高度
+child.layoutAlign = 'MIN';      // 顶部/左侧对齐
+child.layoutAlign = 'CENTER';   // 居中对齐
+child.layoutAlign = 'MAX';      // 底部/右侧对齐
+
+三、常见布局模式
+模式 1：固定尺寸的主容器
+javascriptconst main = figma.createFrame();
+main.resize(1024, 680);
+main.layoutMode = 'VERTICAL';
+main.primaryAxisSizingMode = 'FIXED';    // 高度固定
+main.counterAxisSizingMode = 'FIXED';    // 宽度固定
+模式 2：垂直填充的侧边栏
+javascript// 在 HORIZONTAL 父容器中的左侧菜单
+const leftMenu = figma.createFrame();
+leftMenu.resize(140, 100);  // 宽度140固定，高度会被覆盖
+leftMenu.layoutMode = 'VERTICAL';
+leftMenu.primaryAxisSizingMode = 'AUTO';      // 高度自适应内容
+leftMenu.counterAxisSizingMode = 'FIXED';     // 宽度固定140
+leftMenu.layoutAlign = 'STRETCH';             // ⚠️ 关键！垂直拉伸填充父容器
+模式 3：水平填充的内容区
+javascript// 在 HORIZONTAL 父容器中的右侧内容区
+const rightContent = figma.createFrame();
+rightContent.layoutMode = 'VERTICAL';
+rightContent.primaryAxisSizingMode = 'AUTO';   // 高度自适应内容
+rightContent.counterAxisSizingMode = 'AUTO';   // 宽度自适应内容
+rightContent.layoutGrow = 1;                   // ⚠️ 关键！水平填充剩余空间
+rightContent.layoutAlign = 'STRETCH';          // 垂直拉伸
+rightContent.fills = [];                       // 透明
+模式 4：透明的中间容器
+javascript// 所有不需要背景的容器
+const container = figma.createFrame();
+container.layoutMode = 'HORIZONTAL';  // 或 'VERTICAL'
+container.primaryAxisSizingMode = 'AUTO';
+container.counterAxisSizingMode = 'AUTO';
+container.fills = [];  // ⚠️ 关键！必须透明
+container.itemSpacing = 20;  // 子元素间距
+模式 5：自适应内容的容器（不要填充）
+javascript// 例如：按钮区域容器
+const btnArea = figma.createFrame();
+btnArea.layoutMode = 'HORIZONTAL';
+btnArea.primaryAxisSizingMode = 'AUTO';     // 宽度自适应
+btnArea.counterAxisSizingMode = 'AUTO';     // 高度自适应
+btnArea.fills = [];
+btnArea.primaryAxisAlignItems = 'CENTER';   // 内容居中
+btnArea.layoutAlign = 'STRETCH';            // 水平拉伸到父容器宽度
+// ⚠️ 不要设置 layoutGrow = 1，否则会在主轴方向被拉伸！
+
+四、高频易错点
+❌ 错误 1：给中间容器设置白色背景
+javascript// ❌ 错误
+const container = figma.createFrame();
+container.fills = [{type: 'SOLID', color: white}];  // 会遮挡灰色背景
+
+// ✅ 正确
+const container = figma.createFrame();
+container.fills = [];  // 透明
+❌ 错误 2：边框设置不完整
+javascript// ❌ 错误
+element.strokes = [{type: 'SOLID', color: border}];
+// 缺少 strokeWeight 和 strokeAlign，边框可能看不见
+
+// ✅ 正确
+element.strokes = [{type: 'SOLID', color: border}];
+element.strokeWeight = 1;
+element.strokeAlign = 'INSIDE';
+❌ 错误 3：layoutGrow 的误用
+javascript// ❌ 错误：在 VERTICAL 父容器中，想让宽度填充
+child.layoutGrow = 1;  // 这会拉伸高度，不是宽度！
+
+// ✅ 正确
+child.layoutAlign = 'STRETCH';  // 拉伸宽度
+// 或者同时使用
+child.layoutGrow = 1;           // 拉伸高度
+child.layoutAlign = 'STRETCH';  // 拉伸宽度
+❌ 错误 4：忘记设置 layoutAlign
+javascript// ❌ 错误：左侧菜单高度不填充
+const leftMenu = figma.createFrame();
+leftMenu.resize(140, 100);
+leftMenu.layoutMode = 'VERTICAL';
+leftMenu.primaryAxisSizingMode = 'AUTO';
+leftMenu.counterAxisSizingMode = 'FIXED';
+// 缺少 layoutAlign，不会垂直填充父容器
+
+// ✅ 正确
+leftMenu.layoutAlign = 'STRETCH';  // 关键！
+❌ 错误 5：混淆主轴和交叉轴
+javascript// VERTICAL 布局
+frame.layoutMode = 'VERTICAL';
+frame.primaryAxisSizingMode = 'AUTO';    // 控制高度（主轴 = 垂直）
+frame.counterAxisSizingMode = 'AUTO';    // 控制宽度（交叉轴 = 水平）
+
+// HORIZONTAL 布局
+frame.layoutMode = 'HORIZONTAL';
+frame.primaryAxisSizingMode = 'AUTO';    // 控制宽度（主轴 = 水平）
+frame.counterAxisSizingMode = 'AUTO';    // 控制高度（交叉轴 = 垂直）
+❌ 错误 6：给不需要填充的容器设置 layoutGrow
+javascript// ❌ 错误：按钮容器只需要居中，不需要拉伸
+const btnArea = figma.createFrame();
+btnArea.layoutMode = 'HORIZONTAL';
+btnArea.layoutGrow = 1;  // 这会让高度被拉伸成 1px！
+
+// ✅ 正确
+const btnArea = figma.createFrame();
+btnArea.layoutMode = 'HORIZONTAL';
+btnArea.primaryAxisSizingMode = 'AUTO';  // 自适应内容
+btnArea.counterAxisSizingMode = 'AUTO';  // 自适应内容
+btnArea.layoutAlign = 'STRETCH';         // 只

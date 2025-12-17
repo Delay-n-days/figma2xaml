@@ -1,50 +1,176 @@
-<UserControl x:Class="YourNamespace.Frame37"
+<UserControl x:Class="YourNamespace.Frame36"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d"
-             d:DesignHeight="26" d:DesignWidth="26">
+             d:DesignHeight="69" d:DesignWidth="69">
 
-    <!-- Frame 37 容器 -->
-    <Border
-        CornerRadius="0"
-        BorderBrush="#FF000000"
-        BorderThickness="1"
-        Padding="0">
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-            </Grid.ColumnDefinitions>
-            <!-- Rectangle -->
-            <Border
-                Width="12"
-                Height="12"
-                Background="#CC6680"
-                Grid.Row="0"
-                Grid.Column="0"
-                Margin="0,0,3,4"/>
-            <!-- Rectangle -->
-            <Border
-                Width="12"
-                Height="12"
-                Background="#CC6680"
-                Grid.Row="0"
-                Grid.Column="1"
-                Margin="3,0,0,4"/>
-            <!-- Rectangle -->
-            <Border
-                Width="12"
-                Height="12"
-                Background="#CC6680"
-                Grid.Row="1"
-                Grid.Column="0"
-                Margin="0,4,3,0"/>
-        </Grid>
-    </Border>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <!-- Rectangle -->
+        <Border
+            Background="#000080"
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="0,0,1,1"/>
+        <!-- Rectangle -->
+        <Border
+            Background="#003380"
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="1,0,1,1"/>
+        <!-- Rectangle -->
+        <Border
+            Background="#006680"
+            Grid.Row="0"
+            Grid.Column="2"
+            Margin="1,0,1,1"/>
+        <!-- Rectangle -->
+        <Border
+            Background="#009980"
+            Grid.Row="0"
+            Grid.Column="3"
+            Margin="1,0,1,1"/>
+        <!-- Rectangle -->
+        <Border
+            Background="#00CC80"
+            Grid.Row="0"
+            Grid.Column="4"
+            Margin="1,0,0,1"/>
+        <!-- Rectangle -->
+        <Border
+            Background="#330080"
+            Grid.Row="2"
+            Grid.Column="1"
+            Margin="1,1,1,1"/>
+        <!-- Rectangle -->
+        <Border
+            Background="#333380"
+            Grid.Row="1"
+            Grid.Column="0"
+            Margin="0,1,1,1"/>
+        <!-- Rectangle -->
+        <Border
+            Background="#336680"
+            Grid.Row="1"
+            Grid.Column="3"
+            Margin="1,1,1,1"/>
+        <!-- Rectangle -->
+        <Border
+            Background="#339980"
+            Grid.Row="2"
+            Grid.Column="0"
+            Margin="0,1,1,1"/>
+        <!-- Rectangle -->
+        <Border
+            Background="#33CC80"
+            Grid.Row="1"
+            Grid.Column="2"
+            Margin="1,1,1,1"/>
+        <!-- Rectangle -->
+        <Border
+            Background="#660080"
+            Grid.Row="1"
+            Grid.Column="4"
+            Margin="1,1,0,1"/>
+        <!-- Rectangle -->
+        <Border
+            Background="#666680"
+            Grid.Row="3"
+            Grid.Column="1"
+            Margin="1,1,1,1"/>
+        <!-- Rectangle -->
+        <Border
+            Background="#66CC80"
+            Grid.Row="3"
+            Grid.Column="2"
+            Margin="1,1,1,1"/>
+        <!-- Rectangle -->
+        <Border
+            Background="#990080"
+            Grid.Row="3"
+            Grid.Column="4"
+            Margin="1,1,0,1"/>
+        <!-- Rectangle -->
+        <Border
+            Background="#993380"
+            Grid.Row="3"
+            Grid.Column="3"
+            Margin="1,1,1,1"/>
+        <!-- Rectangle -->
+        <Border
+            Background="#999980"
+            Grid.Row="4"
+            Grid.Column="0"
+            Margin="0,1,1,1"/>
+        <!-- Rectangle -->
+        <Border
+            Background="#99CC80"
+            Grid.Row="4"
+            Grid.Column="1"
+            Margin="1,1,1,1"/>
+        <!-- Rectangle -->
+        <Border
+            Background="#CC0080"
+            Grid.Row="4"
+            Grid.Column="2"
+            Margin="1,1,1,1"/>
+        <!-- Rectangle -->
+        <Border
+            Background="#CC3380"
+            Grid.Row="4"
+            Grid.Column="3"
+            Margin="1,1,1,1"/>
+        <!-- Rectangle -->
+        <Border
+            Background="#CC9980"
+            Grid.Row="2"
+            Grid.Column="2"
+            Margin="1,1,1,1"/>
+        <!-- Rectangle -->
+        <Border
+            Background="#CCCC80"
+            Grid.Row="5"
+            Grid.Column="0"
+            Margin="0,1,1,0"/>
+        <!-- Rectangle -->
+        <Border
+            Background="#669980"
+            Grid.Row="5"
+            Grid.Column="3"
+            Margin="1,1,1,0"/>
+        <!-- Rectangle -->
+        <Border
+            Background="#CC6680"
+            Grid.Row="5"
+            Grid.Column="4"
+            Margin="1,1,0,0"/>
+        <!-- Rectangle -->
+        <Border
+            Background="#996680"
+            Grid.Row="3"
+            Grid.Column="0"
+            Margin="0,1,1,1"/>
+        <!-- Rectangle -->
+        <Border
+            Background="#663380"
+            Grid.Row="2"
+            Grid.Column="4"
+            Margin="1,1,0,1"/>
+    </Grid>
 </UserControl>

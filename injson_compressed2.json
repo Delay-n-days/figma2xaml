@@ -1,0 +1,701 @@
+{
+  "compressed_data": [
+    {
+      "id": "60:316",
+      "type": "FRAME",
+      "children": [
+        {
+          "id": "60:317",
+          "type": "FRAME",
+          "children": [
+            {
+              "id": "60:318",
+              "type": "FRAME",
+              "children": [
+                {
+                  "id": "60:319",
+                  "type": "TEXT",
+                  "name": "开始扫描",
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#1A1A1A"
+                    }
+                  ],
+                  "x": 16,
+                  "y": 6.5,
+                  "width": 48,
+                  "height": 15,
+                  "gridRowSpan": 1,
+                  "gridColumnSpan": 1,
+                  "gridRowAnchorIndex": -1,
+                  "gridColumnAnchorIndex": -1,
+                  "gridChildHorizontalAlign": "AUTO",
+                  "gridChildVerticalAlign": "AUTO",
+                  "layoutSizingHorizontal": "HUG",
+                  "layoutSizingVertical": "HUG",
+                  "characters": "开始扫描",
+                  "hasMissingFont": false,
+                  "hangingPunctuation": false,
+                  "hangingList": false,
+                  "listSpacing": 0,
+                  "leadingTrim": "NONE",
+                  "fontName": {
+                    "family": "Inter",
+                    "style": "Regular"
+                  },
+                  "fontWeight": 400,
+                  "canUpgradeToNativeBidiSupport": false
+                }
+              ],
+              "name": "Frame",
+              "x": 0,
+              "y": 0,
+              "width": 80,
+              "height": 28,
+              "gridRowSpan": 1,
+              "gridColumnSpan": 1,
+              "gridRowAnchorIndex": -1,
+              "gridColumnAnchorIndex": -1,
+              "gridChildHorizontalAlign": "AUTO",
+              "gridChildVerticalAlign": "AUTO",
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#FFFFFF"
+                }
+              ],
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": "#CCCCCC"
+                }
+              ],
+              "paddingLeft": 12,
+              "paddingRight": 12,
+              "primaryAxisAlignItems": "CENTER",
+              "counterAxisAlignItems": "CENTER",
+              "backgrounds": [
+                {
+                  "type": "SOLID",
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                  }
+                }
+              ],
+              "layoutMode": "HORIZONTAL",
+              "verticalPadding": 0
+            },
+            {
+              "id": "60:320",
+              "type": "FRAME",
+              "children": [
+                {
+                  "id": "60:321",
+                  "type": "TEXT",
+                  "name": "停止扫描",
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#1A1A1A"
+                    }
+                  ],
+                  "x": 16,
+                  "y": 6.5,
+                  "width": 48,
+                  "height": 15,
+                  "gridRowSpan": 1,
+                  "gridColumnSpan": 1,
+                  "gridRowAnchorIndex": -1,
+                  "gridColumnAnchorIndex": -1,
+                  "gridChildHorizontalAlign": "AUTO",
+                  "gridChildVerticalAlign": "AUTO",
+                  "layoutSizingHorizontal": "HUG",
+                  "layoutSizingVertical": "HUG",
+                  "characters": "停止扫描",
+                  "hasMissingFont": false,
+                  "hangingPunctuation": false,
+                  "hangingList": false,
+                  "listSpacing": 0,
+                  "leadingTrim": "NONE",
+                  "fontName": {
+                    "family": "Inter",
+                    "style": "Regular"
+                  },
+                  "fontWeight": 400,
+                  "canUpgradeToNativeBidiSupport": false
+                }
+              ],
+              "name": "Frame",
+              "x": 92,
+              "y": 0,
+              "width": 80,
+              "height": 28,
+              "gridRowSpan": 1,
+              "gridColumnSpan": 1,
+              "gridRowAnchorIndex": -1,
+              "gridColumnAnchorIndex": -1,
+              "gridChildHorizontalAlign": "AUTO",
+              "gridChildVerticalAlign": "AUTO",
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#FFFFFF"
+                }
+              ],
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": "#CCCCCC"
+                }
+              ],
+              "paddingLeft": 12,
+              "paddingRight": 12,
+              "primaryAxisAlignItems": "CENTER",
+              "counterAxisAlignItems": "CENTER",
+              "backgrounds": [
+                {
+                  "type": "SOLID",
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                  }
+                }
+              ],
+              "layoutMode": "HORIZONTAL",
+              "verticalPadding": 0
+            },
+            {
+              "id": "60:322",
+              "type": "FRAME",
+              "children": [
+                {
+                  "id": "60:323",
+                  "type": "TEXT",
+                  "name": "站号范围",
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#1A1A1A"
+                    }
+                  ],
+                  "x": 0,
+                  "y": 0,
+                  "width": 48,
+                  "height": 15,
+                  "gridRowSpan": 1,
+                  "gridColumnSpan": 1,
+                  "gridRowAnchorIndex": -1,
+                  "gridColumnAnchorIndex": -1,
+                  "gridChildHorizontalAlign": "AUTO",
+                  "gridChildVerticalAlign": "AUTO",
+                  "layoutSizingHorizontal": "HUG",
+                  "layoutSizingVertical": "HUG",
+                  "characters": "站号范围",
+                  "hasMissingFont": false,
+                  "hangingPunctuation": false,
+                  "hangingList": false,
+                  "listSpacing": 0,
+                  "leadingTrim": "NONE",
+                  "fontName": {
+                    "family": "Inter",
+                    "style": "Regular"
+                  },
+                  "fontWeight": 400,
+                  "canUpgradeToNativeBidiSupport": false
+                },
+                {
+                  "id": "60:324",
+                  "type": "FRAME",
+                  "children": [
+                    {
+                      "id": "60:325",
+                      "type": "TEXT",
+                      "name": "1",
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": "#666666"
+                        }
+                      ],
+                      "x": 22,
+                      "y": 0,
+                      "width": 6,
+                      "height": 13,
+                      "gridRowSpan": 1,
+                      "gridColumnSpan": 1,
+                      "gridRowAnchorIndex": -1,
+                      "gridColumnAnchorIndex": -1,
+                      "gridChildHorizontalAlign": "AUTO",
+                      "gridChildVerticalAlign": "AUTO",
+                      "layoutSizingHorizontal": "HUG",
+                      "layoutSizingVertical": "HUG",
+                      "characters": "1",
+                      "hasMissingFont": false,
+                      "fontSize": 11,
+                      "hangingPunctuation": false,
+                      "hangingList": false,
+                      "listSpacing": 0,
+                      "leadingTrim": "NONE",
+                      "fontName": {
+                        "family": "Inter",
+                        "style": "Regular"
+                      },
+                      "fontWeight": 400,
+                      "canUpgradeToNativeBidiSupport": false
+                    }
+                  ],
+                  "name": "Frame",
+                  "x": 56,
+                  "y": 0,
+                  "width": 50,
+                  "height": 24,
+                  "gridRowSpan": 1,
+                  "gridColumnSpan": 1,
+                  "gridRowAnchorIndex": -1,
+                  "gridColumnAnchorIndex": -1,
+                  "gridChildHorizontalAlign": "AUTO",
+                  "gridChildVerticalAlign": "AUTO",
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#FFFFFF"
+                    }
+                  ],
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": "#CCCCCC"
+                    }
+                  ],
+                  "paddingLeft": 8,
+                  "paddingRight": 8,
+                  "primaryAxisAlignItems": "CENTER",
+                  "backgrounds": [
+                    {
+                      "type": "SOLID",
+                      "blendMode": "NORMAL",
+                      "color": {
+                        "r": 1,
+                        "g": 1,
+                        "b": 1
+                      }
+                    }
+                  ],
+                  "layoutMode": "HORIZONTAL",
+                  "verticalPadding": 0
+                },
+                {
+                  "id": "60:326",
+                  "type": "TEXT",
+                  "name": "-",
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#1A1A1A"
+                    }
+                  ],
+                  "x": 114,
+                  "y": 0,
+                  "width": 6,
+                  "height": 15,
+                  "gridRowSpan": 1,
+                  "gridColumnSpan": 1,
+                  "gridRowAnchorIndex": -1,
+                  "gridColumnAnchorIndex": -1,
+                  "gridChildHorizontalAlign": "AUTO",
+                  "gridChildVerticalAlign": "AUTO",
+                  "layoutSizingHorizontal": "HUG",
+                  "layoutSizingVertical": "HUG",
+                  "characters": "-",
+                  "hasMissingFont": false,
+                  "hangingPunctuation": false,
+                  "hangingList": false,
+                  "listSpacing": 0,
+                  "leadingTrim": "NONE",
+                  "fontName": {
+                    "family": "Inter",
+                    "style": "Regular"
+                  },
+                  "fontWeight": 400,
+                  "canUpgradeToNativeBidiSupport": false
+                },
+                {
+                  "id": "60:327",
+                  "type": "FRAME",
+                  "children": [
+                    {
+                      "id": "60:328",
+                      "type": "TEXT",
+                      "name": "16",
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": "#666666"
+                        }
+                      ],
+                      "x": 19,
+                      "y": 0,
+                      "width": 12,
+                      "height": 13,
+                      "gridRowSpan": 1,
+                      "gridColumnSpan": 1,
+                      "gridRowAnchorIndex": -1,
+                      "gridColumnAnchorIndex": -1,
+                      "gridChildHorizontalAlign": "AUTO",
+                      "gridChildVerticalAlign": "AUTO",
+                      "layoutSizingHorizontal": "HUG",
+                      "layoutSizingVertical": "HUG",
+                      "characters": "16",
+                      "hasMissingFont": false,
+                      "fontSize": 11,
+                      "hangingPunctuation": false,
+                      "hangingList": false,
+                      "listSpacing": 0,
+                      "leadingTrim": "NONE",
+                      "fontName": {
+                        "family": "Inter",
+                        "style": "Regular"
+                      },
+                      "fontWeight": 400,
+                      "canUpgradeToNativeBidiSupport": false
+                    }
+                  ],
+                  "name": "Frame",
+                  "x": 128,
+                  "y": 0,
+                  "width": 50,
+                  "height": 24,
+                  "gridRowSpan": 1,
+                  "gridColumnSpan": 1,
+                  "gridRowAnchorIndex": -1,
+                  "gridColumnAnchorIndex": -1,
+                  "gridChildHorizontalAlign": "AUTO",
+                  "gridChildVerticalAlign": "AUTO",
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#FFFFFF"
+                    }
+                  ],
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": "#CCCCCC"
+                    }
+                  ],
+                  "paddingLeft": 8,
+                  "paddingRight": 8,
+                  "primaryAxisAlignItems": "CENTER",
+                  "backgrounds": [
+                    {
+                      "type": "SOLID",
+                      "blendMode": "NORMAL",
+                      "color": {
+                        "r": 1,
+                        "g": 1,
+                        "b": 1
+                      }
+                    }
+                  ],
+                  "layoutMode": "HORIZONTAL",
+                  "verticalPadding": 0
+                }
+              ],
+              "name": "Frame",
+              "x": 184,
+              "y": 0,
+              "width": 178,
+              "height": 24,
+              "gridRowSpan": 1,
+              "gridColumnSpan": 1,
+              "gridRowAnchorIndex": -1,
+              "gridColumnAnchorIndex": -1,
+              "gridChildHorizontalAlign": "AUTO",
+              "gridChildVerticalAlign": "AUTO",
+              "layoutSizingHorizontal": "HUG",
+              "layoutSizingVertical": "HUG",
+              "primaryAxisAlignItems": "CENTER",
+              "primaryAxisSizingMode": "AUTO",
+              "layoutMode": "HORIZONTAL",
+              "counterAxisSizingMode": "AUTO",
+              "verticalPadding": 0,
+              "itemSpacing": 8
+            },
+            {
+              "id": "60:329",
+              "type": "FRAME",
+              "children": [],
+              "name": "Frame",
+              "x": 374,
+              "y": 0,
+              "width": 1,
+              "height": 100,
+              "gridRowSpan": 1,
+              "gridColumnSpan": 1,
+              "gridRowAnchorIndex": -1,
+              "gridColumnAnchorIndex": -1,
+              "gridChildHorizontalAlign": "AUTO",
+              "gridChildVerticalAlign": "AUTO",
+              "primaryAxisSizingMode": "AUTO",
+              "verticalPadding": 0
+            },
+            {
+              "id": "60:330",
+              "type": "TEXT",
+              "name": "设备无法连接？",
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#3366CC"
+                }
+              ],
+              "x": 387,
+              "y": 0,
+              "width": 84,
+              "height": 15,
+              "gridRowSpan": 1,
+              "gridColumnSpan": 1,
+              "gridRowAnchorIndex": -1,
+              "gridColumnAnchorIndex": -1,
+              "gridChildHorizontalAlign": "AUTO",
+              "gridChildVerticalAlign": "AUTO",
+              "layoutSizingHorizontal": "HUG",
+              "layoutSizingVertical": "HUG",
+              "characters": "设备无法连接？",
+              "hasMissingFont": false,
+              "hangingPunctuation": false,
+              "hangingList": false,
+              "listSpacing": 0,
+              "leadingTrim": "NONE",
+              "fontName": {
+                "family": "Inter",
+                "style": "Regular"
+              },
+              "fontWeight": 400,
+              "canUpgradeToNativeBidiSupport": false
+            }
+          ],
+          "name": "Frame",
+          "x": 16,
+          "y": 12,
+          "width": 471,
+          "height": 100,
+          "gridRowSpan": 1,
+          "gridColumnSpan": 1,
+          "gridRowAnchorIndex": -1,
+          "gridColumnAnchorIndex": -1,
+          "gridChildHorizontalAlign": "AUTO",
+          "gridChildVerticalAlign": "AUTO",
+          "layoutSizingHorizontal": "HUG",
+          "layoutSizingVertical": "HUG",
+          "primaryAxisSizingMode": "AUTO",
+          "layoutMode": "HORIZONTAL",
+          "counterAxisSizingMode": "AUTO",
+          "verticalPadding": 0,
+          "itemSpacing": 12
+        }
+      ],
+      "name": "Frame",
+      "x": 0,
+      "y": 0,
+      "width": 503,
+      "height": 124,
+      "gridRowSpan": 1,
+      "gridColumnSpan": 1,
+      "gridRowAnchorIndex": -1,
+      "gridColumnAnchorIndex": -1,
+      "gridChildHorizontalAlign": "AUTO",
+      "gridChildVerticalAlign": "AUTO",
+      "layoutAlign": "STRETCH",
+      "layoutGrow": 1,
+      "layoutSizingHorizontal": "HUG",
+      "layoutSizingVertical": "HUG",
+      "paddingLeft": 16,
+      "paddingRight": 16,
+      "paddingTop": 12,
+      "paddingBottom": 12,
+      "primaryAxisSizingMode": "AUTO",
+      "layoutMode": "VERTICAL",
+      "counterAxisSizingMode": "AUTO",
+      "verticalPadding": 12,
+      "itemSpacing": 8
+    }
+  ],
+  "defaults": {
+    "GLOBAL": {
+      "visible": true,
+      "locked": false,
+      "opacity": 1,
+      "blendMode": "PASS_THROUGH",
+      "isMask": false,
+      "maskType": "ALPHA",
+      "effects": [],
+      "effectStyleId": "",
+      "reactions": [],
+      "isAsset": false,
+      "detachedInfo": null,
+      "stuckNodes": [],
+      "attachedConnectors": [],
+      "componentPropertyReferences": null,
+      "variableConsumptionMap": {},
+      "boundVariables": {},
+      "resolvedVariableModes": {},
+      "inferredVariables": {},
+      "availableInferredVariables": {},
+      "explicitVariableModes": {},
+      "constrainProportions": false,
+      "layoutGrow": 0,
+      "layoutAlign": "INHERIT",
+      "layoutPositioning": "AUTO",
+      "minWidth": null,
+      "minHeight": null,
+      "maxWidth": null,
+      "maxHeight": null,
+      "rotation": 0,
+      "exportSettings": [],
+      "annotations": [],
+      "playbackSettings": {
+        "autoplay": true,
+        "loop": true,
+        "muted": false
+      }
+    },
+    "RECTANGLE": {
+      "fillStyleId": "",
+      "fills": [],
+      "strokes": [],
+      "strokeStyleId": "",
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "strokeJoin": "MITER",
+      "strokeCap": "NONE",
+      "strokeMiterLimit": 4,
+      "dashPattern": [],
+      "cornerRadius": 0,
+      "cornerSmoothing": 0,
+      "topLeftRadius": 0,
+      "topRightRadius": 0,
+      "bottomLeftRadius": 0,
+      "bottomRightRadius": 0,
+      "strokeTopWeight": 1,
+      "strokeBottomWeight": 1,
+      "strokeLeftWeight": 1,
+      "strokeRightWeight": 1,
+      "fillGeometry": [],
+      "strokeGeometry": [],
+      "layoutSizingHorizontal": "FIXED",
+      "layoutSizingVertical": "FIXED",
+      "constraints": {
+        "horizontal": "MIN",
+        "vertical": "MIN"
+      },
+      "targetAspectRatio": null,
+      "gridChildHorizontalAlign": "AUTO",
+      "gridChildVerticalAlign": "AUTO"
+    },
+    "FRAME": {
+      "fills": [],
+      "fillStyleId": "",
+      "strokes": [],
+      "strokeStyleId": "",
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "strokeJoin": "MITER",
+      "strokeCap": "NONE",
+      "strokeMiterLimit": 4,
+      "dashPattern": [],
+      "cornerRadius": 0,
+      "cornerSmoothing": 0,
+      "topLeftRadius": 0,
+      "topRightRadius": 0,
+      "bottomLeftRadius": 0,
+      "bottomRightRadius": 0,
+      "strokeTopWeight": 1,
+      "strokeBottomWeight": 1,
+      "strokeLeftWeight": 1,
+      "strokeRightWeight": 1,
+      "fillGeometry": [],
+      "strokeGeometry": [],
+      "layoutSizingHorizontal": "FIXED",
+      "layoutSizingVertical": "FIXED",
+      "clipsContent": true,
+      "layoutMode": "NONE",
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 0,
+      "paddingBottom": 0,
+      "itemSpacing": 0,
+      "counterAxisSpacing": 0,
+      "primaryAxisAlignItems": "MIN",
+      "counterAxisAlignItems": "MIN",
+      "primaryAxisSizingMode": "FIXED",
+      "counterAxisSizingMode": "FIXED",
+      "layoutWrap": "NO_WRAP",
+      "counterAxisAlignContent": "AUTO",
+      "layoutGrids": [],
+      "gridStyleId": "",
+      "backgrounds": [],
+      "backgroundStyleId": "",
+      "guides": [],
+      "constraints": {
+        "horizontal": "MIN",
+        "vertical": "MIN"
+      },
+      "overflowDirection": "NONE",
+      "numberOfFixedChildren": 0,
+      "overlayPositionType": "CENTER",
+      "overlayBackgroundInteraction": "NONE",
+      "itemReverseZIndex": false,
+      "strokesIncludedInLayout": false,
+      "devStatus": null
+    },
+    "TEXT": {
+      "fills": [],
+      "fillStyleId": "",
+      "strokes": [],
+      "strokeStyleId": "",
+      "strokeWeight": 1,
+      "strokeAlign": "OUTSIDE",
+      "strokeJoin": "MITER",
+      "strokeCap": "NONE",
+      "strokeMiterLimit": 4,
+      "dashPattern": [],
+      "textAlignHorizontal": "LEFT",
+      "textAlignVertical": "TOP",
+      "textAutoResize": "WIDTH_AND_HEIGHT",
+      "paragraphIndent": 0,
+      "paragraphSpacing": 0,
+      "autoRename": true,
+      "textStyleId": "",
+      "fontSize": 12,
+      "fontName": {
+        "family": "Roboto",
+        "style": "Regular"
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE",
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "constraints": {
+        "horizontal": "MIN",
+        "vertical": "MIN"
+      }
+    }
+  },
+  "metadata": {
+    "original_nodes": 1,
+    "compressed_nodes": 1,
+    "note": "本文件包含压缩后的 Figma 节点数据和默认值表。已删除所有默认值、可计算属性和空集合。"
+  }
+}

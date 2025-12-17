@@ -3,7 +3,9 @@ XAML 渲染器
 作用: 使用 Python 字符串拼接将 WPF AST 渲染为 XAML 字符串
 """
 from src.wpf_ast import WpfNode
-from typing import List
+from typing import List, Dict, Any
+import yaml
+from pathlib import Path
 
 
 class XamlRenderer:
@@ -12,13 +14,49 @@ class XamlRenderer:
     使用纯 Python 字符串拼接渲染 WPF AST
     """
     
-    def __init__(self):
-        """初始化渲染器"""
-        pass
+    def __init__(self, config_dir: str = 'config'):
+        """初始化渲染器
+        
+        Args:
+            config_dir: 配置文件目录
+        """
+        self.wpf_defaults = self._load_wpf_defaults(config_dir)
     
-    def __init__(self):
-        """初始化渲染器"""
-        pass
+    def _load_wpf_defaults(self, config_dir: str) -> Dict[str, Dict[str, Any]]:
+        """加载 WPF 默认值配置
+        
+        Args:
+            config_dir: 配置文件目录
+        
+        Returns:
+            WPF 默认值字典
+        """
+        defaults_file = Path(config_dir) / 'wpf_defaults.yaml'
+        if defaults_file.exists():
+            with open(defaults_file, 'r', encoding='utf-8') as f:
+                return yaml.safe_load(f) or {}
+        return {}
+    
+    def _is_default_value(self, control_type: str, attr_name: str, attr_value: str) -> bool:
+        """判断属性值是否为默认值
+        
+        Args:
+            control_type: 控件类型（如 'Border', 'Grid'）
+            attr_name: 属性名
+            attr_value: 属性值
+        
+        Returns:
+            True 表示是默认值，应该排除
+        """
+        if control_type not in self.wpf_defaults:
+            return False
+        
+        defaults = self.wpf_defaults[control_type]
+        if attr_name not in defaults:
+            return False
+        
+        default_value = str(defaults[attr_name])
+        return str(attr_value) == default_value
     
     def render_usercontrol(
         self,
@@ -88,12 +126,13 @@ class XamlRenderer:
         """获取缩进字符串"""
         return '    ' * level
     
-    def _render_attributes(self, attributes: dict, indent_level: int) -> List[str]:
+    def _render_attributes(self, attributes: dict, indent_level: int, control_type: str = None) -> List[str]:
         """渲染属性列表
         
         Args:
             attributes: 属性字典
             indent_level: 缩进级别
+            control_type: 控件类型（用于过滤默认值）
         
         Returns:
             属性行列表
@@ -103,6 +142,9 @@ class XamlRenderer:
         
         for key, value in attributes.items():
             if value is not None and not key.startswith('_'):
+                # 检查是否为默认值
+                if control_type and self._is_default_value(control_type, key, value):
+                    continue
                 lines.append(f'{indent}    {key}="{value}"')
         
         return lines
@@ -121,7 +163,7 @@ class XamlRenderer:
         lines.append(f'{indent}<Border')
         
         # 属性
-        attr_lines = self._render_attributes(node.attributes, indent_level)
+        attr_lines = self._render_attributes(node.attributes, indent_level, 'Border')
         lines.extend(attr_lines)
         
         # 子元素
@@ -156,7 +198,19 @@ class XamlRenderer:
             lines.append(f'{indent}<!-- {node.comment} -->')
         
         # 开始标签
-        lines.append(f'{indent}<Grid>')
+        lines.append(f'{indent}<Grid')
+        
+        # 其他属性（排除行列定义）
+        other_attrs = {k: v for k, v in node.attributes.items() 
+                      if k not in ['_row_definitions', '_column_definitions']}
+        attr_lines = self._render_attributes(other_attrs, indent_level, 'Grid')
+        lines.extend(attr_lines)
+        
+        # 关闭开始标签
+        if attr_lines:
+            lines[-1] = lines[-1] + '>'
+        else:
+            lines[-1] = lines[-1] + '>'
         
         # 行定义
         row_defs = node.attributes.get('_row_definitions', [])
@@ -194,7 +248,7 @@ class XamlRenderer:
         
         # 开始标签和属性
         lines.append(f'{indent}<StackPanel')
-        attr_lines = self._render_attributes(node.attributes, indent_level)
+        attr_lines = self._render_attributes(node.attributes, indent_level, 'StackPanel')
         lines.extend(attr_lines)
         
         # 最后一个属性后直接跟 >
@@ -223,7 +277,7 @@ class XamlRenderer:
         
         # 开始标签和属性
         lines.append(f'{indent}<WrapPanel')
-        attr_lines = self._render_attributes(node.attributes, indent_level)
+        attr_lines = self._render_attributes(node.attributes, indent_level, 'WrapPanel')
         lines.extend(attr_lines)
         
         # 最后一个属性后直接跟 >
@@ -252,7 +306,7 @@ class XamlRenderer:
         
         # 自闭合标签和属性
         lines.append(f'{indent}<TextBlock')
-        attr_lines = self._render_attributes(node.attributes, indent_level)
+        attr_lines = self._render_attributes(node.attributes, indent_level, 'TextBlock')
         lines.extend(attr_lines)
         
         # 最后一个属性后直接跟 />

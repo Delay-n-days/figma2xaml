@@ -176,9 +176,12 @@ class FigmaToWpfBuilder:
                 grid_row = child.get('gridRowAnchorIndex', -1)
                 grid_col = child.get('gridColumnAnchorIndex', -1)
                 
+                # 获取 Grid 的行列数
+                grid_column_count = len(container.attributes.get('_column_definitions', []))
+                grid_row_count = len(container.attributes.get('_row_definitions', []))
+                
                 # 如果没有明确指定位置,按顺序自动分配
                 if grid_row == -1 or grid_col == -1:
-                    grid_column_count = len(container.attributes.get('_column_definitions', []))
                     if grid_column_count > 0:
                         grid_row = visible_child_index // grid_column_count
                         grid_col = visible_child_index % grid_column_count
@@ -198,9 +201,9 @@ class FigmaToWpfBuilder:
                     child_ast.set_attribute('Grid.ColumnSpan', str(grid_col_span))
                 
                 # 设置 Grid 间距 (通过 Margin 实现)
-                # itemSpacing: 行间距, counterAxisSpacing: 列间距
-                row_spacing = item_spacing  # 行间距
-                col_spacing = node.get('counterAxisSpacing', 0)  # 列间距
+                # gridRowGap: 行间距, gridColumnGap: 列间距
+                row_spacing = node.get('gridRowGap', 0)  # 行间距
+                col_spacing = node.get('gridColumnGap', 0)  # 列间距
                 
                 # 计算 Margin: 左,上,右,下
                 margin_left = col_spacing / 2 if grid_col > 0 else 0
@@ -209,7 +212,6 @@ class FigmaToWpfBuilder:
                 margin_bottom = row_spacing / 2
                 
                 # 为最后一列和最后一行移除右边和下边的间距
-                grid_row_count = len(container.attributes.get('_row_definitions', []))
                 if grid_col == grid_column_count - 1:
                     margin_right = 0
                 if grid_row == grid_row_count - 1:
@@ -231,10 +233,32 @@ class FigmaToWpfBuilder:
             container.add_child(child_ast)
             visible_child_index += 1
         
-        # Border 包含容器
-        border.add_child(container)
+        # 检查是否需要 Border 包装
+        # 如果没有边框、圆角、背景、Padding 等 Border 特有属性，直接返回容器
+        corner_radius = node.get('cornerRadius', 0)
+        border_brush = self._get_border_color(node)
+        background = self._get_background_color(node)
+        padding_str = self._get_padding_string(node)
         
-        return border
+        needs_border = (
+            border_brush is not None or  # 有边框
+            corner_radius > 0 or  # 有圆角
+            background is not None or  # 有背景色
+            padding_str  # 有 Padding
+        )
+        
+        if not needs_border and is_root:
+            # 根节点且不需要 Border，直接返回容器
+            return container
+        elif needs_border:
+            # 需要 Border 包装
+            border.add_child(container)
+            return border
+        else:
+            # 非根节点也不需要 Border，直接返回容器
+            # 但保留注释
+            container.comment = f"{node.get('name', 'Frame')} 容器"
+            return container
     
     def _create_border_for_frame(
         self,
@@ -277,8 +301,11 @@ class FigmaToWpfBuilder:
         
         # 设置属性
         border.set_attribute('CornerRadius', str(corner_radius))
-        border.set_attribute('BorderBrush', border_brush)
-        border.set_attribute('BorderThickness', '1')
+        
+        # 只在有边框时设置边框属性
+        if border_brush:
+            border.set_attribute('BorderBrush', border_brush)
+            border.set_attribute('BorderThickness', '1')
         
         if should_set_width and width:
             border.set_attribute('Width', str(width))
@@ -358,14 +385,39 @@ class FigmaToWpfBuilder:
         width = node.get('width', 0)
         height = node.get('height', 0)
         
+        # 获取布局信息
+        sizing_horizontal = node.get('layoutSizingHorizontal', 'FIXED')
+        sizing_vertical = node.get('layoutSizingVertical', 'FIXED')
+        layout_align = node.get('layoutAlign', 'INHERIT')
+        is_in_fill_column = node.get('_in_fill_column', False)
+        
+        # 判断是否设置宽高
+        if sizing_horizontal == 'FILL' or layout_align == 'STRETCH' or is_in_fill_column:
+            should_set_width = False
+        else:
+            should_set_width = self.rule_engine.should_set_dimension(sizing_horizontal)
+        
+        if sizing_vertical == 'FILL':
+            should_set_height = False
+        else:
+            should_set_height = self.rule_engine.should_set_dimension(sizing_vertical)
+        
         # 创建 Border
         border = create_border(comment=name)
         
-        # 设置属性
-        if width:
+        # 设置宽高
+        if should_set_width and width:
             border.set_attribute('Width', str(width))
-        if height:
+        if should_set_height and height:
             border.set_attribute('Height', str(height))
+        
+        # HorizontalAlignment
+        if sizing_horizontal == 'FILL' or layout_align == 'STRETCH':
+            border.set_attribute('HorizontalAlignment', 'Stretch')
+        
+        # VerticalAlignment  
+        if sizing_vertical == 'FILL':
+            border.set_attribute('VerticalAlignment', 'Stretch')
         
         # 背景色
         background = self._get_background_color(node)
@@ -480,7 +532,7 @@ class FigmaToWpfBuilder:
         
         return None
     
-    def _get_border_color(self, node: Dict[str, Any]) -> str:
+    def _get_border_color(self, node: Dict[str, Any]) -> Optional[str]:
         """获取边框颜色"""
         opacity = node.get('opacity', 1.0)
         strokes = node.get('strokes', [])
@@ -492,7 +544,7 @@ class FigmaToWpfBuilder:
             final_opacity = opacity * stroke_opacity
             return self._hex_to_wpf_color(color, final_opacity)
         
-        return "#FF000000"
+        return None  # 没有边框时返回 None
     
     def _get_text_color(self, node: Dict[str, Any]) -> Optional[str]:
         """获取文本颜色"""

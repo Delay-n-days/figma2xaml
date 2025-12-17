@@ -92,10 +92,11 @@ FIGMA_DEFAULTS = {
             "vertical": "MIN"
         },
         "targetAspectRatio": None,
-        "gridRowSpan": 1,
-        "gridColumnSpan": 1,
-        "gridRowAnchorIndex": -1,
-        "gridColumnAnchorIndex": -1,
+        # Grid 定位属性不作为默认值（在 Grid 布局中这些是关键信息）
+        # "gridRowSpan": 1,
+        # "gridColumnSpan": 1,
+        # "gridRowAnchorIndex": -1,
+        # "gridColumnAnchorIndex": -1,
         "gridChildHorizontalAlign": "AUTO",
         "gridChildVerticalAlign": "AUTO",
     },
@@ -215,18 +216,24 @@ UI_STATE_PROPERTIES = {
     "inferredAutoLayout",  # Figma 推断的布局,可能不准确
 }
 
-# Grid 布局相关属性(如果不使用 Grid 布局则删除)
-GRID_PROPERTIES = {
-    "gridRowSpan",
-    "gridColumnSpan", 
-    "gridRowAnchorIndex",
-    "gridColumnAnchorIndex",
+# Grid 容器属性（仅在容器节点上的 Grid 相关属性）
+GRID_CONTAINER_PROPERTIES = {
     "gridRowCount",
     "gridColumnCount",
     "gridRowGap",
     "gridColumnGap",
+    "gridRowSizes",
+    "gridColumnSizes",
     "gridRowSizingCSS",
     "gridColumnSizingCSS",
+}
+
+# Grid 子元素定位属性（应始终保留，用于定位）
+GRID_CHILD_PROPERTIES = {
+    "gridRowSpan",
+    "gridColumnSpan", 
+    "gridRowAnchorIndex",
+    "gridColumnAnchorIndex",
 }
 
 
@@ -364,8 +371,16 @@ def compress_object(obj: Any, node_type: Optional[str] = None) -> Any:
         if key in UI_STATE_PROPERTIES:
             continue
         
-        # 跳过 Grid 相关属性
-        if key in GRID_PROPERTIES:
+        # Grid 子元素定位属性始终保留（用于 Grid 布局定位）
+        if key in GRID_CHILD_PROPERTIES:
+            compressed[key] = value
+            continue
+        
+        # Grid 容器属性（仅在 GRID 布局时保留）
+        if key in GRID_CONTAINER_PROPERTIES:
+            # 如果是 GRID 布局模式，保留核心属性
+            if obj.get('layoutMode') == 'GRID':
+                compressed[key] = value
             continue
         
         # 跳过特定的空值对象

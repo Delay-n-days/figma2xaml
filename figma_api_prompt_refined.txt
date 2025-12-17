@@ -1,0 +1,538 @@
+# Figma Plugin API 代码生成规范
+
+## 一、核心目标
+根据UI设计图生成 Figma Plugin API 代码,使用类似 WPF 的布局思维(Grid/StackPanel/Border/TextBlock)实现精确布局。
+
+## 二、布局策略
+
+### 1. 基本原则
+- **外层容器**:可设置固定宽高
+- **中间容器**:使用 Auto Layout,不设固定尺寸,能 fill 就 fill
+- **叶子节点**:文本/图标/图片等可设固定宽高
+
+### 2. Auto Layout 配置
+```javascript
+// 布局方向
+layoutMode: 'VERTICAL' | 'HORIZONTAL' | 'NONE'
+
+// 主轴尺寸(沿布局方向)
+primaryAxisSizingMode: 'FIXED' | 'AUTO'  // 固定 | 自适应内容
+
+// 交叉轴尺寸(垂直于布局方向)
+counterAxisSizingMode: 'FIXED' | 'AUTO'
+
+// 填充剩余空间(主轴方向)
+child.layoutGrow = 1
+
+// 交叉轴对齐/拉伸
+child.layoutAlign: 'STRETCH' | 'MIN' | 'CENTER' | 'MAX'
+```
+
+### 3. 关键记忆点
+- **VERTICAL 布局**: 主轴=高度,交叉轴=宽度
+  - `layoutGrow=1` → 拉伸**高度**
+  - `layoutAlign='STRETCH'` → 拉伸**宽度**
+  
+- **HORIZONTAL 布局**: 主轴=宽度,交叉轴=高度
+  - `layoutGrow=1` → 拉伸**宽度**
+  - `layoutAlign='STRETCH'` → 拉伸**高度**
+
+## 三、样式规范
+
+### 1. 背景色
+```javascript
+// 只有需要背景的元素才设置 fills
+element.fills = [{type: 'SOLID', color: {r:1, g:1, b:1}}];  // 白色
+
+// 中间容器必须透明,让主背景透出
+container.fills = [];  // ⚠️ 重要!
+
+// 主容器背景
+mainBg.fills = [{type: 'SOLID', color: {r:.95, g:.95, b:.95}}];  // 灰色
+```
+
+### 2. 边框(必须三要素齐全)
+```javascript
+element.strokes = [{type: 'SOLID', color: {r:.8, g:.8, b:.8}}];
+element.strokeWeight = 1;
+element.strokeAlign = 'INSIDE';  // ⚠️ 不能省略!
+```
+
+### 3. 字体
+```javascript
+// 统一使用 Inter 字体(支持中文)
+await figma.loadFontAsync({ family: "Inter", style: "Regular" });
+
+text.fontName = { family: "Inter", style: "Regular" };
+text.fontSize = 14;
+text.characters = "文本内容";
+```
+
+## 四、常用布局模式
+
+### 模式1: 固定尺寸主容器
+```javascript
+const main = figma.createFrame();
+main.resize(1024, 680);
+main.layoutMode = 'VERTICAL';
+main.primaryAxisSizingMode = 'FIXED';
+main.counterAxisSizingMode = 'FIXED';
+main.fills = [{type: 'SOLID', color: {r:.95, g:.95, b:.95}}];
+```
+
+### 模式2: 垂直填充侧边栏(在 HORIZONTAL 父容器中)
+```javascript
+const sidebar = figma.createFrame();
+sidebar.resize(140, 100);  // 宽度140,高度会被覆盖
+sidebar.layoutMode = 'VERTICAL';
+sidebar.primaryAxisSizingMode = 'AUTO';    // 高度自适应
+sidebar.counterAxisSizingMode = 'FIXED';   // 宽度固定140
+sidebar.layoutAlign = 'STRETCH';           // ⚠️ 垂直拉伸填充
+sidebar.fills = [{type: 'SOLID', color: {r:1, g:1, b:1}}];
+```
+
+### 模式3: 水平填充内容区(在 HORIZONTAL 父容器中)
+```javascript
+const content = figma.createFrame();
+content.layoutMode = 'VERTICAL';
+content.primaryAxisSizingMode = 'AUTO';
+content.counterAxisSizingMode = 'AUTO';
+content.layoutGrow = 1;          // ⚠️ 水平填充剩余空间
+content.layoutAlign = 'STRETCH'; // 垂直拉伸
+content.fills = [];              // 透明
+```
+
+### 模式4: 透明中间容器
+```javascript
+const container = figma.createFrame();
+container.layoutMode = 'HORIZONTAL';
+container.primaryAxisSizingMode = 'AUTO';
+container.counterAxisSizingMode = 'AUTO';
+container.fills = [];           // ⚠️ 必须透明
+container.itemSpacing = 20;     // 子元素间距
+container.paddingLeft = 10;     // 内边距
+container.paddingRight = 10;
+container.paddingTop = 10;
+container.paddingBottom = 10;
+```
+
+### 模式5: 自适应按钮容器
+```javascript
+const btnArea = figma.createFrame();
+btnArea.layoutMode = 'HORIZONTAL';
+btnArea.primaryAxisSizingMode = 'AUTO';   // 宽度自适应
+btnArea.counterAxisSizingMode = 'AUTO';   // 高度自适应
+btnArea.fills = [];
+btnArea.primaryAxisAlignItems = 'CENTER'; // 内容居中
+btnArea.layoutAlign = 'STRETCH';          // 水平拉伸
+// ⚠️ 不要设置 layoutGrow,否则会被拉伸!
+```
+
+## 五、组件抽象
+
+### 核心组件
+- **Border**: 带边框的容器
+- **TextBlock**: 文本元素
+- **StackPanel**: 垂直/水平堆叠容器
+- **Grid**: 虚拟网格系统(通过绝对定位实现)
+- **Rectangle**: 图标/图片占位符
+
+### 图标和图片处理
+- 所有图标/图片用灰色 Rectangle 占位
+- 不处理复杂图形,不实现高级控件细节
+- Button/CheckBox 等用基础组件组合实现
+
+## 六、易错点检查清单
+
+❌ **错误1**: 中间容器设置白色背景 → 应设置 `fills = []`
+❌ **错误2**: 边框缺少 `strokeAlign` → 必须设置为 `'INSIDE'`
+❌ **错误3**: 混淆 `layoutGrow` 和 `layoutAlign` 的作用方向
+❌ **错误4**: 忘记设置 `layoutAlign = 'STRETCH'` 导致不填充
+❌ **错误5**: 给自适应容器设置 `layoutGrow = 1` 导致异常拉伸
+❌ **错误6**: 混淆 VERTICAL/HORIZONTAL 的主轴和交叉轴
+
+## 七、代码组织建议
+
+```javascript
+// 1. 工具函数
+const white = {r:1, g:1, b:1};
+const gray = {r:.95, g:.95, b:.95};
+const border = {r:.8, g:.8, b:.8};
+
+// 2. 高级组件函数
+function createBorder(width, height) { ... }
+function createTextBlock(text, size) { ... }
+function createStackPanel(orientation) { ... }
+
+// 3. 数据配置(表驱动)
+const items = [...];
+
+// 4. 主生成逻辑(循环生成,减少重复)
+async function generate() {
+  await figma.loadFontAsync({ family: "Inter", style: "Regular" });
+  // ...
+}
+
+generate();
+```
+
+## 八、输出要求
+
+- 代码简洁,避免过度抽象
+- 允许 ±5px 间距误差
+- 所有文本使用 Inter 字体
+- 布局精准,优先使用 Auto Layout
+- 只在必要时使用绝对定位(如复杂网格)
+生成demo
+```
+// 工程向导界面生成器 - 完全修复版
+async function loadFont() {
+  await figma.loadFontAsync({ family: "Inter", style: "Regular" });
+}
+
+function rect(w, h, c, r = 0) {
+  const el = figma.createRectangle();
+  el.resize(w, h);
+  el.fills = [{type: 'SOLID', color: c}];
+  if (r) el.cornerRadius = r;
+  return el;
+}
+
+function txt(s, sz, c) {
+  const t = figma.createText();
+  t.characters = s;
+  t.fontSize = sz;
+  t.fontName = {family: "Inter", style: "Regular"};
+  t.fills = [{type: 'SOLID', color: c}];
+  return t;
+}
+
+async function generate() {
+  await loadFont();
+  
+  const white = {r:1, g:1, b:1};
+  const gray = {r:.95, g:.95, b:.95};
+  const blue = {r:0, g:.4, b:1};
+  const dark = {r:.2, g:.2, b:.2};
+  const border = {r:.88, g:.88, b:.88};
+  const textGray = {r:.4, g:.4, b:.4};
+  
+  // ===== 主容器 =====
+  const main = figma.createFrame();
+  main.name = "工程向导";
+  main.resize(1024, 680);
+  main.fills = [{type: 'SOLID', color: gray}];
+  main.layoutMode = 'VERTICAL';
+  main.primaryAxisSizingMode = 'FIXED';
+  main.counterAxisSizingMode = 'FIXED';
+  
+  // ===== 标题栏 =====
+  const titleBar = figma.createFrame();
+  titleBar.resize(1024, 45);
+  titleBar.fills = [{type: 'SOLID', color: white}];
+  titleBar.layoutMode = 'HORIZONTAL';
+  titleBar.primaryAxisSizingMode = 'FIXED';
+  titleBar.counterAxisSizingMode = 'FIXED';
+  titleBar.paddingLeft = 15;
+  titleBar.paddingRight = 15;
+  titleBar.paddingTop = 12;
+  titleBar.primaryAxisAlignItems = 'SPACE_BETWEEN';
+  titleBar.counterAxisAlignItems = 'CENTER';
+  
+  const title = txt("工程向导", 16, dark);
+  titleBar.appendChild(title);
+  
+  const closeIcon = rect(20, 20, border);
+  titleBar.appendChild(closeIcon);
+  
+  main.appendChild(titleBar);
+  
+  // ===== 内容区域 =====
+  const content = figma.createFrame();
+  content.layoutMode = 'HORIZONTAL';
+  content.primaryAxisSizingMode = 'AUTO';
+  content.counterAxisSizingMode = 'AUTO';
+  content.fills = [];
+  content.layoutGrow = 1;
+  content.layoutAlign = 'STRETCH';
+  
+  // ===== 左侧菜单 =====
+  const leftMenu = figma.createFrame();
+  leftMenu.resize(140, 100);
+  leftMenu.fills = [{type: 'SOLID', color: white}];
+  leftMenu.layoutMode = 'VERTICAL';
+  leftMenu.primaryAxisSizingMode = 'AUTO';
+  leftMenu.counterAxisSizingMode = 'FIXED';
+  leftMenu.layoutAlign = 'STRETCH';
+  
+  // 在线按钮
+  const onlineBtn = figma.createFrame();
+  onlineBtn.resize(140, 40);
+  onlineBtn.fills = [{type: 'SOLID', color: blue}];
+  onlineBtn.layoutMode = 'HORIZONTAL';
+  onlineBtn.primaryAxisSizingMode = 'FIXED';
+  onlineBtn.counterAxisSizingMode = 'FIXED';
+  onlineBtn.paddingLeft = 15;
+  onlineBtn.paddingTop = 10;
+  onlineBtn.counterAxisAlignItems = 'CENTER';
+  onlineBtn.appendChild(txt("在线", 14, white));
+  leftMenu.appendChild(onlineBtn);
+  
+  // 离线按钮
+  const offlineBtn = figma.createFrame();
+  offlineBtn.resize(140, 40);
+  offlineBtn.fills = [{type: 'SOLID', color: white}];
+  offlineBtn.strokes = [{type: 'SOLID', color: border}];
+  offlineBtn.strokeWeight = 1;
+  offlineBtn.strokeAlign = 'INSIDE';
+  offlineBtn.layoutMode = 'HORIZONTAL';
+  offlineBtn.primaryAxisSizingMode = 'FIXED';
+  offlineBtn.counterAxisSizingMode = 'FIXED';
+  offlineBtn.paddingLeft = 15;
+  offlineBtn.paddingTop = 10;
+  offlineBtn.counterAxisAlignItems = 'CENTER';
+  offlineBtn.itemSpacing = 10;
+  offlineBtn.appendChild(rect(20, 20, border));
+  offlineBtn.appendChild(txt("离线", 14, dark));
+  leftMenu.appendChild(offlineBtn);
+  
+  content.appendChild(leftMenu);
+  
+  // ===== 右侧内容区 =====
+  const rightContent = figma.createFrame();
+  rightContent.layoutMode = 'VERTICAL';
+  rightContent.primaryAxisSizingMode = 'AUTO';
+  rightContent.counterAxisSizingMode = 'AUTO';
+  rightContent.fills = [];
+  rightContent.layoutGrow = 1;
+  rightContent.layoutAlign = 'STRETCH';
+  rightContent.paddingLeft = 20;
+  rightContent.paddingRight = 20;
+  rightContent.paddingTop = 20;
+  rightContent.paddingBottom = 20;
+  rightContent.itemSpacing = 20;
+  
+  // ===== 主区域容器 =====
+  const mainArea = figma.createFrame();
+  mainArea.layoutMode = 'HORIZONTAL';
+  mainArea.primaryAxisSizingMode = 'AUTO';
+  mainArea.counterAxisSizingMode = 'AUTO';
+  mainArea.fills = [];
+  mainArea.itemSpacing = 30;
+  
+  // ===== 产品区域 =====
+  const productArea = figma.createFrame();
+  productArea.layoutMode = 'VERTICAL';
+  productArea.primaryAxisSizingMode = 'AUTO';
+  productArea.counterAxisSizingMode = 'AUTO';
+  productArea.fills = [];
+  productArea.itemSpacing = 20;
+  
+  const products = ["IS580", "IS580-1M", "ES100", "ES100-MVSY2", "ES510", "ES510-1M", "ES590", "ES590H"];
+  
+  // 第一行产品
+  const row1 = figma.createFrame();
+  row1.layoutMode = 'HORIZONTAL';
+  row1.primaryAxisSizingMode = 'AUTO';
+  row1.counterAxisSizingMode = 'AUTO';
+  row1.fills = [];
+  row1.itemSpacing = 20;
+  
+  for (let i = 0; i < 4; i++) {
+    const card = figma.createFrame();
+    card.resize(140, 180);
+    card.fills = [{type: 'SOLID', color: white}];
+    card.strokes = [{type: 'SOLID', color: border}];
+    card.strokeWeight = 1;
+    card.strokeAlign = 'INSIDE';
+    card.cornerRadius = 4;
+    card.layoutMode = 'VERTICAL';
+    card.primaryAxisSizingMode = 'FIXED';
+    card.counterAxisSizingMode = 'FIXED';
+    card.paddingLeft = 10;
+    card.paddingRight = 10;
+    card.paddingTop = 10;
+    card.paddingBottom = 10;
+    card.itemSpacing = 10;
+    card.effects = [{
+      type: 'DROP_SHADOW',
+      color: {r:0, g:0, b:0, a:.08},
+      offset: {x:0, y:2},
+      radius: 6,
+      visible: true,
+      blendMode: 'NORMAL'
+    }];
+    
+    const img = rect(120, 130, white);
+    img.strokes = [{type: 'SOLID', color: border}];
+    img.strokeWeight = 1;
+    img.strokeAlign = 'INSIDE';
+    card.appendChild(img);
+    card.appendChild(txt(products[i], 12, dark));
+    row1.appendChild(card);
+  }
+  productArea.appendChild(row1);
+  
+  // 第二行产品
+  const row2 = figma.createFrame();
+  row2.layoutMode = 'HORIZONTAL';
+  row2.primaryAxisSizingMode = 'AUTO';
+  row2.counterAxisSizingMode = 'AUTO';
+  row2.fills = [];
+  row2.itemSpacing = 20;
+  
+  for (let i = 4; i < 8; i++) {
+    const card = figma.createFrame();
+    card.resize(140, 180);
+    card.fills = [{type: 'SOLID', color: white}];
+    card.strokes = [{type: 'SOLID', color: border}];
+    card.strokeWeight = 1;
+    card.strokeAlign = 'INSIDE';
+    card.cornerRadius = 4;
+    card.layoutMode = 'VERTICAL';
+    card.primaryAxisSizingMode = 'FIXED';
+    card.counterAxisSizingMode = 'FIXED';
+    card.paddingLeft = 10;
+    card.paddingRight = 10;
+    card.paddingTop = 10;
+    card.paddingBottom = 10;
+    card.itemSpacing = 10;
+    card.effects = [{
+      type: 'DROP_SHADOW',
+      color: {r:0, g:0, b:0, a:.08},
+      offset: {x:0, y:2},
+      radius: 6,
+      visible: true,
+      blendMode: 'NORMAL'
+    }];
+    
+    const img = rect(120, 130, white);
+    img.strokes = [{type: 'SOLID', color: border}];
+    img.strokeWeight = 1;
+    img.strokeAlign = 'INSIDE';
+    card.appendChild(img);
+    card.appendChild(txt(products[i], 12, dark));
+    row2.appendChild(card);
+  }
+  productArea.appendChild(row2);
+  
+  mainArea.appendChild(productArea);
+  
+  // ===== 配置面板 =====
+  const configPanel = figma.createFrame();
+  configPanel.layoutMode = 'VERTICAL';
+  configPanel.primaryAxisSizingMode = 'AUTO';
+  configPanel.counterAxisSizingMode = 'AUTO';
+  configPanel.fills = [];
+  configPanel.itemSpacing = 15;
+  
+  const configs = [
+    ["通讯类型:", "串口"],
+    ["串口号:", "COM3"],
+    ["波特率:", "115200"],
+    ["数据位:", "8"],
+    ["校验位:", "None"],
+    ["停止位:", "1"]
+  ];
+  
+  configs.forEach(cfg => {
+    const row = figma.createFrame();
+    row.layoutMode = 'HORIZONTAL';
+    row.primaryAxisSizingMode = 'AUTO';
+    row.counterAxisSizingMode = 'AUTO';
+    row.fills = [];
+    row.counterAxisAlignItems = 'CENTER';
+    row.itemSpacing = 10;
+    
+    const label = txt(cfg[0], 13, textGray);
+    label.resize(80, label.height);
+    label.textAlignHorizontal = 'RIGHT';
+    label.textAutoResize = 'HEIGHT';
+    row.appendChild(label);
+    
+    const combo = figma.createFrame();
+    combo.resize(150, 32);
+    combo.fills = [{type: 'SOLID', color: white}];
+    combo.strokes = [{type: 'SOLID', color: border}];
+    combo.strokeWeight = 1;
+    combo.strokeAlign = 'INSIDE';
+    combo.cornerRadius = 4;
+    combo.layoutMode = 'HORIZONTAL';
+    combo.primaryAxisSizingMode = 'FIXED';
+    combo.counterAxisSizingMode = 'FIXED';
+    combo.paddingLeft = 10;
+    combo.paddingRight = 10;
+    combo.primaryAxisAlignItems = 'SPACE_BETWEEN';
+    combo.counterAxisAlignItems = 'CENTER';
+    combo.itemSpacing = 10;
+    
+    combo.appendChild(txt(cfg[1], 13, dark));
+    combo.appendChild(rect(8, 8, border));
+    row.appendChild(combo);
+    
+    configPanel.appendChild(row);
+  });
+  
+  // 复选框
+  const checkbox = figma.createFrame();
+  checkbox.layoutMode = 'HORIZONTAL';
+  checkbox.primaryAxisSizingMode = 'AUTO';
+  checkbox.counterAxisSizingMode = 'AUTO';
+  checkbox.fills = [];
+  checkbox.counterAxisAlignItems = 'CENTER';
+  checkbox.paddingLeft = 80;
+  checkbox.itemSpacing = 8;
+  
+  const chk = figma.createFrame();
+  chk.resize(16, 16);
+  chk.fills = [{type: 'SOLID', color: white}];
+  chk.strokes = [{type: 'SOLID', color: border}];
+  chk.strokeWeight = 1;
+  chk.strokeAlign = 'INSIDE';
+  
+  checkbox.appendChild(chk);
+  checkbox.appendChild(txt("自速应漏特率", 12, dark));
+  configPanel.appendChild(checkbox);
+  
+  mainArea.appendChild(configPanel);
+  rightContent.appendChild(mainArea);
+  
+  // ===== 下一页按钮区域 =====
+  const btnArea = figma.createFrame();
+  btnArea.layoutMode = 'HORIZONTAL';
+  btnArea.primaryAxisSizingMode = 'AUTO';
+  btnArea.counterAxisSizingMode = 'AUTO';
+  btnArea.fills = [];
+  btnArea.primaryAxisAlignItems = 'CENTER';
+  btnArea.counterAxisAlignItems = 'MIN';
+  btnArea.paddingTop = 20;
+  btnArea.layoutAlign = 'STRETCH';
+  
+  const btn = figma.createFrame();
+  btn.resize(100, 36);
+  btn.fills = [{type: 'SOLID', color: white}];
+  btn.strokes = [{type: 'SOLID', color: border}];
+  btn.strokeWeight = 1;
+  btn.strokeAlign = 'INSIDE';
+  btn.cornerRadius = 4;
+  btn.layoutMode = 'HORIZONTAL';
+  btn.primaryAxisSizingMode = 'FIXED';
+  btn.counterAxisSizingMode = 'FIXED';
+  btn.primaryAxisAlignItems = 'CENTER';
+  btn.counterAxisAlignItems = 'CENTER';
+  btn.appendChild(txt("下一页", 14, dark));
+  
+  btnArea.appendChild(btn);
+  rightContent.appendChild(btnArea);
+  
+  content.appendChild(rightContent);
+  main.appendChild(content);
+  
+  figma.currentPage.appendChild(main);
+  figma.viewport.scrollAndZoomIntoView([main]);
+  figma.notify("✅ 界面生成完成!");
+  figma.closePlugin();
+}
+
+generate();
+```

@@ -1,0 +1,136 @@
+# ============================================================================
+# WPF 控件默认值配置
+# 作用: 定义 WPF 控件的默认属性值，生成 XAML 时排除这些默认值以保持简洁
+# ============================================================================
+
+# Border 控件默认值
+Border:
+  # 对齐方式
+  HorizontalAlignment: Stretch
+  VerticalAlignment: Stretch
+  
+  # 边距和填充
+  Margin: "0"
+  Padding: "0"
+  
+  # 边框
+  BorderThickness: "0"
+  
+  # 圆角
+  CornerRadius: "0"
+
+# StackPanel 控件默认值
+StackPanel:
+  # 对齐方式
+  HorizontalAlignment: Stretch
+  VerticalAlignment: Stretch
+  
+  # 方向
+  Orientation: Vertical
+  
+  # 边距
+  Margin: "0"
+
+# Grid 控件默认值
+Grid:
+  # 对齐方式
+  HorizontalAlignment: Stretch
+  VerticalAlignment: Stretch
+  
+  # 边距
+  Margin: "0"
+  
+  # 显示网格线（仅用于调试）
+  ShowGridLines: false
+
+# WrapPanel 控件默认值
+WrapPanel:
+  # 对齐方式
+  HorizontalAlignment: Stretch
+  VerticalAlignment: Stretch
+  
+  # 方向
+  Orientation: Horizontal
+  
+  # 边距
+  Margin: "0"
+
+# TextBlock 控件默认值
+TextBlock:
+  # 对齐方式
+  HorizontalAlignment: Left
+  VerticalAlignment: Top
+  
+  # 文本对齐
+  TextAlignment: Left
+  TextWrapping: NoWrap
+  
+  # 边距
+  Margin: "0"
+  
+  # 字体
+  FontSize: "12"
+  FontWeight: Normal
+  FontStyle: Normal
+
+# Button 控件默认值
+Button:
+  # 对齐方式
+  HorizontalAlignment: Left
+  VerticalAlignment: Top
+  
+  # 内容对齐
+  HorizontalContentAlignment: Center
+  VerticalContentAlignment: Center
+  
+  # 边距和填充
+  Margin: "0"
+  Padding: "1"
+
+# TextBox 控件默认值
+TextBox:
+  # 对齐方式
+  HorizontalAlignment: Stretch
+  VerticalAlignment: Top
+  
+  # 文本对齐
+  TextAlignment: Left
+  TextWrapping: NoWrap
+  
+  # 边距
+  Margin: "0"
+  Padding: "2"
+
+# Image 控件默认值
+Image:
+  # 对齐方式
+  HorizontalAlignment: Stretch
+  VerticalAlignment: Stretch
+  
+  # 拉伸模式
+  Stretch: Uniform
+  
+  # 边距
+  Margin: "0"
+
+# ScrollViewer 控件默认值
+ScrollViewer:
+  # 对齐方式
+  HorizontalAlignment: Stretch
+  VerticalAlignment: Stretch
+  
+  # 滚动条可见性
+  HorizontalScrollBarVisibility: Disabled
+  VerticalScrollBarVisibility: Visible
+  
+  # 边距
+  Margin: "0"
+
+# Canvas 控件默认值
+Canvas:
+  # 对齐方式
+  HorizontalAlignment: Left
+  VerticalAlignment: Top
+  
+  # 边距
+  Margin: "0"
