@@ -1,6 +1,6 @@
 """
 Figma 到 WPF XAML 转换器 V2
-架构: AST + 规则引擎 + Jinja2 模板
+架构: AST + 规则引擎 + Python 字符串拼接
 作者: GitHub Copilot
 版本: 2.0
 """
@@ -20,19 +20,18 @@ from src.xaml_renderer import XamlRenderer
 class FigmaToXamlConverter:
     """Figma 到 XAML 转换器 (V2 架构)
     
-    使用 AST + 规则引擎 + Jinja2 模板
+    使用 AST + 规则引擎 + Python 字符串拼接
     """
     
-    def __init__(self, config_dir: str = 'config', template_dir: str = 'templates'):
+    def __init__(self, config_dir: str = 'config'):
         """初始化转换器
         
         Args:
             config_dir: 配置文件目录
-            template_dir: 模板文件目录
         """
         self.builder = FigmaToWpfBuilder(config_dir)
         self.optimizer = ASTOptimizer(optimization_level=0)  # 第一版: 不优化
-        self.renderer = XamlRenderer(template_dir)
+        self.renderer = XamlRenderer()
     
     def convert_node(self, figma_node: dict, is_root: bool = False) -> str:
         """转换单个 Figma 节点
@@ -48,7 +47,7 @@ class FigmaToXamlConverter:
         ast = self.builder.build(figma_node, is_root=is_root)
         
         # 2. 优化 AST (第一版: 不优化)
-        ast = self.optimizer.optimize(ast)
+        # ast = self.optimizer.optimize(ast)
         
         # 3. 渲染 XAML
         node_name = figma_node.get('name', 'Control')
@@ -119,7 +118,7 @@ def main():
     
     print("=" * 70)
     print("Figma JSON → WPF XAML 转换器 V2.0")
-    print("架构: AST + 规则引擎 + Jinja2 模板")
+    print("架构: AST + 规则引擎 + Python 字符串拼接")
     print("=" * 70)
     print()
     

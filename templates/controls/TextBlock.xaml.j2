@@ -1,5 +1,0 @@
-{# TextBlock 控件模板 #}
-{%- set indent = '    ' * indent_level -%}
-{{ indent }}<TextBlock
-{%- for key, value in node.attributes.items() if value is not none %} {{ key }}="{{ value }}"
-{%- endfor %}/>

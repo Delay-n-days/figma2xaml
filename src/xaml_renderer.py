@@ -1,34 +1,24 @@
 """
 XAML 渲染器
-作用: 使用 Jinja2 模板将 WPF AST 渲染为 XAML 字符串
+作用: 使用 Python 字符串拼接将 WPF AST 渲染为 XAML 字符串
 """
-from jinja2 import Environment, FileSystemLoader, select_autoescape
-from pathlib import Path
 from src.wpf_ast import WpfNode
+from typing import List
 
 
 class XamlRenderer:
     """XAML 渲染器
     
-    使用 Jinja2 模板引擎渲染 WPF AST
+    使用纯 Python 字符串拼接渲染 WPF AST
     """
     
-    def __init__(self, template_dir: str = 'templates'):
-        """初始化渲染器
-        
-        Args:
-            template_dir: 模板目录路径
-        """
-        self.template_dir = Path(template_dir)
-        
-        # 初始化 Jinja2 环境
-        self.env = Environment(
-            loader=FileSystemLoader(str(self.template_dir)),
-            autoescape=select_autoescape(['html', 'xml']),
-            trim_blocks=False,          # 不删除块后的第一个换行符
-            lstrip_blocks=False,        # 不删除块前的空白
-            keep_trailing_newline=True  # 保留尾部换行符
-        )
+    def __init__(self):
+        """初始化渲染器"""
+        pass
+    
+    def __init__(self):
+        """初始化渲染器"""
+        pass
     
     def render_usercontrol(
         self,
@@ -48,21 +38,29 @@ class XamlRenderer:
         Returns:
             XAML 字符串
         """
-        # 加载基础模板
-        template = self.env.get_template('base.xaml.j2')
+        lines = []
         
-        # 渲染
-        xaml = template.render(
-            root=root,
-            class_name=class_name,
-            design_width=design_width,
-            design_height=design_height
-        )
+        # UserControl 头部
+        lines.append(f'<UserControl x:Class="YourNamespace.{class_name}"')
+        lines.append('             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"')
+        lines.append('             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"')
+        lines.append('             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"')
+        lines.append('             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"')
+        lines.append('             mc:Ignorable="d"')
+        lines.append(f'             d:DesignHeight="{design_height}" d:DesignWidth="{design_width}">')
+        lines.append('')
         
-        return xaml
+        # 渲染根节点
+        root_xaml = self.render_node(root, indent_level=1)
+        lines.append(root_xaml)
+        
+        # UserControl 结束
+        lines.append('</UserControl>')
+        
+        return '\n'.join(lines)
     
     def render_node(self, node: WpfNode, indent_level: int = 0) -> str:
-        """渲染单个节点 (用于调试)
+        """渲染单个节点
         
         Args:
             node: WPF AST 节点
@@ -71,18 +69,204 @@ class XamlRenderer:
         Returns:
             XAML 字符串
         """
-        # 加载宏模板
-        template = self.env.from_string(
-            "{% from 'macros/helpers.j2' import render_control %}"
-            "{{ render_control(node, indent_level) }}"
-        )
+        if node.type == 'Border':
+            return self._render_border(node, indent_level)
+        elif node.type == 'Grid':
+            return self._render_grid(node, indent_level)
+        elif node.type == 'StackPanel':
+            return self._render_stackpanel(node, indent_level)
+        elif node.type == 'WrapPanel':
+            return self._render_wrappanel(node, indent_level)
+        elif node.type == 'TextBlock':
+            return self._render_textblock(node, indent_level)
+        else:
+            # 未知类型
+            indent = '    ' * indent_level
+            return f'{indent}<!-- 未知控件类型: {node.type} -->'
+    
+    def _get_indent(self, level: int) -> str:
+        """获取缩进字符串"""
+        return '    ' * level
+    
+    def _render_attributes(self, attributes: dict, indent_level: int) -> List[str]:
+        """渲染属性列表
         
-        return template.render(node=node, indent_level=indent_level)
+        Args:
+            attributes: 属性字典
+            indent_level: 缩进级别
+        
+        Returns:
+            属性行列表
+        """
+        lines = []
+        indent = self._get_indent(indent_level)
+        
+        for key, value in attributes.items():
+            if value is not None and not key.startswith('_'):
+                lines.append(f'{indent}    {key}="{value}"')
+        
+        return lines
+
+
+    def _render_border(self, node: WpfNode, indent_level: int) -> str:
+        """渲染 Border 元素"""
+        lines = []
+        indent = self._get_indent(indent_level)
+        
+        # 注释
+        if node.comment:
+            lines.append(f'{indent}<!-- {node.comment} -->')
+        
+        # 开始标签
+        lines.append(f'{indent}<Border')
+        
+        # 属性
+        attr_lines = self._render_attributes(node.attributes, indent_level)
+        lines.extend(attr_lines)
+        
+        # 子元素
+        if node.children:
+            # 最后一个属性后直接跟 >
+            if attr_lines:
+                lines[-1] = lines[-1] + '>'
+            else:
+                lines[-1] = lines[-1] + '>'
+            
+            for child in node.children:
+                child_xaml = self.render_node(child, indent_level + 1)
+                lines.append(child_xaml)
+            
+            lines.append(f'{indent}</Border>')
+        else:
+            # 自闭合 />
+            if attr_lines:
+                lines[-1] = lines[-1] + '/>'
+            else:
+                lines[-1] = lines[-1] + '/>'
+        
+        return '\n'.join(lines)
+    
+    def _render_grid(self, node: WpfNode, indent_level: int) -> str:
+        """渲染 Grid 元素"""
+        lines = []
+        indent = self._get_indent(indent_level)
+        
+        # 注释
+        if node.comment:
+            lines.append(f'{indent}<!-- {node.comment} -->')
+        
+        # 开始标签
+        lines.append(f'{indent}<Grid>')
+        
+        # 行定义
+        row_defs = node.attributes.get('_row_definitions', [])
+        if row_defs:
+            lines.append(f'{indent}    <Grid.RowDefinitions>')
+            for row_height in row_defs:
+                lines.append(f'{indent}        <RowDefinition Height="{row_height}"/>')
+            lines.append(f'{indent}    </Grid.RowDefinitions>')
+        
+        # 列定义
+        col_defs = node.attributes.get('_column_definitions', [])
+        if col_defs:
+            lines.append(f'{indent}    <Grid.ColumnDefinitions>')
+            for col_width in col_defs:
+                lines.append(f'{indent}        <ColumnDefinition Width="{col_width}"/>')
+            lines.append(f'{indent}    </Grid.ColumnDefinitions>')
+        
+        # 子元素
+        for child in node.children:
+            child_xaml = self.render_node(child, indent_level + 1)
+            lines.append(child_xaml)
+        
+        lines.append(f'{indent}</Grid>')
+        
+        return '\n'.join(lines)
+    
+    def _render_stackpanel(self, node: WpfNode, indent_level: int) -> str:
+        """渲染 StackPanel 元素"""
+        lines = []
+        indent = self._get_indent(indent_level)
+        
+        # 注释
+        if node.comment:
+            lines.append(f'{indent}<!-- {node.comment} -->')
+        
+        # 开始标签和属性
+        lines.append(f'{indent}<StackPanel')
+        attr_lines = self._render_attributes(node.attributes, indent_level)
+        lines.extend(attr_lines)
+        
+        # 最后一个属性后直接跟 >
+        if attr_lines:
+            lines[-1] = lines[-1] + '>'
+        else:
+            lines[-1] = lines[-1] + '>'
+        
+        # 子元素
+        for child in node.children:
+            child_xaml = self.render_node(child, indent_level + 1)
+            lines.append(child_xaml)
+        
+        lines.append(f'{indent}</StackPanel>')
+        
+        return '\n'.join(lines)
+    
+    def _render_wrappanel(self, node: WpfNode, indent_level: int) -> str:
+        """渲染 WrapPanel 元素"""
+        lines = []
+        indent = self._get_indent(indent_level)
+        
+        # 注释
+        if node.comment:
+            lines.append(f'{indent}<!-- {node.comment} -->')
+        
+        # 开始标签和属性
+        lines.append(f'{indent}<WrapPanel')
+        attr_lines = self._render_attributes(node.attributes, indent_level)
+        lines.extend(attr_lines)
+        
+        # 最后一个属性后直接跟 >
+        if attr_lines:
+            lines[-1] = lines[-1] + '>'
+        else:
+            lines[-1] = lines[-1] + '>'
+        
+        # 子元素
+        for child in node.children:
+            child_xaml = self.render_node(child, indent_level + 1)
+            lines.append(child_xaml)
+        
+        lines.append(f'{indent}</WrapPanel>')
+        
+        return '\n'.join(lines)
+    
+    def _render_textblock(self, node: WpfNode, indent_level: int) -> str:
+        """渲染 TextBlock 元素"""
+        lines = []
+        indent = self._get_indent(indent_level)
+        
+        # 注释
+        if node.comment:
+            lines.append(f'{indent}<!-- {node.comment} -->')
+        
+        # 自闭合标签和属性
+        lines.append(f'{indent}<TextBlock')
+        attr_lines = self._render_attributes(node.attributes, indent_level)
+        lines.extend(attr_lines)
+        
+        # 最后一个属性后直接跟 />
+        if attr_lines:
+            lines[-1] = lines[-1] + '/>'
+        else:
+            lines[-1] = lines[-1] + '/>'
+        
+        return '\n'.join(lines)
 
 
 # 测试代码
 if __name__ == '__main__':
-    from src.wpf_ast import create_border, create_stackpanel, create_textblock
+    from src.wpf_ast import create_border, create_stackpanel, create_textblock, create_grid
     
     # 创建测试 AST
     root = create_border(
@@ -92,19 +276,31 @@ if __name__ == '__main__':
         Background='#FFFFFF'
     )
     
-    stack = create_stackpanel(orientation='Vertical')
-    root.add_child(stack)
+    grid = create_grid()
+    grid.set_attribute('_row_definitions', ['1*', '1*'])
+    grid.set_attribute('_column_definitions', ['Auto', '*'])
+    root.add_child(grid)
     
-    text = create_textblock(
-        text='Hello World',
-        comment='测试文本',
-        FontSize='16',
+    text1 = create_textblock(
+        comment='测试文本1',
+        Text='Hello',
+        FontSize='16'
+    )
+    text1.set_attribute('Grid.Row', '0')
+    text1.set_attribute('Grid.Column', '0')
+    grid.add_child(text1)
+    
+    text2 = create_textblock(
+        comment='测试文本2',
+        Text='World',
         FontWeight='Bold'
     )
-    stack.add_child(text)
+    text2.set_attribute('Grid.Row', '0')
+    text2.set_attribute('Grid.Column', '1')
+    grid.add_child(text2)
     
     # 渲染
-    renderer = XamlRenderer('templates')
+    renderer = XamlRenderer()
     xaml = renderer.render_usercontrol(root, class_name='TestControl', design_width=200, design_height=100)
     
     print(xaml)
