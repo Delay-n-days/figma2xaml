@@ -1,0 +1,8 @@
+<Grid>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="Auto"/>
+        <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+    <TextBlock Text="标签:" FontSize="14" Grid.Column="0"/>
+    <Border Background="#F0F0F0" Margin="10,0,0,0" Grid.Column="1"/>
+</Grid>

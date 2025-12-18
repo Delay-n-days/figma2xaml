@@ -1,0 +1,11 @@
+<Border Background="#FFFFFF" Padding="15,12,15,12">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="工程向导" FontSize="16" Foreground="#333333" Grid.Column="0"/>
+        <Border Width="20" Height="20" Background="#E0E0E0" Grid.Column="2"/>
+    </Grid>
+</Border>

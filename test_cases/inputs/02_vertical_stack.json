@@ -1,0 +1,55 @@
+{
+  "compressed_data": [
+    {
+      "id": "test:02",
+      "type": "FRAME",
+      "name": "VerticalStack",
+      "layoutMode": "VERTICAL",
+      "primaryAxisAlignItems": "MIN",
+      "counterAxisAlignItems": "MIN",
+      "itemSpacing": 8,
+      "paddingLeft": 15,
+      "paddingRight": 15,
+      "paddingTop": 15,
+      "paddingBottom": 15,
+      "layoutSizingHorizontal": "FIXED",
+      "layoutSizingVertical": "HUG",
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 150,
+      "children": [
+        {
+          "id": "test:02-1",
+          "type": "TEXT",
+          "name": "Title",
+          "characters": "标题",
+          "fontSize": 16,
+          "fontWeight": 700,
+          "layoutSizingHorizontal": "HUG",
+          "layoutSizingVertical": "HUG",
+          "fills": [{"type": "SOLID", "color": "#000000"}],
+          "x": 15,
+          "y": 15,
+          "width": 40,
+          "height": 22
+        },
+        {
+          "id": "test:02-2",
+          "type": "TEXT",
+          "name": "Content",
+          "characters": "内容文本",
+          "fontSize": 14,
+          "fontWeight": 400,
+          "layoutSizingHorizontal": "HUG",
+          "layoutSizingVertical": "HUG",
+          "fills": [{"type": "SOLID", "color": "#666666"}],
+          "x": 15,
+          "y": 45,
+          "width": 70,
+          "height": 20
+        }
+      ]
+    }
+  ]
+}

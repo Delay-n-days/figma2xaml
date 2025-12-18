@@ -1,0 +1,55 @@
+{
+  "compressed_data": [
+    {
+      "id": "test:01",
+      "type": "FRAME",
+      "name": "HorizontalStack",
+      "layoutMode": "HORIZONTAL",
+      "primaryAxisAlignItems": "MIN",
+      "counterAxisAlignItems": "CENTER",
+      "itemSpacing": 16,
+      "paddingLeft": 20,
+      "paddingRight": 20,
+      "paddingTop": 10,
+      "paddingBottom": 10,
+      "layoutSizingHorizontal": "HUG",
+      "layoutSizingVertical": "HUG",
+      "x": 0,
+      "y": 0,
+      "width": 300,
+      "height": 50,
+      "children": [
+        {
+          "id": "test:01-1",
+          "type": "TEXT",
+          "name": "Label1",
+          "characters": "按钮1",
+          "fontSize": 14,
+          "fontWeight": 400,
+          "layoutSizingHorizontal": "HUG",
+          "layoutSizingVertical": "HUG",
+          "fills": [{"type": "SOLID", "color": "#333333"}],
+          "x": 20,
+          "y": 15,
+          "width": 50,
+          "height": 20
+        },
+        {
+          "id": "test:01-2",
+          "type": "TEXT",
+          "name": "Label2",
+          "characters": "按钮2",
+          "fontSize": 14,
+          "fontWeight": 400,
+          "layoutSizingHorizontal": "HUG",
+          "layoutSizingVertical": "HUG",
+          "fills": [{"type": "SOLID", "color": "#333333"}],
+          "x": 86,
+          "y": 15,
+          "width": 50,
+          "height": 20
+        }
+      ]
+    }
+  ]
+}

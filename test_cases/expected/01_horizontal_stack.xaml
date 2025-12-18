@@ -1,0 +1,10 @@
+<Border Padding="20,10,20,10">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="按钮1" FontSize="14" Foreground="#333333" Grid.Column="0"/>
+        <TextBlock Text="按钮2" FontSize="14" Foreground="#333333" Margin="16,0,0,0" Grid.Column="1"/>
+    </Grid>
+</Border>

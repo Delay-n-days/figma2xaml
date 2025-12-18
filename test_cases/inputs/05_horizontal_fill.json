@@ -1,0 +1,52 @@
+{
+  "compressed_data": [
+    {
+      "id": "test:05",
+      "type": "FRAME",
+      "name": "HorizontalWithFill",
+      "layoutMode": "HORIZONTAL",
+      "primaryAxisAlignItems": "MIN",
+      "counterAxisAlignItems": "STRETCH",
+      "itemSpacing": 10,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 0,
+      "paddingBottom": 0,
+      "layoutSizingHorizontal": "FIXED",
+      "layoutSizingVertical": "FIXED",
+      "x": 0,
+      "y": 0,
+      "width": 400,
+      "height": 50,
+      "children": [
+        {
+          "id": "test:05-1",
+          "type": "TEXT",
+          "name": "FixedLabel",
+          "characters": "标签:",
+          "fontSize": 14,
+          "fontWeight": 400,
+          "layoutSizingHorizontal": "HUG",
+          "layoutSizingVertical": "HUG",
+          "fills": [{"type": "SOLID", "color": "#000000"}],
+          "x": 0,
+          "y": 15,
+          "width": 50,
+          "height": 20
+        },
+        {
+          "id": "test:05-2",
+          "type": "RECTANGLE",
+          "name": "FillInput",
+          "layoutSizingHorizontal": "FILL",
+          "layoutSizingVertical": "FILL",
+          "fills": [{"type": "SOLID", "color": "#F0F0F0"}],
+          "x": 60,
+          "y": 0,
+          "width": 340,
+          "height": 50
+        }
+      ]
+    }
+  ]
+}

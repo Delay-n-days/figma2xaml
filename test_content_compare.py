@@ -1,8 +1,10 @@
 """
 智能 XAML 对比 - 提取关键信息对比
+支持语义对比,忽略无关紧要的差异
 """
 import re
 from collections import Counter
+import xml.etree.ElementTree as ET
 
 
 def extract_elements(xaml):
@@ -105,3 +107,118 @@ def compare_xaml_content(file1, file2):
 
 if __name__ == '__main__':
     compare_xaml_content('out.xaml', 'out_v2.xaml')
+
+
+def normalize_value(value):
+    """标准化属性值,忽略微小差异"""
+    if not value:
+        return value
+    
+    # 标准化数字(去除多余小数点)
+    try:
+        num = float(value)
+        if num == int(num):
+            return str(int(num))
+        return f"{num:.2f}"
+    except:
+        pass
+    
+    # 标准化空格
+    return ' '.join(value.split())
+
+
+def compare_xaml_semantically(xaml1, xaml2, tolerance=2.0):
+    """
+    语义化对比两个 XAML 字符串
+    
+    Args:
+        xaml1: 第一个 XAML 字符串
+        xaml2: 第二个 XAML 字符串
+        tolerance: 数值容差(像素)
+    
+    Returns:
+        (is_match, differences): 是否匹配,差异列表
+    """
+    differences = []
+    
+    # 尝试解析为 XML
+    try:
+        # 包装成完整的 XML
+        wrapped1 = f'<Root xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">{xaml1}</Root>'
+        wrapped2 = f'<Root xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">{xaml2}</Root>'
+        
+        root1 = ET.fromstring(wrapped1)
+        root2 = ET.fromstring(wrapped2)
+        
+        # 递归对比元素
+        compare_elements(root1, root2, differences, tolerance, path="Root")
+        
+    except ET.ParseError as e:
+        # XML 解析失败,回退到文本对比
+        differences.append(f"XML 解析失败: {e}")
+        return False, differences
+    
+    return len(differences) == 0, differences
+
+
+def compare_elements(elem1, elem2, differences, tolerance, path=""):
+    """递归对比两个 XML 元素"""
+    # 去除命名空间
+    tag1 = elem1.tag.split('}')[-1] if '}' in elem1.tag else elem1.tag
+    tag2 = elem2.tag.split('}')[-1] if '}' in elem2.tag else elem2.tag
+    
+    # 对比标签名
+    if tag1 != tag2:
+        differences.append(f"{path}: 标签不同 ({tag1} vs {tag2})")
+        return
+    
+    current_path = f"{path}/{tag1}"
+    
+    # 对比属性
+    attrs1 = {k.split('}')[-1]: v for k, v in elem1.attrib.items()}
+    attrs2 = {k.split('}')[-1]: v for k, v in elem2.attrib.items()}
+    
+    # 忽略的属性(不重要)
+    ignore_attrs = {'xmlns', 'x:Name'}
+    
+    all_keys = (set(attrs1.keys()) | set(attrs2.keys())) - ignore_attrs
+    
+    for key in all_keys:
+        val1 = attrs1.get(key, '')
+        val2 = attrs2.get(key, '')
+        
+        if val1 != val2:
+            # 检查是否是数值差异
+            if is_numeric_diff_acceptable(val1, val2, tolerance):
+                continue
+            
+            differences.append(f"{current_path}[@{key}]: '{val1}' vs '{val2}'")
+    
+    # 对比文本内容
+    text1 = (elem1.text or '').strip()
+    text2 = (elem2.text or '').strip()
+    if text1 != text2:
+        differences.append(f"{current_path}/text(): '{text1}' vs '{text2}'")
+    
+    # 对比子元素数量
+    children1 = list(elem1)
+    children2 = list(elem2)
+    
+    if len(children1) != len(children2):
+        differences.append(f"{current_path}: 子元素数量不同 ({len(children1)} vs {len(children2)})")
+        return
+    
+    # 递归对比子元素
+    for child1, child2 in zip(children1, children2):
+        compare_elements(child1, child2, differences, tolerance, current_path)
+
+
+def is_numeric_diff_acceptable(val1, val2, tolerance):
+    """检查数值差异是否可接受"""
+    try:
+        num1 = float(val1)
+        num2 = float(val2)
+        return abs(num1 - num2) <= tolerance
+    except:
+        return False
+

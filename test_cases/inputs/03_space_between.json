@@ -1,0 +1,53 @@
+{
+  "compressed_data": [
+    {
+      "id": "test:03",
+      "type": "FRAME",
+      "name": "SpaceBetween",
+      "layoutMode": "HORIZONTAL",
+      "primaryAxisAlignItems": "SPACE_BETWEEN",
+      "counterAxisAlignItems": "CENTER",
+      "itemSpacing": 0,
+      "paddingLeft": 15,
+      "paddingRight": 15,
+      "paddingTop": 12,
+      "paddingBottom": 12,
+      "layoutSizingHorizontal": "FIXED",
+      "layoutSizingVertical": "FIXED",
+      "x": 0,
+      "y": 0,
+      "width": 1024,
+      "height": 45,
+      "fills": [{"type": "SOLID", "color": "#FFFFFF"}],
+      "children": [
+        {
+          "id": "test:03-1",
+          "type": "TEXT",
+          "name": "LeftText",
+          "characters": "工程向导",
+          "fontSize": 16,
+          "fontWeight": 400,
+          "layoutSizingHorizontal": "HUG",
+          "layoutSizingVertical": "HUG",
+          "fills": [{"type": "SOLID", "color": "#333333"}],
+          "x": 15,
+          "y": 19,
+          "width": 64,
+          "height": 19
+        },
+        {
+          "id": "test:03-2",
+          "type": "RECTANGLE",
+          "name": "RightButton",
+          "layoutSizingHorizontal": "FIXED",
+          "layoutSizingVertical": "FIXED",
+          "fills": [{"type": "SOLID", "color": "#E0E0E0"}],
+          "x": 989,
+          "y": 18.5,
+          "width": 20,
+          "height": 20
+        }
+      ]
+    }
+  ]
+}
