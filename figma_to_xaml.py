@@ -519,7 +519,8 @@ class FigmaToXamlConverter:
         # 可选属性(非默认值才添加)
         # WPF 默认字体是 Segoe UI,字号是系统字号(通常12)
         if font_family and font_family not in ['Segoe UI', 'Roboto']:
-            xaml += f' FontFamily="{font_family}"'
+            # xaml += f' FontFamily="{font_family}"'
+            pass # 不设置字体族,使用默认即可
         if font_size and font_size != 12:
             xaml += f' FontSize="{font_size}"'
         if font_weight and font_weight >= 700:

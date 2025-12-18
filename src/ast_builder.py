@@ -525,7 +525,8 @@ class FigmaToWpfBuilder:
         
         # 设置属性
         if font_family and font_family not in ['Segoe UI', 'Roboto']:
-            textblock.set_attribute('FontFamily', font_family)
+            # textblock.set_attribute('FontFamily', font_family)
+            pass  # 不设置字体族,使用默认即可
         
         if font_size and font_size != 12:
             textblock.set_attribute('FontSize', str(font_size))
