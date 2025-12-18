@@ -1,0 +1,33 @@
+<Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <!-- Header 容器 -->
+        <Border
+            Background="#F3F4F6"
+            Padding="16,12,16,12"
+            Grid.Row="0"
+            Grid.Column="0">
+            <!-- Title -->
+            <TextBlock
+                Text="设备列表"
+                FontSize="18"
+                Foreground="#111827"
+                VerticalAlignment="Center"/>
+        </Border>
+        <!-- Content 容器 -->
+        <Border
+            Background="#FFFFFF"
+            Grid.Row="1"
+            Grid.Column="0">
+            <!-- NoData -->
+            <TextBlock
+                Text="暂无数据"
+                FontSize="14"
+                Foreground="#9CA3AF"/>
+        </Border>
+    </Grid>

@@ -1,0 +1,125 @@
+{
+  "compressed_data": [
+    {
+      "id": "64:503",
+      "type": "FRAME",
+      "name": "RangeInput",
+      "layoutMode": "HORIZONTAL",
+      "counterAxisAlignItems": "CENTER",
+      "itemSpacing": 17,
+      "layoutSizingVertical": "HUG",
+      "x": 0,
+      "y": 0,
+      "width": 244,
+      "height": 32,
+      "children": [
+        {
+          "id": "64:501",
+          "type": "TEXT",
+          "name": "站号范围",
+          "characters": "站号范围",
+          "fontSize": 16.5,
+          "fontWeight": 400,
+          "fills": [{"type": "SOLID", "color": "#1F2937"}],
+          "layoutSizingHorizontal": "HUG",
+          "layoutSizingVertical": "HUG",
+          "x": 0,
+          "y": 6,
+          "width": 66,
+          "height": 20
+        },
+        {
+          "id": "64:499",
+          "type": "FRAME",
+          "name": "Input1",
+          "layoutSizingHorizontal": "HUG",
+          "layoutSizingVertical": "HUG",
+          "fills": [{"type": "SOLID", "color": "#FFFFFF"}],
+          "strokes": [{"type": "SOLID", "color": "#D1D5DB"}],
+          "cornerRadius": 4,
+          "paddingLeft": 24,
+          "paddingRight": 24,
+          "paddingTop": 6,
+          "paddingBottom": 6,
+          "layoutMode": "HORIZONTAL",
+          "primaryAxisAlignItems": "CENTER",
+          "counterAxisAlignItems": "CENTER",
+          "x": 83,
+          "y": 0,
+          "width": 56,
+          "height": 32,
+          "children": [
+            {
+              "id": "64:500",
+              "type": "TEXT",
+              "name": "1",
+              "characters": "1",
+              "fontSize": 16.5,
+              "fontWeight": 400,
+              "fills": [{"type": "SOLID", "color": "#1F2937"}],
+              "layoutSizingHorizontal": "HUG",
+              "layoutSizingVertical": "HUG",
+              "x": 24,
+              "y": 6,
+              "width": 8,
+              "height": 20
+            }
+          ]
+        },
+        {
+          "id": "64:498",
+          "type": "TEXT",
+          "name": "—",
+          "characters": "—",
+          "fontSize": 16.5,
+          "fontWeight": 400,
+          "fills": [{"type": "SOLID", "color": "#1F2937"}],
+          "layoutSizingHorizontal": "HUG",
+          "layoutSizingVertical": "HUG",
+          "x": 156,
+          "y": 6,
+          "width": 17,
+          "height": 20
+        },
+        {
+          "id": "64:496",
+          "type": "FRAME",
+          "name": "Input2",
+          "layoutSizingHorizontal": "HUG",
+          "layoutSizingVertical": "HUG",
+          "fills": [{"type": "SOLID", "color": "#FFFFFF"}],
+          "strokes": [{"type": "SOLID", "color": "#D1D5DB"}],
+          "cornerRadius": 4,
+          "paddingLeft": 18,
+          "paddingRight": 18,
+          "paddingTop": 6,
+          "paddingBottom": 6,
+          "layoutMode": "HORIZONTAL",
+          "primaryAxisAlignItems": "CENTER",
+          "counterAxisAlignItems": "CENTER",
+          "x": 190,
+          "y": 0,
+          "width": 54,
+          "height": 32,
+          "children": [
+            {
+              "id": "64:497",
+              "type": "TEXT",
+              "name": "16",
+              "characters": "16",
+              "fontSize": 16.5,
+              "fontWeight": 400,
+              "fills": [{"type": "SOLID", "color": "#1F2937"}],
+              "layoutSizingHorizontal": "HUG",
+              "layoutSizingVertical": "HUG",
+              "x": 18,
+              "y": 6,
+              "width": 18,
+              "height": 20
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+<Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <!-- StartButton 容器 -->
+        <Border
+            CornerRadius="4"
+            BorderBrush="#D1D5DB"
+            BorderThickness="1"
+            Background="#FFFFFF"
+            Padding="6,11,6,11"
+            Grid.Column="0">
+            <!-- 开始扫描 -->
+            <TextBlock
+                Text="开始扫描"
+                FontSize="16.5"
+                Foreground="#1F2937"
+                HorizontalAlignment="Center"/>
+        </Border>
+        <!-- StopButton 容器 -->
+        <Border
+            CornerRadius="4"
+            BorderBrush="#D1D5DB"
+            BorderThickness="1"
+            Background="#FFFFFF"
+            Padding="6,11,6,11"
+            Grid.Column="1">
+            <!-- 停止扫描 -->
+            <TextBlock
+                Text="停止扫描"
+                FontSize="16.5"
+                Foreground="#1F2937"
+                HorizontalAlignment="Center"/>
+        </Border>
+    </Grid>

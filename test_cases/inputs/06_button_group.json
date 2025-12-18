@@ -1,0 +1,97 @@
+{
+  "compressed_data": [
+    {
+      "id": "64:510",
+      "type": "FRAME",
+      "name": "ButtonGroup",
+      "layoutMode": "HORIZONTAL",
+      "primaryAxisAlignItems": "MIN",
+      "counterAxisAlignItems": "CENTER",
+      "itemSpacing": 18,
+      "layoutSizingHorizontal": "HUG",
+      "layoutSizingVertical": "HUG",
+      "x": 0,
+      "y": 0,
+      "width": 174,
+      "height": 42,
+      "children": [
+        {
+          "id": "64:483",
+          "type": "FRAME",
+          "name": "StartButton",
+          "layoutSizingHorizontal": "HUG",
+          "layoutSizingVertical": "HUG",
+          "fills": [{"type": "SOLID", "color": "#FFFFFF"}],
+          "strokes": [{"type": "SOLID", "color": "#D1D5DB"}],
+          "cornerRadius": 4,
+          "paddingLeft": 6,
+          "paddingRight": 6,
+          "paddingTop": 11,
+          "paddingBottom": 11,
+          "layoutMode": "VERTICAL",
+          "primaryAxisAlignItems": "CENTER",
+          "counterAxisAlignItems": "CENTER",
+          "x": 0,
+          "y": 0,
+          "width": 78,
+          "height": 42,
+          "children": [
+            {
+              "id": "64:484",
+              "type": "TEXT",
+              "name": "开始扫描",
+              "characters": "开始扫描",
+              "fontSize": 16.5,
+              "fontWeight": 400,
+              "fills": [{"type": "SOLID", "color": "#1F2937"}],
+              "layoutSizingHorizontal": "HUG",
+              "layoutSizingVertical": "HUG",
+              "x": 18,
+              "y": 11,
+              "width": 66,
+              "height": 20
+            }
+          ]
+        },
+        {
+          "id": "64:486",
+          "type": "FRAME",
+          "name": "StopButton",
+          "layoutSizingHorizontal": "HUG",
+          "layoutSizingVertical": "HUG",
+          "fills": [{"type": "SOLID", "color": "#FFFFFF"}],
+          "strokes": [{"type": "SOLID", "color": "#D1D5DB"}],
+          "cornerRadius": 4,
+          "paddingLeft": 6,
+          "paddingRight": 6,
+          "paddingTop": 11,
+          "paddingBottom": 11,
+          "layoutMode": "VERTICAL",
+          "primaryAxisAlignItems": "CENTER",
+          "counterAxisAlignItems": "CENTER",
+          "x": 96,
+          "y": 0,
+          "width": 78,
+          "height": 42,
+          "children": [
+            {
+              "id": "64:487",
+              "type": "TEXT",
+              "name": "停止扫描",
+              "characters": "停止扫描",
+              "fontSize": 16.5,
+              "fontWeight": 400,
+              "fills": [{"type": "SOLID", "color": "#1F2937"}],
+              "layoutSizingHorizontal": "HUG",
+              "layoutSizingVertical": "HUG",
+              "x": 6,
+              "y": 11,
+              "width": 66,
+              "height": 20
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,18 @@
-<Border Padding="15">
-    <StackPanel HorizontalAlignment="Left">
-        <TextBlock Text="标题" FontSize="16" FontWeight="Bold"/>
-        <TextBlock Text="内容文本" FontSize="14" Foreground="#666666" Margin="0,8,0,0"/>
-    </StackPanel>
-</Border>
+<!-- VerticalStack 容器 -->
+    <Border
+        Padding="15">
+        <StackPanel
+            HorizontalAlignment="Left">
+            <!-- Title -->
+            <TextBlock
+                Text="标题"
+                FontSize="16"
+                FontWeight="Bold"
+                Margin="0,0,0,8"/>
+            <!-- Content -->
+            <TextBlock
+                Text="内容文本"
+                FontSize="14"
+                Foreground="#666666"/>
+        </StackPanel>
+    </Border>

@@ -1,0 +1,87 @@
+{
+  "compressed_data": [
+    {
+      "id": "64:585",
+      "type": "FRAME",
+      "name": "FormRow",
+      "layoutMode": "GRID",
+      "layoutAlign": "STRETCH",
+      "layoutSizingHorizontal": "FILL",
+      "layoutSizingVertical": "HUG",
+      "gridRowCount": 1,
+      "gridColumnCount": 2,
+      "gridRowGap": 0,
+      "gridColumnGap": 11,
+      "gridRowSizes": [{"type": "HUG", "value": 1}],
+      "gridColumnSizes": [
+        {"type": "HUG", "value": 1},
+        {"type": "FLEX", "value": 1}
+      ],
+      "x": 0,
+      "y": 0,
+      "width": 761,
+      "height": 38,
+      "children": [
+        {
+          "id": "64:580",
+          "type": "TEXT",
+          "name": "工程名称:",
+          "characters": "工程名称:",
+          "fontSize": 16.5,
+          "fontWeight": 400,
+          "fills": [{"type": "SOLID", "color": "#1F2937"}],
+          "layoutSizingHorizontal": "HUG",
+          "layoutSizingVertical": "HUG",
+          "gridRowAnchorIndex": 0,
+          "gridColumnAnchorIndex": 0,
+          "gridChildHorizontalAlign": "MIN",
+          "gridChildVerticalAlign": "CENTER",
+          "x": 0,
+          "y": 9,
+          "width": 71,
+          "height": 20
+        },
+        {
+          "id": "64:582",
+          "type": "FRAME",
+          "name": "Input",
+          "layoutGrow": 1,
+          "layoutSizingHorizontal": "FILL",
+          "layoutSizingVertical": "HUG",
+          "fills": [{"type": "SOLID", "color": "#FFFFFF"}],
+          "strokes": [{"type": "SOLID", "color": "#D1D5DB"}],
+          "cornerRadius": 4,
+          "paddingLeft": 13,
+          "paddingRight": 13,
+          "paddingTop": 9,
+          "paddingBottom": 9,
+          "layoutMode": "HORIZONTAL",
+          "counterAxisAlignItems": "CENTER",
+          "gridRowAnchorIndex": 0,
+          "gridColumnAnchorIndex": 1,
+          "x": 82,
+          "y": 0,
+          "width": 679,
+          "height": 38,
+          "children": [
+            {
+              "id": "64:583",
+              "type": "TEXT",
+              "name": "NewProject3",
+              "characters": "NewProject3",
+              "fontSize": 16.5,
+              "fontWeight": 400,
+              "fills": [{"type": "SOLID", "color": "#1F2937"}],
+              "layoutSizingHorizontal": "HUG",
+              "layoutSizingVertical": "HUG",
+              "x": 13,
+              "y": 9,
+              "width": 101,
+              "height": 20
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -15,13 +15,13 @@
             <TextBlock
                 Text="标题"
                 FontSize="16"
-                FontWeight="Bold"/>
+                FontWeight="Bold"
+                Margin="0,0,0,8"/>
             <!-- Content -->
             <TextBlock
                 Text="内容文本"
                 FontSize="14"
-                Foreground="#666666"
-                Margin="0,8,0,0"/>
+                Foreground="#666666"/>
         </StackPanel>
     </Border>
 </UserControl>

@@ -1,11 +1,23 @@
-<Border Background="#FFFFFF" Padding="15,12,15,12">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="Auto"/>
-        </Grid.ColumnDefinitions>
-        <TextBlock Text="工程向导" FontSize="16" Foreground="#333333" Grid.Column="0"/>
-        <Border Height="20" Background="#E0E0E0" Grid.Column="2"/>
-    </Grid>
-</Border>
+<!-- SpaceBetween 容器 -->
+    <Border
+        Background="#FFFFFF"
+        Padding="15,12,15,12">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <!-- LeftText -->
+            <TextBlock
+                Text="工程向导"
+                FontSize="16"
+                Foreground="#333333"
+                Grid.Column="0"/>
+            <!-- RightButton -->
+            <Border
+                Height="20"
+                Background="#E0E0E0"
+                Grid.Column="2"/>
+        </Grid>
+    </Border>

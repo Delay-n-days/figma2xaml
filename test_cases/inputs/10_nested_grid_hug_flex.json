@@ -1,0 +1,99 @@
+{
+  "compressed_data": [
+    {
+      "id": "64:566",
+      "type": "FRAME",
+      "name": "NestedGrid",
+      "layoutMode": "GRID",
+      "layoutAlign": "STRETCH",
+      "layoutSizingHorizontal": "FILL",
+      "layoutSizingVertical": "FILL",
+      "gridRowCount": 2,
+      "gridColumnCount": 1,
+      "gridRowGap": 0,
+      "gridColumnGap": 0,
+      "gridRowSizes": [
+        {"type": "HUG", "value": 1},
+        {"type": "FLEX", "value": 1}
+      ],
+      "gridColumnSizes": [{"type": "FLEX", "value": 1}],
+      "x": 0,
+      "y": 0,
+      "width": 800,
+      "height": 600,
+      "children": [
+        {
+          "id": "64:567",
+          "type": "FRAME",
+          "name": "Header",
+          "layoutSizingHorizontal": "FILL",
+          "layoutSizingVertical": "HUG",
+          "fills": [{"type": "SOLID", "color": "#F3F4F6"}],
+          "paddingLeft": 16,
+          "paddingRight": 16,
+          "paddingTop": 12,
+          "paddingBottom": 12,
+          "gridRowAnchorIndex": 0,
+          "gridColumnAnchorIndex": 0,
+          "x": 0,
+          "y": 0,
+          "width": 800,
+          "height": 48,
+          "layoutMode": "HORIZONTAL",
+          "counterAxisAlignItems": "CENTER",
+          "children": [
+            {
+              "id": "64:568",
+              "type": "TEXT",
+              "name": "Title",
+              "characters": "设备列表",
+              "fontSize": 18,
+              "fontWeight": 600,
+              "fills": [{"type": "SOLID", "color": "#111827"}],
+              "layoutSizingHorizontal": "HUG",
+              "layoutSizingVertical": "HUG",
+              "x": 16,
+              "y": 14,
+              "width": 72,
+              "height": 20
+            }
+          ]
+        },
+        {
+          "id": "64:570",
+          "type": "FRAME",
+          "name": "Content",
+          "layoutGrow": 1,
+          "layoutSizingHorizontal": "FILL",
+          "layoutSizingVertical": "FILL",
+          "fills": [{"type": "SOLID", "color": "#FFFFFF"}],
+          "gridRowAnchorIndex": 1,
+          "gridColumnAnchorIndex": 0,
+          "x": 0,
+          "y": 48,
+          "width": 800,
+          "height": 552,
+          "layoutMode": "VERTICAL",
+          "counterAxisAlignItems": "CENTER",
+          "children": [
+            {
+              "id": "64:571",
+              "type": "TEXT",
+              "name": "NoData",
+              "characters": "暂无数据",
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fills": [{"type": "SOLID", "color": "#9CA3AF"}],
+              "layoutSizingHorizontal": "HUG",
+              "layoutSizingVertical": "HUG",
+              "x": 356,
+              "y": 266,
+              "width": 56,
+              "height": 20
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

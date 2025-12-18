@@ -12,20 +12,20 @@
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
             <!-- Label1 -->
             <TextBlock
                 Text="按钮1"
                 FontSize="14"
                 Foreground="#333333"
+                Margin="0,0,16,0"
                 Grid.Column="0"/>
             <!-- Label2 -->
             <TextBlock
                 Text="按钮2"
                 FontSize="14"
                 Foreground="#333333"
-                Margin="16,0,0,0"
                 Grid.Column="1"/>
         </Grid>
     </Border>

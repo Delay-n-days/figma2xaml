@@ -1,0 +1,144 @@
+{
+  "compressed_data": [
+    {
+      "id": "64:563",
+      "type": "FRAME",
+      "name": "TableHeader",
+      "layoutMode": "GRID",
+      "layoutGrow": 1,
+      "layoutSizingHorizontal": "FILL",
+      "gridRowCount": 1,
+      "gridColumnCount": 7,
+      "gridRowGap": 0,
+      "gridColumnGap": 0,
+      "gridRowSizes": [{"type": "FLEX", "value": 1}],
+      "gridColumnSizes": [
+        {"type": "FLEX", "value": 1},
+        {"type": "FLEX", "value": 1},
+        {"type": "FLEX", "value": 1},
+        {"type": "FLEX", "value": 1},
+        {"type": "FLEX", "value": 1},
+        {"type": "FLEX", "value": 1},
+        {"type": "FLEX", "value": 1}
+      ],
+      "x": 0,
+      "y": 0,
+      "width": 761,
+      "height": 40,
+      "children": [
+        {
+          "id": "64:511",
+          "type": "FRAME",
+          "name": "Col1",
+          "layoutAlign": "STRETCH",
+          "layoutGrow": 1,
+          "layoutSizingHorizontal": "FILL",
+          "layoutSizingVertical": "FILL",
+          "strokes": [{"type": "SOLID", "color": "#D1D5DB"}],
+          "layoutMode": "HORIZONTAL",
+          "primaryAxisAlignItems": "CENTER",
+          "counterAxisAlignItems": "CENTER",
+          "gridRowAnchorIndex": 0,
+          "gridColumnAnchorIndex": 0,
+          "x": 0,
+          "y": 0,
+          "width": 108.71,
+          "height": 40,
+          "children": [
+            {
+              "id": "64:512",
+              "type": "TEXT",
+              "name": "行号",
+              "characters": "行号",
+              "fontSize": 16.5,
+              "fontWeight": 400,
+              "fills": [{"type": "SOLID", "color": "#4B5563"}],
+              "layoutSizingHorizontal": "HUG",
+              "layoutSizingVertical": "HUG",
+              "x": 37.86,
+              "y": 10,
+              "width": 33,
+              "height": 20
+            }
+          ]
+        },
+        {
+          "id": "64:542",
+          "type": "FRAME",
+          "name": "Col2",
+          "layoutAlign": "STRETCH",
+          "layoutGrow": 1,
+          "layoutSizingHorizontal": "FILL",
+          "layoutSizingVertical": "FILL",
+          "strokes": [{"type": "SOLID", "color": "#D1D5DB"}],
+          "strokeWeight": "Mixed",
+          "strokeLeftWeight": 0,
+          "layoutMode": "HORIZONTAL",
+          "primaryAxisAlignItems": "CENTER",
+          "counterAxisAlignItems": "CENTER",
+          "gridRowAnchorIndex": 0,
+          "gridColumnAnchorIndex": 1,
+          "x": 108.71,
+          "y": 0,
+          "width": 108.71,
+          "height": 40,
+          "children": [
+            {
+              "id": "64:543",
+              "type": "TEXT",
+              "name": "对象名",
+              "characters": "对象名",
+              "fontSize": 16.5,
+              "fontWeight": 400,
+              "fills": [{"type": "SOLID", "color": "#4B5563"}],
+              "layoutSizingHorizontal": "HUG",
+              "layoutSizingVertical": "HUG",
+              "x": 29.36,
+              "y": 10,
+              "width": 50,
+              "height": 20
+            }
+          ]
+        },
+        {
+          "id": "64:545",
+          "type": "FRAME",
+          "name": "Col3",
+          "layoutAlign": "STRETCH",
+          "layoutGrow": 1,
+          "layoutSizingHorizontal": "FILL",
+          "layoutSizingVertical": "FILL",
+          "strokes": [{"type": "SOLID", "color": "#D1D5DB"}],
+          "strokeWeight": "Mixed",
+          "strokeLeftWeight": 0,
+          "layoutMode": "HORIZONTAL",
+          "primaryAxisAlignItems": "CENTER",
+          "counterAxisAlignItems": "CENTER",
+          "gridRowAnchorIndex": 0,
+          "gridColumnAnchorIndex": 2,
+          "x": 217.43,
+          "y": 0,
+          "width": 108.71,
+          "height": 40,
+          "children": [
+            {
+              "id": "64:546",
+              "type": "TEXT",
+              "name": "对象类型",
+              "characters": "对象类型",
+              "fontSize": 16.5,
+              "fontWeight": 400,
+              "fills": [{"type": "SOLID", "color": "#4B5563"}],
+              "layoutSizingHorizontal": "HUG",
+              "layoutSizingVertical": "HUG",
+              "x": 21.36,
+              "y": 10,
+              "width": 66,
+              "height": 20
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

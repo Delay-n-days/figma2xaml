@@ -141,10 +141,10 @@ class FigmaToWpfBuilder:
             if '_column_definitions' not in container.attributes:
                 column_definitions = []
                 for i, child in enumerate(visible_children):
-                    is_last_in_root = (is_root and i == len(visible_children) - 1)
+                    # 只根据layoutSizingHorizontal判断,不使用is_last_in_root
                     is_fill = (child.get('layoutSizingHorizontal') == 'FILL')
                     
-                    if is_fill or is_last_in_root:
+                    if is_fill:
                         column_definitions.append('*')
                     else:
                         column_definitions.append('Auto')
@@ -171,6 +171,7 @@ class FigmaToWpfBuilder:
             child['_parent_spacing'] = item_spacing
             child['_parent_layout'] = current_layout
             child['_is_first_child'] = is_first
+            child['_is_last_child'] = (visible_child_index == len(visible_children) - 1)
             child['_in_fill_column'] = is_in_fill_column
             
             # 构建子节点
@@ -206,22 +207,41 @@ class FigmaToWpfBuilder:
                 if grid_col_span > 1:
                     child_ast.set_attribute('Grid.ColumnSpan', str(grid_col_span))
                 
+                # 设置Grid单元格内的对齐方式
+                grid_h_align = child.get('gridChildHorizontalAlign')
+                grid_v_align = child.get('gridChildVerticalAlign')
+                
+                if grid_h_align:
+                    h_align_map = {
+                        'MIN': 'Left',
+                        'CENTER': 'Center',
+                        'MAX': 'Right',
+                        'STRETCH': 'Stretch'
+                    }
+                    if grid_h_align in h_align_map:
+                        child_ast.set_attribute('HorizontalAlignment', h_align_map[grid_h_align])
+                
+                if grid_v_align:
+                    v_align_map = {
+                        'MIN': 'Top',
+                        'CENTER': 'Center',
+                        'MAX': 'Bottom',
+                        'STRETCH': 'Stretch'
+                    }
+                    if grid_v_align in v_align_map:
+                        child_ast.set_attribute('VerticalAlignment', v_align_map[grid_v_align])
+                
                 # 设置 Grid 间距 (通过 Margin 实现)
                 # gridRowGap: 行间距, gridColumnGap: 列间距
                 row_spacing = node.get('gridRowGap', 0)  # 行间距
                 col_spacing = node.get('gridColumnGap', 0)  # 列间距
                 
                 # 计算 Margin: 左,上,右,下
-                margin_left = col_spacing / 2 if grid_col > 0 else 0
-                margin_top = row_spacing / 2 if grid_row > 0 else 0
-                margin_right = col_spacing / 2
-                margin_bottom = row_spacing / 2
-                
-                # 为最后一列和最后一行移除右边和下边的间距
-                if grid_col == grid_column_count - 1:
-                    margin_right = 0
-                if grid_row == grid_row_count - 1:
-                    margin_bottom = 0
+                # 间距应该完整加在前一个元素上,而不是平分
+                margin_left = 0
+                margin_top = 0
+                margin_right = col_spacing if grid_col < grid_column_count - 1 else 0
+                margin_bottom = row_spacing if grid_row < grid_row_count - 1 else 0
                 
                 if margin_left > 0 or margin_top > 0 or margin_right > 0 or margin_bottom > 0:
                     # 转换为整数（如果是整数值）
@@ -270,7 +290,22 @@ class FigmaToWpfBuilder:
             return container
         elif needs_border:
             # 需要 Border 包装
-            border.add_child(container)
+            # 优化:如果container只有一个TextBlock子元素,直接将TextBlock放在Border内,避免冗余StackPanel
+            if (len(container.children) == 1 and 
+                container.children[0].type == 'TextBlock' and
+                container.type == 'StackPanel'):
+                # 将TextBlock从StackPanel中取出
+                text_block = container.children[0]
+                # 将StackPanel的对齐属性转移到TextBlock上
+                if 'HorizontalAlignment' in container.attributes:
+                    text_block.set_attribute('HorizontalAlignment', container.attributes['HorizontalAlignment'])
+                if 'VerticalAlignment' in container.attributes:
+                    text_block.set_attribute('VerticalAlignment', container.attributes['VerticalAlignment'])
+                # 直接将TextBlock添加到Border
+                border.add_child(text_block)
+            else:
+                # 正常情况,Border包装容器
+                border.add_child(container)
             return border
         else:
             # 非根节点也不需要 Border，直接返回容器
@@ -528,12 +563,15 @@ class FigmaToWpfBuilder:
             return 'NONE'
     
     def _calculate_margin(self, node: Dict[str, Any]) -> Optional[str]:
-        """计算 Margin"""
+        """计算 Margin
+        
+        间距应该加在前一个元素的右侧/下侧,而不是后一个元素的左侧/上侧
+        """
         parent_spacing = node.get('_parent_spacing', 0)
         parent_layout = node.get('_parent_layout', 'NONE')
-        is_first_child = node.get('_is_first_child', False)
+        is_last_child = node.get('_is_last_child', False)
         
-        if parent_spacing > 0 and not is_first_child:
+        if parent_spacing > 0 and not is_last_child:
             if parent_layout == 'WRAP':
                 half_spacing = parent_spacing / 2
                 if half_spacing == int(half_spacing):
@@ -541,9 +579,11 @@ class FigmaToWpfBuilder:
                 else:
                     return str(half_spacing)
             elif parent_layout == 'VERTICAL':
-                return f"0,{int(parent_spacing)},0,0"
+                # 垂直布局:间距加在下侧
+                return f"0,0,0,{int(parent_spacing)}"
             elif parent_layout == 'HORIZONTAL':
-                return f"{int(parent_spacing)},0,0,0"
+                # 水平布局:间距加在右侧
+                return f"0,0,{int(parent_spacing)},0"
         
         return None
     

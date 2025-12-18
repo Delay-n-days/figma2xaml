@@ -1,0 +1,59 @@
+<Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <!-- Col1 容器 -->
+        <Border
+            BorderBrush="#D1D5DB"
+            BorderThickness="1"
+            Grid.Row="0"
+            Grid.Column="0">
+            <StackPanel
+                Orientation="Horizontal">
+                <!-- 行号 -->
+                <TextBlock
+                    Text="行号"
+                    FontSize="16.5"
+                    Foreground="#4B5563"/>
+            </StackPanel>
+        </Border>
+        <!-- Col2 容器 -->
+        <Border
+            BorderBrush="#D1D5DB"
+            BorderThickness="1"
+            Grid.Row="0"
+            Grid.Column="1">
+            <StackPanel
+                Orientation="Horizontal">
+                <!-- 对象名 -->
+                <TextBlock
+                    Text="对象名"
+                    FontSize="16.5"
+                    Foreground="#4B5563"/>
+            </StackPanel>
+        </Border>
+        <!-- Col3 容器 -->
+        <Border
+            BorderBrush="#D1D5DB"
+            BorderThickness="1"
+            Grid.Row="0"
+            Grid.Column="2">
+            <StackPanel
+                Orientation="Horizontal">
+                <!-- 对象类型 -->
+                <TextBlock
+                    Text="对象类型"
+                    FontSize="16.5"
+                    Foreground="#4B5563"/>
+            </StackPanel>
+        </Border>
+    </Grid>
