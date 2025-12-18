@@ -17,7 +17,25 @@ container_selection_rules:
       use_grid: true
       use_grid_layout: true
   
-  # 规则 2: 水平布局 + 换行 → WrapPanel
+  # 规则 2: 水平布局 + SPACE_BETWEEN → Grid (两端对齐)
+  - name: "水平布局两端对齐(Space Between)"
+    condition: "layout_mode == 'HORIZONTAL' and primary_axis_align == 'SPACE_BETWEEN'"
+    result:
+      container_type: Grid
+      use_grid: true
+      space_between: true
+      orientation: Horizontal
+  
+  # 规则 2.5: 垂直布局 + SPACE_BETWEEN → Grid (两端对齐)
+  - name: "垂直布局两端对齐(Space Between)"
+    condition: "layout_mode == 'VERTICAL' and primary_axis_align == 'SPACE_BETWEEN'"
+    result:
+      container_type: Grid
+      use_grid: true
+      space_between: true
+      orientation: Vertical
+  
+  # 规则 3: 水平布局 + 换行 → WrapPanel
   - name: "水平布局且需要换行"
     condition: "layout_mode == 'HORIZONTAL' and layout_wrap == 'WRAP'"
     result:
@@ -25,14 +43,14 @@ container_selection_rules:
       orientation: Horizontal
       use_grid: false
   
-  # 规则 3: 水平布局 + 有填充子元素 + 多个子元素 → Grid
+  # 规则 4: 水平布局 + 有填充子元素 + 多个子元素 → Grid
   - name: "水平布局且有填充子元素(使用Grid)"
     condition: "layout_mode == 'HORIZONTAL' and has_fill_child and visible_children_count > 1"
     result:
       container_type: Grid
       use_grid: true
   
-  # 规则 3: 垂直布局 → StackPanel (Vertical)
+  # 规则 5: 垂直布局 → StackPanel (Vertical)
   - name: "垂直布局"
     condition: "layout_mode == 'VERTICAL'"
     result:
@@ -40,7 +58,7 @@ container_selection_rules:
       orientation: Vertical
       use_grid: false
   
-  # 规则 4: 水平布局 (无换行,无填充) → StackPanel (Horizontal)
+  # 规则 6: 水平布局 (无换行,无填充) → StackPanel (Horizontal)
   - name: "水平布局(无换行)"
     condition: "layout_mode == 'HORIZONTAL'"
     result:

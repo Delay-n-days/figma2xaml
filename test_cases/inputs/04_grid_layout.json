@@ -9,6 +9,15 @@
       "gridColumnCount": 3,
       "gridRowGap": 10,
       "gridColumnGap": 10,
+      "gridRowSizes": [
+        {"type": "FLEX", "value": 1},
+        {"type": "FLEX", "value": 1}
+      ],
+      "gridColumnSizes": [
+        {"type": "FLEX", "value": 1},
+        {"type": "FLEX", "value": 1},
+        {"type": "FLEX", "value": 1}
+      ],
       "paddingLeft": 20,
       "paddingRight": 20,
       "paddingTop": 20,

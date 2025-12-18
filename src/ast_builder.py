@@ -82,7 +82,8 @@ class FigmaToWpfBuilder:
             'layout_mode': layout_mode,
             'layout_wrap': layout_wrap,
             'has_fill_child': has_fill_child,
-            'visible_children_count': len(visible_children)
+            'visible_children_count': len(visible_children),
+            'primary_axis_align': primary_axis_align  # 添加主轴对齐
         }
         container_config = self.rule_engine.select_container(container_context)
         
@@ -110,7 +111,9 @@ class FigmaToWpfBuilder:
             row_definitions = []
             for row_size in grid_row_sizes:
                 if row_size.get('type') == 'FLEX':
-                    row_definitions.append(f"{row_size.get('value', 1)}*")
+                    value = row_size.get('value', 1)
+                    # 如果是1,简化为 "*"
+                    row_definitions.append('*' if value == 1 else f"{value}*")
                 elif row_size.get('type') == 'FIXED':
                     row_definitions.append(str(row_size.get('value', 'Auto')))
                 else:
@@ -120,7 +123,9 @@ class FigmaToWpfBuilder:
             column_definitions = []
             for col_size in grid_column_sizes:
                 if col_size.get('type') == 'FLEX':
-                    column_definitions.append(f"{col_size.get('value', 1)}*")
+                    value = col_size.get('value', 1)
+                    # 如果是1,简化为 "*"
+                    column_definitions.append('*' if value == 1 else f"{value}*")
                 elif col_size.get('type') == 'FIXED':
                     column_definitions.append(str(col_size.get('value', 'Auto')))
                 else:
@@ -132,18 +137,19 @@ class FigmaToWpfBuilder:
                 container.set_attribute('_column_definitions', column_definitions)
         
         elif use_grid:
-            # Grid: 需要设置列定义
-            column_definitions = []
-            for i, child in enumerate(visible_children):
-                is_last_in_root = (is_root and i == len(visible_children) - 1)
-                is_fill = (child.get('layoutSizingHorizontal') == 'FILL')
+            # Grid: 需要设置列定义(如果还没有设置)
+            if '_column_definitions' not in container.attributes:
+                column_definitions = []
+                for i, child in enumerate(visible_children):
+                    is_last_in_root = (is_root and i == len(visible_children) - 1)
+                    is_fill = (child.get('layoutSizingHorizontal') == 'FILL')
+                    
+                    if is_fill or is_last_in_root:
+                        column_definitions.append('*')
+                    else:
+                        column_definitions.append('Auto')
                 
-                if is_fill or is_last_in_root:
-                    column_definitions.append('*')
-                else:
-                    column_definitions.append('Auto')
-            
-            container.set_attribute('_column_definitions', column_definitions)
+                container.set_attribute('_column_definitions', column_definitions)
         
         # 转换子元素
         current_layout = self._get_current_layout(layout_mode, layout_wrap)
@@ -228,7 +234,19 @@ class FigmaToWpfBuilder:
             
             # 水平布局 Grid: 设置 Grid.Column
             elif use_grid:
-                child_ast.set_attribute('Grid.Column', str(visible_child_index))
+                # 检查是否是 SPACE_BETWEEN 布局
+                if container_config.get('space_between'):
+                    # 两端对齐: 第一个在列0,最后一个在列2,中间的在列1
+                    if visible_child_index == 0:
+                        col_index = 0  # 第一个元素
+                    elif visible_child_index == len(visible_children) - 1:
+                        col_index = 2  # 最后一个元素
+                    else:
+                        col_index = 1  # 中间元素
+                    child_ast.set_attribute('Grid.Column', str(col_index))
+                else:
+                    # 普通 Grid: 按顺序排列
+                    child_ast.set_attribute('Grid.Column', str(visible_child_index))
             
             container.add_child(child_ast)
             visible_child_index += 1
@@ -372,6 +390,17 @@ class FigmaToWpfBuilder:
         
         elif container_type == 'Grid':
             container = create_grid()
+            
+            # 检查是否是 SPACE_BETWEEN 布局
+            if container_config.get('space_between'):
+                # 为两端对齐创建列定义: Auto - * - Auto
+                orientation = container_config.get('orientation', 'Horizontal')
+                if orientation == 'Horizontal':
+                    # 水平两端对齐: Auto - * - Auto
+                    container.attributes['_column_definitions'] = ['Auto', '*', 'Auto']
+                else:
+                    # 垂直两端对齐: Auto - * - Auto (行)
+                    container.attributes['_row_definitions'] = ['Auto', '*', 'Auto']
         
         else:
             # 默认 StackPanel

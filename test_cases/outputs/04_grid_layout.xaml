@@ -10,6 +10,15 @@
     <Border
         Padding="20">
         <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
             <!-- Cell1 -->
             <Border
                 Background="#FF5733"
@@ -28,7 +37,7 @@
                 Grid.Row="1"
                 Grid.Column="0"
                 Grid.ColumnSpan="2"
-                Margin="0,5,5,5"/>
+                Margin="0,5,5,0"/>
         </Grid>
     </Border>
 </UserControl>

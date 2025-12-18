@@ -11,6 +11,6 @@
         </Grid.ColumnDefinitions>
         <Border Background="#FF5733" Grid.Row="0" Grid.Column="0" Margin="0,0,5,5"/>
         <Border Background="#33FF57" Grid.Row="0" Grid.Column="1" Margin="5,0,5,5"/>
-        <Border Background="#3357FF" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,5,5,5"/>
+        <Border Background="#3357FF" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,5,5,0"/>
     </Grid>
 </Border>

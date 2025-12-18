@@ -14,6 +14,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
             <!-- LeftText -->
             <TextBlock
@@ -25,7 +26,7 @@
             <Border
                 Height="20"
                 Background="#E0E0E0"
-                Grid.Column="1"/>
+                Grid.Column="2"/>
         </Grid>
     </Border>
 </UserControl>
